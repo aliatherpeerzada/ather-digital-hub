@@ -35,7 +35,7 @@
                                 software — we create digital solutions that transform your business. From
                                 conceptualization to full-scale deployment, we’re with you every step of the way,
                                 delivering tailor-made solutions designed to meet your unique needs.</p>
-                            <a href=""
+                            <a href="https://www.fiverr.com/bestdevever"  target="_blank"
                                 class="btn btn-secondary   py-sm-3 px-sm-5 rounded-pill me-3 wow animate__animated animate__bounceInDown w-50"
                                 data-wow-duration="1s" data-wow-delay="1.2s">Contact
                                 Us</a>
@@ -557,7 +557,7 @@
                                 seamless functionality to deliver an exceptional user experience and support your
                                 business goals.
                             </p>
-                            <a href="https://www.fiverr.com/bestdevever/develope-modern-mobile-responsive-html-or-wordpress-website-for-your-business"
+                            <a href="https://www.fiverr.com/bestdevever/develope-modern-mobile-responsive-html-or-wordpress-website-for-your-business" target="_blank"
                                 class="fancy-button" style="--clr:#8A2BE2"> <span class="fancy-button__icon-wrapper">
 
 
@@ -584,7 +584,7 @@
                                 performance, security, and speed, ensuring it runs smoothly and is always accessible to
                                 your users.
                             </p>
-                            <a href="https://www.fiverr.com/bestdevever/fix-and-update-your-html-css-jquery-php-laravel-code-ignitor-javascript-asp-bug"
+                            <a href="https://www.fiverr.com/bestdevever/fix-and-update-your-html-css-jquery-php-laravel-code-ignitor-javascript-asp-bug" target="_blank"
                                 class="fancy-button" style="--clr:#8A2BE2"> <span class="fancy-button__icon-wrapper">
 
 
@@ -623,7 +623,7 @@
                                 synchronization of financial data, automated workflows, and real-time accounting updates
                                 directly within your custom platform.
                             </p>
-                            <a href="https://www.fiverr.com/bestdevever/fix-your-window-form-application-and-solve-all-your-c-sharp-and-sqlserver-issues"
+                            <a href="https://www.fiverr.com/bestdevever/fix-your-window-form-application-and-solve-all-your-c-sharp-and-sqlserver-issues" target="_blank"
                                 class="fancy-button" style="--clr:#8A2BE2"> <span class="fancy-button__icon-wrapper">
 
 
@@ -651,7 +651,7 @@
                                 streamline administration, enhance the learning experience, and provide tools for
                                 managing courses, student progress, and communication all in one platform.
                             </p>
-                            <a href="https://www.fiverr.com/bestdevever/create-modern-responsive-website-or-upgrade-and-fix-your-current-one"
+                            <a href="https://www.fiverr.com/bestdevever/create-modern-responsive-website-or-upgrade-and-fix-your-current-one" target="_blank"
                                 class="fancy-button" style="--clr:#8A2BE2"> <span class="fancy-button__icon-wrapper">
 
 
@@ -678,7 +678,7 @@
                                 process, ensure accurate and timely billing, and simplify payment tracking for a more
                                 efficient and organized financial workflow.
                             </p>
-                            <a href="https://www.fiverr.com/bestdevever/create-your-html-css-jquery-php-laravel-code-ignitor-javascript-asp"
+                            <a href="https://www.fiverr.com/bestdevever/create-your-html-css-jquery-php-laravel-code-ignitor-javascript-asp" target="_blank"
                                 class="fancy-button" style="--clr:#8A2BE2"> <span class="fancy-button__icon-wrapper">
 
 
@@ -703,7 +703,7 @@
                             <p class="m-0">We create comprehensive hotel and booking management systems that
                                 streamline reservation processes, manage guest information, optimize room availability,
                                 and provide seamless booking experiences for both customers and staff.</p>
-                            <a href="https://www.fiverr.com/bestdevever/create-modern-responsive-website"
+                            <a href="https://www.fiverr.com/bestdevever/create-modern-responsive-website" target="_blank"
                                 class="fancy-button" style="--clr:#8A2BE2"> <span class="fancy-button__icon-wrapper">
 
 
@@ -729,7 +729,7 @@
                                 stock levels, automate reordering, manage suppliers, and gain real-time insights into
                                 your inventory, ensuring efficient operations and reducing the risk of shortages or
                                 overstocking.</p>
-                            <a href="https://www.fiverr.com/bestdevever/sell-you-ready-made-php-point-of-sale-system-and-with-inventory-management"
+                            <a href="https://www.fiverr.com/bestdevever/sell-you-ready-made-php-point-of-sale-system-and-with-inventory-management" target="_blank"
                                 class="fancy-button" style="--clr:#8A2BE2"> <span class="fancy-button__icon-wrapper">
 
 
@@ -763,7 +763,7 @@
                             <p class="m-0">We build custom registration systems tailored to your needs, enabling
                                 seamless online sign-ups, secure user data management, and easy tracking of
                                 registrations for events, memberships, or services.</p>
-                            <a href="https://www.fiverr.com/bestdevever/make-your-php-contact-form-multistep-form-functioning-with-jquery-validation"
+                            <a href="https://www.fiverr.com/bestdevever/make-your-php-contact-form-multistep-form-functioning-with-jquery-validation" target="_blank"
                                 class="fancy-button" style="--clr:#8A2BE2"> <span class="fancy-button__icon-wrapper">
 
 
@@ -789,7 +789,7 @@
                                 appointment scheduling, manage client bookings, track projects, and simplify invoicing
                                 and payments, allowing you to run your studio efficiently and deliver an exceptional
                                 customer experience.</p>
-                            <a href="https://www.fiverr.com/bestdevever/create-php-laravel-photos-management-system-for-you-studio-image-management-sys"
+                            <a href="https://www.fiverr.com/bestdevever/create-php-laravel-photos-management-system-for-you-studio-image-management-sys" target="_blank"
                                 class="fancy-button" style="--clr:#8A2BE2"> <span class="fancy-button__icon-wrapper">
 
 
@@ -830,7 +830,7 @@
                             style="width: 65px; height: 65px;">
                         <div class="ps-4">
                             <h5 class="mb-1">LEE</h5>
-                            <a href="https://www.fiverr.com/bestdevever"> <span>United Kingdom</span> </a>
+                            <a href="https://www.fiverr.com/bestdevever" target="_blank"> <span>United Kingdom</span> </a>
                         </div>
                     </div>
                 </div>
@@ -843,7 +843,7 @@
                             style="width: 65px; height: 65px;">
                         <div class="ps-4">
                             <h5 class="mb-1">Eduardoarane716</h5>
-                            <a href="https://www.fiverr.com/bestdevever"> <span>Canada</span> </a>
+                            <a href="https://www.fiverr.com/bestdevever" target="_blank"> <span>Canada</span> </a>
                         </div>
                     </div>
                 </div>
@@ -855,7 +855,7 @@
                             style="width: 65px; height: 65px;">
                         <div class="ps-4">
                             <h5 class="mb-1">Sameer Siddiqui</h5>
-                            <a href="https://www.fiverr.com/bestdevever"> <span>Pakistan</span> </a>
+                            <a href="https://www.fiverr.com/bestdevever" target="_blank"> <span>Pakistan</span> </a>
                         </div>
                     </div>
                 </div>
@@ -868,7 +868,7 @@
                             style="width: 65px; height: 65px;">
                         <div class="ps-4">
                             <h5 class="mb-1">Automaxed</h5>
-                            <a href="https://www.fiverr.com/bestdevever"> <span>Netherlands</span> </a>
+                            <a href="https://www.fiverr.com/bestdevever" target="_blank"> <span>Netherlands</span> </a>
                         </div>
                     </div>
                 </div>
@@ -882,7 +882,7 @@
                             style="width: 65px; height: 65px;">
                         <div class="ps-4">
                             <h5 class="mb-1">Mrradzi</h5>
-                            <a href="https://www.fiverr.com/bestdevever"> <span>Thailand</span> </a>
+                            <a href="https://www.fiverr.com/bestdevever" target="_blank"> <span>Thailand</span> </a>
                         </div>
                     </div>
                 </div>
@@ -895,7 +895,7 @@
                             style="width: 65px; height: 65px;">
                         <div class="ps-4">
                             <h5 class="mb-1">Brandonmazy</h5>
-                            <a href="https://www.fiverr.com/bestdevever"> <span>United States</span> </a>
+                            <a href="https://www.fiverr.com/bestdevever" target="_blank"> <span>United States</span> </a>
                         </div>
                     </div>
                 </div>
@@ -908,7 +908,7 @@
                             style="width: 65px; height: 65px;">
                         <div class="ps-4">
                             <h5 class="mb-1">ciappolo</h5>
-                            <a href="https://www.fiverr.com/bestdevever"> <span>Italy</span> </a>
+                            <a href="https://www.fiverr.com/bestdevever" target="_blank"> <span>Italy</span> </a>
                         </div>
                     </div>
                 </div>
@@ -920,7 +920,7 @@
                             style="width: 65px; height: 65px;">
                         <div class="ps-4">
                             <h5 class="mb-1">brandonmazy</h5>
-                            <a href="https://www.fiverr.com/bestdevever"> <span>United States</span> </a>
+                            <a href="https://www.fiverr.com/bestdevever" target="_blank"> <span>United States</span> </a>
                         </div>
                     </div>
                 </div>
@@ -932,7 +932,7 @@
                             style="width: 65px; height: 65px;">
                         <div class="ps-4">
                             <h5 class="mb-1">adair_j</h5>
-                            <a href="https://www.fiverr.com/bestdevever"> <span>United States</span> </a>
+                            <a href="https://www.fiverr.com/bestdevever" target="_blank"> <span>United States</span> </a>
                         </div>
                     </div>
                 </div>
@@ -1002,7 +1002,7 @@
                                     aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
-                        <a href="https://www.fiverr.com/bestdevever"
+                        <a href="https://www.fiverr.com/bestdevever" target="_blank"
                             class="btn btn-primary py-sm-3 px-sm-5 rounded-pill mt-3">Lets Connect</a>
                     </div>
                     <div class="col-lg-6 wow animate__animated animate__slideInRight" data-wow-duration="2s">
