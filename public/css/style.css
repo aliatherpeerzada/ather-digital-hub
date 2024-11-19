@@ -50,7 +50,7 @@ h6,
 }
 
 
-/*** Button ***/
+/*** .fancy-button ***/
 .btn {
     font-weight: 500;
     transition: .5s;
@@ -448,7 +448,7 @@ h6,
 
 /*** Newsletter ***/
 .newsletter {
-    margin: 6rem 0;
+    margin: 0rem 0;
     background:
         url(../img/blob-top-left.png),
         url(../img/blob-top-right.png),
@@ -468,6 +468,11 @@ h6,
 /*** Testimonial ***/
 .testimonial-carousel .testimonial-item {
     padding: 0 30px 30px 30px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    min-height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .testimonial-carousel .owl-nav {
@@ -509,24 +514,12 @@ h6,
     background: var(--primary);
 }
 
-
-/*** Footer ***/
-.footer {
-    margin-top: 6rem;
-    padding-top: 9rem;
-    /* background:
-        url(../img/bg-top.png),
-        url(../img/map.png);
-    background-position:
-        center top,
-        center center;
-    background-repeat: no-repeat; */
-}
+ 
 
 .footer .btn.btn-social {
     margin-right: 5px;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -565,7 +558,7 @@ h6,
 }
 
 .footer .copyright {
-    padding: 25px 0;
+    padding: 15px 0;
     font-size: 14px;
     border-top: 1px solid rgba(256, 256, 256, .1);
 }
@@ -580,11 +573,11 @@ h6,
     border-right: 1px solid rgba(255, 255, 255, .1);
 }
 
-.footer .footer-menu a:last-child {
+/* .footer .footer-menu a:last-child {
     margin-right: 0;
     padding-right: 0;
     border-right: none;
-}
+} */
 
 .footer .copyright a:hover,
 .footer .footer-menu a:hover {
@@ -675,6 +668,7 @@ h6,
   .advertisers-service-sec p {
     color: #575a7b;
     font-size: 15px;
+    height: 160px;
     line-height: 1.6;
     letter-spacing: 0.03em;
     z-index: 3;
@@ -716,4 +710,130 @@ h6,
     color: #f0f0f0;
   }
   /* ADVERTISERS SERVICE CARD ENDED */
+  
+/* From Uiverse.io by Creatlydev */ 
+.fancy-button {
+    
+    position: sticky;
+    bottom: 0; /* Fix the button to the bottom */
+    left: 50%;
+    transform: translateX(-50%); 
+    line-height: 1;
+    text-decoration: none;
+    display: inline-flex;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: var(--clr);
+    color: #ffffff;
+    border-radius: 10rem;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    padding-left: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
    
+    transition: background-color 0.3s;
+  }
+  
+  .fancy-button__icon-wrapper {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    color: var(--clr);
+    background-color: #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+  
+  .fancy-button:hover {
+    background-color: #ffffff;
+  }
+  
+  .fancy-button:hover .fancy-button__icon-wrapper {
+    color: #000;
+  }
+  
+  .fancy-button__icon-svg--copy {
+    position: absolute;
+    transform: translate(-150%, 150%);
+  }
+  
+  .fancy-button:hover .fancy-button__icon-svg:first-child {
+    transition: transform 0.3s ease-in-out;
+    transform: translate(150%, -150%);
+  }
+  
+  .fancy-button:hover .fancy-button__icon-svg--copy {
+    transition: transform 0.3s ease-in-out 0.1s;
+    transform: translate(0);
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+  #particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #b61924;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  
+  /* ---- stats.js ---- */
+  
+  .count-particles{
+    background: #000022;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 80px;
+    color: #13E8E9;
+    font-size: .8em;
+    text-align: left;
+    text-indent: 4px;
+    line-height: 14px;
+    padding-bottom: 2px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+  }
+  
+  .js-count-particles{
+    font-size: 1.1em;
+  }
+  
+  #stats,
+  .count-particles{
+    -webkit-user-select: none;
+  }
+  
+  #stats{
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+  }
+  
+  .count-particles{
+    border-radius: 0 0 3px 3px;
+  }
+
+  .fa-quote-left{
+    font-weight: bold;
+    color: #FFFFFF !important;
+    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
+  }
