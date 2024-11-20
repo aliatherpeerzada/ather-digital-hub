@@ -2,8 +2,39 @@
 <html lang="en">
 
 
-<x-front-header />
+@section('seoMeta')
+<meta http-equiv="Cache-Control" content="max-age=31536000">
+<title>#1 In Software Development Company In World | Empowering IT World</title>
+<meta name="description" content="Discover the #1 software development company in the world, empowering the IT industry with innovative solutions, cutting-edge technology, and expert services to drive business growth and digital transformation.">
+<link rel="canonical" href="{{url('/')}}" />
 
+<link rel="apple-touch-icon" sizes="76x76" href="{{URL::asset('apple-touch-icon.png')}}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{URL::asset('favicon-32x32.png')}}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{URL::asset('favicon-16x16.png')}}">
+
+<link rel="manifest" href="{{URL::asset('site.webmanifest')}}">
+ 
+ 
+<meta name="msapplication-TileColor" content="#6222cc">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="#1 In Software Development Company In World | Empowering IT World" />
+<meta property="og:description" content="Discover the #1 software development company in the world, empowering the IT industry with innovative solutions, cutting-edge technology, and expert services to drive business growth and digital transformation." />
+<meta property="og:url" content="{{url('/')}}" />
+<meta property="og:site_name" content="Ather Digital Hub" />
+<meta property="og:updated_time" content="2024-11-20 12:08:59" />
+<meta property="og:image" content="{{URL::asset('img/social_media.jpg')}}" />
+<meta property="og:image:secure_url" content="{{url('/')}}" />
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="World No 1 Custom Development Solution Company" />
+<meta property="og:image:type" content="image/jpg" />
+ 
+@endsection
+
+<x-front-header />
 <body>
     <div class="   p-0" style="background-color: #f1f1f1;">
         <!-- Spinner Start -->
@@ -41,7 +72,7 @@
                                 Us</a>
                             {{-- <a href="" class="btn btn-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a> --}}
                         </div>
-                        <div class="col-lg-6 text-center text-lg-start">
+                        <div class="col-lg-6 text-center text-lg-start wow animate__animated animate__slideInRight" data-wow-duration="1s">
 
                             <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 889 634" width="700"
                                 height="634">
@@ -531,7 +562,8 @@
         </div>
 
 
-        <section id="advertisers" class="advertisers-service-sec pt-5 pb-5">
+    
+        <section id="services" class="advertisers-service-sec pt-5 pb-5">
             <div class="container">
                 <div class="row">
                     <div class="section-header text-center">
@@ -810,7 +842,7 @@
         </section>
         <!-- Feature End -->
     <!-- Testimonial Start -->
-    <div class=" py-5 wow fadeInUp" data-wow-delay="0.1s" style="    background-color: #6222cc;">
+    <div id="testimonials" class=" py-5 wow fadeInUp" data-wow-delay="0.1s" style="    background-color: #6222cc;">
         <div class="container  px-lg-5">
             <p class="section-title text-secondary justify-content-center wow animate__animated animate__bounceInDown"
                 data-wow-duration="1s"><span></span>Testimonial<span></span>
@@ -822,7 +854,7 @@
 
 
                 <div class="testimonial-item bg-light rounded my-4">
-                    <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>They worked
+                    <p class="fs-5"><i class="fa fa-quote-left fa-4x   mt-n4 me-3"></i>They worked
                         well with the team to make sure the integration was customised to our exact specification.
                         👌🏽</p>
                     <div class="d-flex align-items-center">
@@ -835,7 +867,7 @@
                     </div>
                 </div>
                 <div class="testimonial-item bg-light rounded my-4">
-                    <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Thank you very
+                    <p class="fs-5"><i class="fa fa-quote-left fa-4x   mt-n4 me-3"></i>Thank you very
                         much, everything was resolved quickly and efficiently, that's what I would like to
                         highlight. </p>
                     <div class="d-flex align-items-center">
@@ -848,7 +880,7 @@
                     </div>
                 </div>
                 <div class="testimonial-item bg-light rounded my-4">
-                    <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Great
+                    <p class="fs-5"><i class="fa fa-quote-left fa-4x   mt-n4 me-3"></i>Great
                         experience with him. Recommended </p>
                     <div class="d-flex align-items-center">
                         <img class="img-fluid flex-shrink-0 rounded-circle" src="img/user.svg"
@@ -860,7 +892,7 @@
                     </div>
                 </div>
                 <div class="testimonial-item bg-light rounded my-4">
-                    <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Very reliable
+                    <p class="fs-5"><i class="fa fa-quote-left fa-4x   mt-n4 me-3"></i>Very reliable
                         web developer, knowing what he does. He managed to develop even challenging parts of our...
                     </p>
                     <div class="d-flex align-items-center">
@@ -873,7 +905,7 @@
                     </div>
                 </div>
                 <div class="testimonial-item bg-light rounded my-4">
-                    <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Awesome and
+                    <p class="fs-5"><i class="fa fa-quote-left fa-4x   mt-n4 me-3"></i>Awesome and
                         fast response.
 
                     </p>
@@ -887,7 +919,7 @@
                     </div>
                 </div>
                 <div class="testimonial-item bg-light rounded my-4">
-                    <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>I had the
+                    <p class="fs-5"><i class="fa fa-quote-left fa-4x   mt-n4 me-3"></i>I had the
                         pleasure of working with Bestdevever on several recent projects and was extremely impressed
                         ...</p>
                     <div class="d-flex align-items-center">
@@ -900,7 +932,7 @@
                     </div>
                 </div>
                 <div class="testimonial-item bg-light rounded my-4">
-                    <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Second order
+                    <p class="fs-5"><i class="fa fa-quote-left fa-4x   mt-n4 me-3"></i>Second order
                         made to Bestdevever, always fast and accurate, by now I will only use him for all my future
                         projects.</p>
                     <div class="d-flex align-items-center">
@@ -913,7 +945,7 @@
                     </div>
                 </div>
                 <div class="testimonial-item bg-light rounded my-4">
-                    <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>He is GREAT!!!
+                    <p class="fs-5"><i class="fa fa-quote-left fa-4x   mt-n4 me-3"></i>He is GREAT!!!
                         Every project Great!! Must use him you will be glad you did!!!</p>
                     <div class="d-flex align-items-center">
                         <img class="img-fluid flex-shrink-0 rounded-circle" src="img/user.svg"
@@ -925,7 +957,7 @@
                     </div>
                 </div>
                 <div class="testimonial-item bg-light rounded my-4">
-                    <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Bestdevever
+                    <p class="fs-5"><i class="fa fa-quote-left fa-4x   mt-n4 me-3"></i>Bestdevever
                         was very easy to work with and was able to execute every request. He works fast...</p>
                     <div class="d-flex align-items-center">
                         <img class="img-fluid flex-shrink-0 rounded-circle" src="img/user.svg"
@@ -945,7 +977,7 @@
     <!-- Testimonial End -->
 
         <!-- About Start -->
-        <div class=" py-5">
+        <div id="about-us" class=" py-5">
             <div class="container py-5 px-lg-5">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6 wow animate__animated animate__slideInLeft" data-wow-duration="2s">
@@ -1047,7 +1079,7 @@
         </div>
         <!-- Facts End -->
 
-        <div class="    wow animate__animated animate__fadeInDown" data-wow-duration="2s">
+        <div id="projects" class="    wow animate__animated animate__fadeInDown" data-wow-duration="2s">
             <div class="container py-5 px-lg-5">
                 <div>
                     <p class="section-title text-secondary justify-content-center"><span></span>Our
@@ -1076,7 +1108,7 @@
                                 </div>
                             </div>
                             <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">UI / UX Design</p>
+                                <p class="  fw-medium mb-2">UI / UX Design</p>
                                 <h5 class="lh-base mb-0">Digital Agency Website Design And Development</a>
                             </div>
                         </div>
@@ -1175,33 +1207,92 @@
         <!-- Newsletter Start -->
         <div class=" bg-primary newsletter py-5 wow fadeInUp" data-wow-delay="0.1s">
             <div class="container py-5 px-lg-5">
-                <div class="row justify-content-center">
-                    <div class="col-lg-7 text-center">
-                        <p class="section-title text-white justify-content-center"><span></span>Newsletter<span></span>
-                        </p>
-                        <h1 class="text-center text-white mb-4">Stay Always In Touch</h1>
 
-                        <div class="position-relative w-100 mt-3">
-                            <form method="get" action="">
-                                <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
-                                    placeholder="Enter Your Email" style="height: 48px;">
-                                <button type="submit"
-                                    class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
-                                        class="fa fa-paper-plane text-primary fs-4"></i></button>
-                            </form>
-                        </div>
+                <div class="row mt-5 ">
+                    <div class="section-header text-center">
+                        <h2 class="text-white fw-bold fs-1 wow animate__animated animate__bounceInDown" data-wow-duration="1s">
+                            Contact
+                            <span class="b-class-secondary">Us </span>
+                        </h2>
+
                     </div>
                 </div>
+                <div class="row justify-content-center py-5">
+                    <div class="container contact-form-container">
+                        <div class="contact-form-card">
+                          <!-- Left Section with Engaging Content -->
+                          <div class="content-section">
+                            <h2 class="form-title">Ready to Grow Your Business?</h2>
+                            <p class="form-description mt-5">
+                              Our expert team is ready to help you achieve your goals. Whether you're looking to increase sales, streamline processes, or build custom software solutions, we're here for you. Let’s work together to create the perfect solution for your business.
+                            </p>
+                            <p>
+                              Fill out the form on the right to get started. We’re excited to help you grow your business and see measurable results.
+                            </p>
+                          </div>
+                      
+                          <!-- Right Section with the Form -->
+                          <div class="form-section">
+                            <h3 class="form-title text-dark">Get in Touch</h3>
+                            <form action="#" method="POST">
+                              <!-- Name Field -->
+                              <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required>
+                              </div>
+                      
+                              <!-- Email Field -->
+                              <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address" required>
+                              </div>
+                              <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="number" class="form-control" id="number" name="number" placeholder="Enter your phone number" required>
+                              </div>
+                      
+                              <!-- Message Field -->
+                              <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="4" placeholder="Tell us how we can help you" required></textarea>
+                              </div>
+                      
+                              <!-- Submit Button -->
+                              <a href="javascript:void(0)" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block" style="color: var(--dark);
+                                 background: var(--secondary);">Submit</a>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+
+
+               
+              
             </div>
         </div>
         <!-- Newsletter End -->
 
        
+        <div class="row p-5 justify-content-center" style="box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;">
+            <div class="col-lg-7 text-center">
+                <p class="section-title text-secondary justify-content-center   wow animate__animated animate__fadeInDown" data-wow-duration="2s"><span></span>Newsletter<span></span>
+                </p>
+                <h1 class="text-center   mb-4 wow animate__animated animate__fadeInDown" data-wow-duration="6s">Always Stay In Touch</h1>
 
-        <!-- Projects Start -->
+                <div class="position-relative w-100 mt-3">
+                    <form method="get" action="">
+                        <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
+                            placeholder="Enter Your Email" style="height: 48px;">
+                        <button type="submit"
+                            class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
+                                class="fa fa-paper-plane text-primary fs-4"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
 
-        <!-- Projects End -->
-
+        
 
     
 
