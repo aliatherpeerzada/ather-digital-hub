@@ -71,7 +71,7 @@
                 <div data-aos="fade-down" data-aos-duration="3000"
                     class="technology d-flex justify-content-center align-items-center">
                     <div class="technologyBox rounded-circle d-flex justify-content-center align-items-center">
-                        <img src={{ URL::asset('programming/reactjs.png') }} />
+                        <img src={{ URL::asset('programming/reactJs.png') }} />
                     </div>
                     <div
                         class="textHost rounded-2 px-3  position-absolute bg-secondary d-flex justify-content-center align-items-center">
