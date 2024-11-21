@@ -15,7 +15,7 @@
                     <a href="/" class="nav-item nav-link active">Home</a>
                     <a href="#about-us" class="nav-item nav-link">About</a>
                     <a href="#services" class="nav-item nav-link">Service</a>
-                    <a href="#projects" class="nav-item nav-link">Project</a>
+                    {{-- <a href="#projects" class="nav-item nav-link">Project</a> --}}
                      {{-- <a href="#" class="nav-item nav-link">Contact</a> --}}
                 </div>
                 <a href="#contact" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Get Started</a>

@@ -839,11 +839,24 @@ h6,
     color: #000;
     margin-bottom: 20px;
   }
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
   .form-control {
     border-radius: 8px;
     box-shadow: none;
     border: 1px solid #ddd;
+   
+  }
+  .form-group{
     margin-bottom: 20px;
   }
 
@@ -869,4 +882,11 @@ h6,
     .content-section, .form-section {
       padding: 20px;
     }
+  }
+
+
+  #particles-js{
+    width: 100%;
+    opacity: .4;
+    height: 100%;
   }
