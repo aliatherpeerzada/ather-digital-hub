@@ -127,8 +127,7 @@
 
     .Technologies::after {
         content: '';
-        background-image: url('../assets/techs/techs.png');
-        background-size: cover;
+         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         position: absolute;
@@ -171,7 +170,7 @@
     }
 
     .my-slider .textHost {
-        top: -3px;
+        top: 1px;
         padding-top: 2px;
         border-bottom: 2px solid var(--baseColor1);
         /* padding-bottom: 2px; */

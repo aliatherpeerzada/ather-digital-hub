@@ -110,4 +110,4 @@ particlesJS("particles-js", {
 
 });
 
-particlesJS.lead('portfolio-canvas', {})
+ 
