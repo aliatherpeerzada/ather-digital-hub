@@ -39,6 +39,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(['middleware' => 'auth'],function (){
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
     Route::get('/admin/dashboard',[AdminController::class,'dashboard'])->name('dashboard');
+    Route::delete('/admin/newsletter/delete/{id}',[FormController::class,'newsletter_delete'])->name('newsletter.delete');
+    Route::delete('/admin/contact/delete/{id}',[FormController::class,'contact_delete'])->name('contact.delete');
 
 });
         

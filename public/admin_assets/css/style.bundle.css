@@ -49583,8 +49583,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: #fca503; */
-    background-color: black;
+    
 }
 @media (min-width: 992px) {
     .header {

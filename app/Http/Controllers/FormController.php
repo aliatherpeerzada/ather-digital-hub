@@ -54,14 +54,15 @@ class FormController extends Controller
             'message' => 'required',
         ]);
          
-        Contact::create($data);
-
+       Contact::create($data);
+ 
+        SendMailJob::dispatchAfterResponse($data, 'contact');
          
         return back()->with('message', 'Contact Submitted successfully');
     }
 
 
-    public function admin_contact_delete($id)
+    public function contact_delete($id)
     {
         $contact = Contact::find($id);
         $contact->delete();
@@ -78,28 +79,28 @@ class FormController extends Controller
         ]);
 
         if (Newsletter::where('subscription_email', $request->subscription_email)->exists()) {
-            return back()->with('message', 'Newsletter subscription successful');
+            return back()->with('message', 'Newsletter subscription successfull');
         }
 
 
         if (str_contains(strtolower($request->subscription_email), 'xyz.com')) {
-            return back()->with('message', 'Contact Submitted successfully');
+            return back()->with('message', 'Newsletter subscription successfull');
         }
 
         if ($this->check_email($request->subscription_email)) {
 
-            return redirect()->back()->with('message', 'Newsletter subscription successful');
+            return redirect()->back()->with('message', 'Newsletter subscription successfull');
         }
 
 
         Newsletter::create($data);
-        // SendMailJob::dispatchAfterResponse($data, 'newsletter');
+        SendMailJob::dispatchAfterResponse($data, 'newsletter');
 
         return back()->with('message', 'Newsletter subscription successful');
     }
 
 
-    public function admin_news_delete($id)
+    public function newsletter_delete($id)
     {
         $newsletter = Newsletter::find($id);
         $newsletter->delete();

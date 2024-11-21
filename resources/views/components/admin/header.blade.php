@@ -4,7 +4,7 @@
         <!--begin::Logo-->
         <a href="{{route('dashboard')}}">
 
-            <img alt="Logo" src="{{asset('assets/images/nav_logo.png')}}" class="w-100 h-50px">
+            <img alt="Logo" src="{{asset('img/logo.png')}}" class="w-100 h-50px">
         </a>
 
         <style>
@@ -59,13 +59,13 @@
     </div>
     <!--end::Brand-->
     <!--begin::Toolbar-->
-    <div class="toolbar d-flex align-items-stretch" style="background-color: black;color:white">
+    <div class="toolbar d-flex align-items-stretch">
         <!--begin::Toolbar container-->
         <div class="container-fluid py-6 py-lg-0 d-flex flex-column flex-lg-row align-items-lg-stretch justify-content-lg-between">
             <!--begin::Page title-->
             <div class="page-title d-flex justify-content-center flex-column me-5">
                 <!--begin::Title-->
-                <h1 class="d-flex flex-column text-white fw-bolder fs-3 mb-0">Dashboard</h1>
+                <h1 class="d-flex flex-column text-dark fw-bolder fs-3 mb-0 ">Dashboard</h1>
                 <!--end::Title-->
                 <!--begin::Breadcrumb-->
 

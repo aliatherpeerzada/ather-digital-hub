@@ -3,7 +3,7 @@
 
 <head>
     <base href="{{ url('/') }}">
-    <title>Kore Consulting</title>
+    <title>Ali Ather Hub</title>
     <meta charset="utf-8" />
 
     <link rel="shortcut icon" href="{{asset('favicon.png')}}" />
