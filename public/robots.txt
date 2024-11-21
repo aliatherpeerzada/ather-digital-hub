@@ -7,4 +7,5 @@ Disallow: /login/
 Allow: /public/
 Allow: /images/
 
-# Provide the URL of your sitemap 
+# Provide the URL of your sitemap
+Sitemap: https://www.atherdigitalhub.com/sitemap.xml
