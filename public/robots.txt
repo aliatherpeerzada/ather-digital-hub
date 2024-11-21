@@ -1,5 +1,11 @@
+# Allow all search engines to crawl the entire website
 User-agent: *
 Disallow: /admin/
 Disallow: /login/
+
+# Allow access to specific directories or files if needed
 Allow: /public/
-Sitemap: https://www.yourwebsite.com/sitemap.xml
+Allow: /images/
+
+# Provide the URL of your sitemap
+Sitemap: https://www.atherdigitalhub.com/sitemap.xml
