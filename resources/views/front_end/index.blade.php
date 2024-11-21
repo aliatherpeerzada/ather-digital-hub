@@ -707,7 +707,7 @@
             </div>
         </div> --}}
 
-        
+        <x-technologie />
 
 
         <!-- Newsletter Start -->
