@@ -10,7 +10,7 @@
     <link rel="canonical" href="{{ url('/') }}" />
     <link rel="icon" href="favicon-96x96.png" sizes="96x96" type="image/png">
 
-    <link rel="apple-touch-icon" sizes="96x96" href="{{ URL::asset('apple-touch-icon.png') }}">
+
     <link rel="apple-touch-icon" sizes="76x76" href="{{ URL::asset('apple-touch-icon.png') }}">
     {{-- <link rel="icon" type="image/png" sizes="32x32" href="{{ URL::asset('favicon-32x32.png') }}"> --}}
     <link rel="icon" type="image/png" sizes="32x32" href="{{ URL::asset('favicon-32x32.png') }}">
