@@ -38,14 +38,14 @@ class SendMailJob implements ShouldQueue
         switch ($this->form_type) {
             case 'contact':
                 
-                Mail::to('intern.9@fossphorus.com')->send(new ContactMail($this->data));
+                Mail::to('aliatherse@gmail.com')->send(new ContactMail($this->data));
                  
                 Mail::to($this->data['email'])->send(new ContactConfirmMail($this->data));
                 break;
 
             case 'newsletter':
                 
-                Mail::to('intern.9@fossphorus.com')->send(new NewsletterMail($this->data));
+                Mail::to('aliatherse@gmail.com')->send(new NewsletterMail($this->data));
 
 
                 Mail::to($this->data['subscription_email'])->send(new NewsletterConfirmMail($this->data));

@@ -28,7 +28,8 @@ class FormController extends Controller
         //     return back()->withErrors(['captcha' => 'Captcha verification failed. Please try again.']);
         // }
 
-        $restrictedWords = ['SEO', 'marketing', 'social media marketing', 'betting', 'promotional', 'advertising', 'content marketing', 'email marketing', 'lead generation', 'content', 'branding', 'copywriting', 'email', 'website', 'landing page',];
+        $restrictedWords = [];
+        // $restrictedWords = ['SEO', 'marketing', 'social media marketing', 'betting', 'promotional', 'advertising', 'content marketing', 'email marketing', 'lead generation', 'content', 'branding', 'copywriting', 'email', 'website', 'landing page',];
         $messageContent = strtolower($request->message);
 
         // Check if the message content contains any restricted words
