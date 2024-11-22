@@ -8,7 +8,7 @@
     <meta name="description"
         content="Discover the #1 software development company in the world, empowering the IT industry with innovative solutions, cutting-edge technology, and expert services to drive business growth and digital transformation.">
     <link rel="canonical" href="{{ url('/') }}" />
-    <link rel="icon" href="favicon-96x96.png" sizes="96x96" type="image/png">
+    <link rel="icon" href="{{ URL::asset('favicon-96x96.png')}}" sizes="96x96" type="image/png">
 
 
     <link rel="apple-touch-icon" sizes="76x76" href="{{ URL::asset('apple-touch-icon.png') }}">
