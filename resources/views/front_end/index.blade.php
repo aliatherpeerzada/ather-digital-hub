@@ -9,11 +9,13 @@
         content="Discover the #1 software development company in the world, empowering the IT industry with innovative solutions, cutting-edge technology, and expert services to drive business growth and digital transformation.">
     <link rel="canonical" href="{{ url('/') }}" />
 
+    <link rel="apple-touch-icon" sizes="96x96" href="{{ URL::asset('apple-touch-icon.png') }}">
     <link rel="apple-touch-icon" sizes="76x76" href="{{ URL::asset('apple-touch-icon.png') }}">
+    {{-- <link rel="icon" type="image/png" sizes="32x32" href="{{ URL::asset('favicon-32x32.png') }}"> --}}
     <link rel="icon" type="image/png" sizes="32x32" href="{{ URL::asset('favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ URL::asset('favicon-16x16.png') }}">
     <meta name="keywords" content="website designing, website development, WordPress development, Wix development, Squarespace development, software application development, mobile app development, Odoo integration, Xero integration, Zoho integration, Mailchimp integration, custom software solutions, mobile app development company, responsive website design, web development services, digital transformation, eCommerce development, CMS development, SEO-friendly websites, professional website design, SaaS development, cloud software development, UI/UX design, web development agency, Odoo ERP, Xero accounting software, Zoho CRM, integrated software solutions, cross-platform app development">
-    <link rel="icon" href="{{ URL::asset('favicon.svg') }}" sizes="96x96" type="image/svg+xml">
+    {{-- <link rel="icon" href="{{ URL::asset('favicon.svg') }}" sizes="96x96" type="image/svg+xml"> --}}
     <link rel="icon" href="{{ URL::asset('favicon.svg') }}" type="image/svg+xml">
 
     <link rel="manifest" href="{{ URL::asset('site.webmanifest') }}">
