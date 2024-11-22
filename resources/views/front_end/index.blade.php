@@ -18,7 +18,7 @@
     <meta name="keywords" content="website designing, website development, WordPress development, Wix development, Squarespace development, software application development, mobile app development, Odoo integration, Xero integration, Zoho integration, Mailchimp integration, custom software solutions, mobile app development company, responsive website design, web development services, digital transformation, eCommerce development, CMS development, SEO-friendly websites, professional website design, SaaS development, cloud software development, UI/UX design, web development agency, Odoo ERP, Xero accounting software, Zoho CRM, integrated software solutions, cross-platform app development">
     {{-- <link rel="icon" href="{{ URL::asset('favicon.svg') }}" sizes="96x96" type="image/svg+xml"> --}}
     <link rel="icon" href="{{ URL::asset('favicon.svg') }}" type="image/svg+xml">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{ URL::asset('favicon.ico')}}" type="image/x-icon">
 
     <link rel="manifest" href="{{ URL::asset('site.webmanifest') }}">
 
