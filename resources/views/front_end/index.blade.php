@@ -13,6 +13,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ URL::asset('favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ URL::asset('favicon-16x16.png') }}">
     <meta name="keywords" content="website designing, website development, WordPress development, Wix development, Squarespace development, software application development, mobile app development, Odoo integration, Xero integration, Zoho integration, Mailchimp integration, custom software solutions, mobile app development company, responsive website design, web development services, digital transformation, eCommerce development, CMS development, SEO-friendly websites, professional website design, SaaS development, cloud software development, UI/UX design, web development agency, Odoo ERP, Xero accounting software, Zoho CRM, integrated software solutions, cross-platform app development">
+    <link rel="icon" href="{{ URL::asset('favicon.svg') }}" sizes="96x96" type="image/svg+xml">
+    <link rel="icon" href="{{ URL::asset('favicon.svg') }}" type="image/svg+xml">
 
     <link rel="manifest" href="{{ URL::asset('site.webmanifest') }}">
 
@@ -46,15 +48,7 @@
     }
     </script>
 @endsection
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-62XFM2N3Q0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-62XFM2N3Q0');
-</script>
 <x-front-header />
 
 <body>
