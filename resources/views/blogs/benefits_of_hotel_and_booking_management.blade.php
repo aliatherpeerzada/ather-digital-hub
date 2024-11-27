@@ -31,7 +31,7 @@
     <meta property="og:title" content="The Benefits of a Hotel and Booking Management System" />
     <meta property="og:description"
         content="Discover the #1 software development company in the world, empowering the IT industry with innovative solutions, cutting-edge technology, and expert services to drive business growth and digital transformation." />
-    <meta property="og:url" content="{{ url('/') }}" />
+    <meta property="og:url" content="{{ url('the-benefits-of-a-hotel-and-booking-management-system') }}" />
     <meta property="og:site_name" content="Ather Digital Hub" />
     <meta property="og:updated_time" content="2024-11-20 12:08:59" />
     <meta property="og:image" content="{{ asset('img/blogs/hotel-and-booking-managemeny-system-by-ather-digital-hub.jpg') }}" />
