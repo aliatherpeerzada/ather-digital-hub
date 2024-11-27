@@ -107,7 +107,7 @@
                                     class="img-fluid" alt=""> </a>
 
                             <div class="data">
-                                <a href="#">
+                                <a href="{{URL('the-benefits-of-a-hotel-and-booking-management-system')}}">
                                     <div class="content">
                                         <span class="author">27 November, 2024</span>
                                         <h2 class="title"> The Benefits of a Hotel and Booking
@@ -121,6 +121,7 @@
                                             business operations. But the real game-changer? Developing it in Laravel
                                             with
                                             the expertise of Ather Digital Hub.</p>
+                                     
 
                                     </div>
                                 </a>
