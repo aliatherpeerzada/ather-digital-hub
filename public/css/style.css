@@ -45,7 +45,9 @@ h4,
 .fw-semi-bold {
     font-weight: 600 !important;
 }
-
+h1 span{
+    color: var(--secondary) !important;
+}
 h5,
 h6,
 .fw-medium {
@@ -795,7 +797,7 @@ h6,
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
     padding: 20px;
   }
 

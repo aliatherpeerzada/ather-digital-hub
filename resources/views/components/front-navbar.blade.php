@@ -12,9 +12,18 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav mx-auto py-0">
-                    <a href="/" class="nav-item nav-link active">Home</a>
+                    <a href="/" class="nav-item nav-link @if (Request::fullUrl() == url('home'))
+                    active
+                    @endif" 
+                    
+>Home</a>
                     <a href="#about-us" class="nav-item nav-link">About</a>
                     <a href="#services" class="nav-item nav-link">Service</a>
+                    <a href="{{URL('blog')}}" class="nav-item nav-link   @if (Request::fullUrl() == url('blog'))
+                    active
+                    @endif"
+                  
+                    >Our Blogs</a>
                     {{-- <a href="#projects" class="nav-item nav-link">Project</a> --}}
                      {{-- <a href="#" class="nav-item nav-link">Contact</a> --}}
                 </div>

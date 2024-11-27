@@ -33,14 +33,26 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
         Route::get('testimonial', function(){
             return view('front_end.testimonial');
         });
+        Route::get('blog', function(){
+            return view('front_end.blog');
+        });
+        Route::get('blog-detail', function(){
+            return view('front_end.blog-detail');
+        });
+
+        Route::get('the-benefits-of-a-hotel-and-booking-management-system',function(){
+            return view('blogs.benefits_of_hotel_and_booking_management');
+        });
+
+
 
         Route::post('/contact/store',[FormController::class,'contact_store'])->name('contact.store');
         Route::post('/newsletter/store',[FormController::class,'news_letter_store'])->name('newsletter.store');
-Route::group(['middleware' => 'auth'],function (){
-    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-    Route::get('/admin/dashboard',[AdminController::class,'dashboard'])->name('dashboard');
-    Route::delete('/admin/newsletter/delete/{id}',[FormController::class,'newsletter_delete'])->name('newsletter.delete');
-    Route::delete('/admin/contact/delete/{id}',[FormController::class,'contact_delete'])->name('contact.delete');
+            Route::group(['middleware' => 'auth'],function (){
+                Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+                Route::get('/admin/dashboard',[AdminController::class,'dashboard'])->name('dashboard');
+                Route::delete('/admin/newsletter/delete/{id}',[FormController::class,'newsletter_delete'])->name('newsletter.delete');
+                Route::delete('/admin/contact/delete/{id}',[FormController::class,'contact_delete'])->name('contact.delete');
 
-});
+            });
         
