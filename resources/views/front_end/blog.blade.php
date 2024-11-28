@@ -7,7 +7,7 @@
     <title>#1 In Software Development Company In World | Empowering IT World</title>
     <meta name="description"
         content="Discover the #1 software development company in the world, empowering the IT industry with innovative solutions, cutting-edge technology, and expert services to drive business growth and digital transformation.">
-    <link rel="canonical" href="{{ url('/') }}" />
+    <link rel="canonical" href="{{ url('/blog') }}" />
     <link rel="icon" href="{{ URL::asset('favicon-96x96.png') }}" sizes="96x96" type="image/png">
 
 
@@ -32,7 +32,7 @@
     <meta property="og:title" content="#1 In Software Development Company In World | Empowering IT World" />
     <meta property="og:description"
         content="Discover the #1 software development company in the world, empowering the IT industry with innovative solutions, cutting-edge technology, and expert services to drive business growth and digital transformation." />
-    <meta property="og:url" content="{{ url('/') }}" />
+    <meta property="og:url" content="{{ url('/blog') }}" />
     <meta property="og:site_name" content="Ather Digital Hub" />
     <meta property="og:updated_time" content="2024-11-20 12:08:59" />
     <meta property="og:image" content="{{ URL::asset('img/social_media.jpg') }}" />
@@ -133,13 +133,13 @@
                 </div>
               
                 <div class="col-md-4">
-
+                    
                     <div class="example-1 card">
                         <div class="wrapper">
                             <a href="{{URL('how-to-earn-extra-money-by-selling-billing-and-invoicing-solutions-as-a-service-by-ather-digital-hub')}}"> <img
-                                    src="{{ asset('img/blogs/how-to-earn-extra-money-by-selling-billing-and-invoicing-solutions-as-a-service-by-ather-digital-hub.jpeg') }}"
-                                    class="img-fluid" alt=""> </a>
-
+                                src="{{ asset('img/blogs/how-to-earn-extra-money-by-selling-billing-and-invoicing-solutions-as-a-service-by-ather-digital-hub.jpeg') }}"
+                                class="img-fluid" alt=""> </a>
+                                
                             <div class="data">
                                 <a href="{{URL('how-to-earn-extra-money-by-selling-billing-and-invoicing-solutions-as-a-service-by-ather-digital-hub')}}">
                                     <div class="content">
@@ -151,13 +151,38 @@
 
                                     </div>
                                 </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="col-md-4">
+
+                    <div class="example-1 card">
+                        <div class="wrapper">
+                            <a href="{{URL('how-to-earn-money-as-a-laravel-developer-a-comprehensive-guide')}}"> <img
+                                    src="{{ asset('img/blogs/how-to-earn-money-by-learning-laravel-development.jpg') }}"
+                                    class="img-fluid" alt=""> </a>
+
+                            <div class="data">
+                                <a href="{{URL('how-to-earn-money-as-a-laravel-developer-a-comprehensive-guide')}}">
+                                    <div class="content">
+                                        <span class="author">26 November, 2024</span>
+                                        <h2 class="title"> How to Earn Money as a Laravel Developer: A Comprehensive Guide
+                                        </h2>
+                                        <p class="text">  Laravel, a powerful PHP framework, has revolutionized web development. Its elegant syntax, robust features, and large community make it a top choice for developers worldwide.</p>
+                                     
+
+                                    </div>
+                                </a>
 
                             </div>
                         </div>
                     </div>
 
                 </div>
-
 
             </div>
         </div>
