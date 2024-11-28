@@ -131,6 +131,32 @@
                     </div>
 
                 </div>
+              
+                <div class="col-md-4">
+
+                    <div class="example-1 card">
+                        <div class="wrapper">
+                            <a href="{{URL('how-to-earn-extra-money-by-selling-billing-and-invoicing-solutions-as-a-service-by-ather-digital-hub')}}"> <img
+                                    src="{{ asset('img/blogs/how-to-earn-extra-money-by-selling-billing-and-invoicing-solutions-as-a-service-by-ather-digital-hub.jpeg') }}"
+                                    class="img-fluid" alt=""> </a>
+
+                            <div class="data">
+                                <a href="{{URL('how-to-earn-extra-money-by-selling-billing-and-invoicing-solutions-as-a-service-by-ather-digital-hub')}}">
+                                    <div class="content">
+                                        <span class="author">28 November, 2024</span>
+                                        <h2 class="title"> How to Earn Extra Money by Selling Billing and Invoicing Solutions as a Service
+                                        </h2>
+                                        <p class="text"> In today’s fast-paced digital economy, businesses of all sizes need efficient billing and invoicing solutions to streamline their financial operations. Entrepreneurs and tech enthusiasts can seize this opportunity by offering billing and invoicing solutions as a service. Not only is this a lucrative income stream, but it also helps businesses save time, reduce errors, and enhance their cash flow management.</p>
+                                     
+
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
 
 
             </div>

@@ -43,6 +43,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
         Route::get('the-benefits-of-a-hotel-and-booking-management-system',function(){
             return view('blogs.benefits_of_hotel_and_booking_management');
         });
+        Route::get('how-to-earn-extra-money-by-selling-billing-and-invoicing-solutions-as-a-service-by-ather-digital-hub',function(){
+            return view('blogs.how_to_earn_extra_money_by_selling_billing_and_invoicing_solutions_as_a_service_by_ather_digital_hub');
+        });
 
 
 
