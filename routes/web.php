@@ -49,6 +49,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
         Route::get('how-to-earn-money-as-a-laravel-developer-a-comprehensive-guide',function(){
             return view('blogs.how_to_earn_money_as_a_laravel_developer_a_comprehensive_guide');
         });
+        Route::get('laravel-vs-wordpress-why-laravel-is-ideal-for-erp-systems-and-how-ather-digital-hub-sets-itself-apart',function(){
+            return view('blogs.laravel_vs_wordpress_why_laravel_is_ideal_for_erp_systems_and_how_ather_digital_hub_sets_itself_apart');
+        });
 
 
 

@@ -102,6 +102,38 @@
 
                     <div class="example-1 card">
                         <div class="wrapper">
+                            <a href="{{URL('laravel-vs-wordpress-why-laravel-is-ideal-for-erp-systems-and-how-ather-digital-hub-sets-itself-apart')}}"> <img
+                                    src="{{ asset('img/blogs/laravel_vs_wordpress_why_laravel_is_ideal_for_erp_systems_and_how_ather_digital_hub_sets_itself_apart.jpg') }}"
+                                    class="img-fluid" alt=""> </a>
+
+                            <div class="data">
+                                <a href="{{URL('laravel-vs-wordpress-why-laravel-is-ideal-for-erp-systems-and-how-ather-digital-hub-sets-itself-apart')}}">
+                                    <div class="content">
+                                        <span class="author">30 November, 2024</span>
+                                        <h2 class="title"> 
+                                            Laravel vs WordPress: Why Laravel is Ideal for ERP Systems and How Ather Digital Hub Sets Itself Apart
+                                        </h2>
+                                        <p class="text"> In today’s fast-paced and highly competitive hospitality
+                                            industry, a Hotel and Booking Management System is no longer a luxury—it’s a
+                                            necessity. Whether you own a boutique hotel, a large resort, or a chain of
+                                            properties, having an efficient, automated system can revolutionize your
+                                            business operations. But the real game-changer? Developing it in Laravel
+                                            with
+                                            the expertise of Ather Digital Hub.</p>
+                                     
+
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+
+                    <div class="example-1 card">
+                        <div class="wrapper">
                             <a href="{{URL('the-benefits-of-a-hotel-and-booking-management-system')}}"> <img
                                     src="{{ asset('img/blogs/hotel-and-booking-managemeny-system-by-ather-digital-hub.jpg') }}"
                                     class="img-fluid" alt=""> </a>
