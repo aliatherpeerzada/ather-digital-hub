@@ -7,7 +7,7 @@
     <title>The Benefits of a Hotel and Booking Management System</title>
     <meta name="description" content="Discover the key benefits of a hotel and booking management system. Streamline your operations, enhance guest experiences, and improve revenue with powerful software solutions designed for the hospitality industry.">
 
-    <link rel="canonical" href="{{ url('/') }}" />
+    <link rel="canonical" href="{{ url('blog/the-benefits-of-a-hotel-and-booking-management-system') }}" />
     <link rel="icon" href="{{ URL::asset('favicon-96x96.png') }}" sizes="96x96" type="image/png">
 
 

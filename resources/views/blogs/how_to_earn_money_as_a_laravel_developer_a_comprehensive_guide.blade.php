@@ -11,7 +11,7 @@
     <title>How to Earn Money as a Laravel Developer – Complete Guide</title>
 
 
-    <link rel="canonical" href="{{ url('how-to-earn-money-as-a-laravel-developer-a-comprehensive-guide') }}" />
+    <link rel="canonical" href="{{ url('blog/how-to-earn-money-as-a-laravel-developer-a-comprehensive-guide') }}" />
     <link rel="icon" href="{{ URL::asset('favicon-96x96.png') }}" sizes="96x96" type="image/png">
 
 

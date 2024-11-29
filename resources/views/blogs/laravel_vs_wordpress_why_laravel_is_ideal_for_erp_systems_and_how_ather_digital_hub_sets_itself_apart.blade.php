@@ -11,7 +11,7 @@
     <title>Laravel vs WordPress: Why Laravel is Ideal for ERP Systems | Ather Digital Hub</title>
 
 
-    <link rel="canonical" href="{{ url('laravel-vs-wordpress-why-laravel-is-ideal-for-erp-systems-and-how-ather-digital-hub-sets-itself-apart') }}" />
+    <link rel="canonical" href="{{ url('blog/laravel-vs-wordpress-why-laravel-is-ideal-for-erp-systems-and-how-ather-digital-hub-sets-itself-apart') }}" />
     <link rel="icon" href="{{ URL::asset('favicon-96x96.png') }}" sizes="96x96" type="image/png">
 
 
