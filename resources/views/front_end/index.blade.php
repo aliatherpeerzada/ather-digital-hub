@@ -4,7 +4,7 @@
 
 @section('seoMeta')
     <meta http-equiv="Cache-Control" content="max-age=31536000">
-    <title>#1 In Software Development Company In World | Empowering IT World</title>
+    <title>Ather Digital Hub - #1 In Software Development Company In World | Empowering IT World</title>
     <meta name="description"
         content="Discover the #1 software development company in the world, empowering the IT industry with innovative solutions, cutting-edge technology, and expert services to drive business growth and digital transformation.">
     <link rel="canonical" href="{{ url('/') }}" />
