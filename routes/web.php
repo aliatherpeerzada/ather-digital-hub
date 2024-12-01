@@ -54,7 +54,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
         });
 
         Route::get('how-laravel-and-google-translate-api-can-simplify-multilingual-translation-for-your-website',function(){
-            return view('blogs.laravel_vs_wordpress_why_laravel_is_ideal_for_erp_systems_and_how_ather_digital_hub_sets_itself_apart');
+            return view('blogs.leveraging_google_translate_api_with_laravel_for_seamless_multilingual_translation');
         });
 
 
