@@ -102,6 +102,34 @@
 
                     <div class="example-1 card">
                         <div class="wrapper">
+                            <a href="{{URL('how-laravel-and-google-translate-api-can-simplify-multilingual-translation-for-your-website')}}"> <img
+                                    src="{{ asset('img/blogs/laravel-google-api-making-multilingual-simplified.jpg') }}"
+                                    class="img-fluid" alt=""> </a>
+
+                            <div class="data">
+                                <a href="{{URL('how-laravel-and-google-translate-api-can-simplify-multilingual-translation-for-your-website')}}">
+                                    <div class="content">
+                                        <span class="author">02 December, 2024</span>
+                                        <h2 class="title"> 
+                                            How Laravel and Google Translate API Can Simplify Multilingual Translation for Your Website
+                                        </h2>
+                                        <p class="text"> 
+                                            In today’s globalized world, businesses, websites, and applications need to cater to diverse audiences who speak different languages. Offering your content in multiple languages can enhance the user experience and broaden your reach. However, manually translating content can be time-consuming and resource-intensive. Fortunately, combining the power of Laravel, a popular PHP framework, with the Google Translate API provides an efficient and automated solution for multilingual translation.
+                                        </p>
+                                     
+
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+
+                    <div class="example-1 card">
+                        <div class="wrapper">
                             <a href="{{URL('laravel-vs-wordpress-why-laravel-is-ideal-for-erp-systems-and-how-ather-digital-hub-sets-itself-apart')}}"> <img
                                     src="{{ asset('img/blogs/laravel_vs_wordpress_why_laravel_is_ideal_for_erp_systems_and_how_ather_digital_hub_sets_itself_apart.jpg') }}"
                                     class="img-fluid" alt=""> </a>
@@ -164,6 +192,12 @@
 
                 </div>
               
+              
+
+      
+            </div>
+      
+            <div class="row pb-5">
                 <div class="col-md-4">
                     
                     <div class="example-1 card">
@@ -215,8 +249,8 @@
                     </div>
 
                 </div>
-
             </div>
+
         </div>
         <x-contact />
         <div class="row p-5 justify-content-center"

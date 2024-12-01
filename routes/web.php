@@ -53,6 +53,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
             return view('blogs.laravel_vs_wordpress_why_laravel_is_ideal_for_erp_systems_and_how_ather_digital_hub_sets_itself_apart');
         });
 
+        Route::get('how-laravel-and-google-translate-api-can-simplify-multilingual-translation-for-your-website',function(){
+            return view('blogs.laravel_vs_wordpress_why_laravel_is_ideal_for_erp_systems_and_how_ather_digital_hub_sets_itself_apart');
+        });
+
 
 
         Route::post('/contact/store',[FormController::class,'contact_store'])->name('contact.store');
