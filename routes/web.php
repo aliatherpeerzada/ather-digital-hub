@@ -18,9 +18,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
         // Route::get('about', function(){
         //     return view('front_end.about');
         // });
-        // Route::get('/', function(){
-        //     return view('front_end.index');
-        // });
+        Route::get('/', function(){
+            return view('front_end.index');
+        });
         // Route::get('project', function(){
         //     return view('front_end.project');
         // });
