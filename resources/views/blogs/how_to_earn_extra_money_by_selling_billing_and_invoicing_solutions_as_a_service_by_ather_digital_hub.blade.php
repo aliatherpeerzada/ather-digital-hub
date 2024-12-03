@@ -9,7 +9,7 @@
     <meta name="description" content="Discover how to earn extra income by offering billing and invoicing solutions as a service. Learn key steps to get started and how Ather Digital Hub can help you build a scalable, money-generating application.">
     <meta name="keywords" content="billing and invoicing solutions, earn extra income, SaaS business, passive income ideas, custom software development, billing software, invoicing application, Ather Digital Hub, business automation, recurring revenue, small business tools, scalable software solutions, entrepreneurship ideas, cloud-based invoicing">
     
-    <link rel="canonical" href="{{ url('blog/how-to-earn-extra-money-by-selling-billing-and-invoicing-solutions-as-a-service-by-ather-digital-hub') }}" />
+    <link rel="canonical" href="{{ url('how-to-earn-extra-money-by-selling-billing-and-invoicing-solutions-as-a-service-by-ather-digital-hub') }}" />
     <link rel="icon" href="{{ URL::asset('favicon-96x96.png') }}" sizes="96x96" type="image/png">
 
 
@@ -35,7 +35,7 @@
     <meta property="og:site_name" content="Ather Digital Hub" />
     <meta property="og:updated_time" content="2024-11-20 12:08:59" />
     <meta property="og:image" content="{{ asset('img/blogs/how-to-earn-extra-money-by-selling-billing-and-invoicing-solutions-as-a-service-by-ather-digital-hub.jpeg') }}" />
-    <meta property="og:image:secure_url" content="{{ url('/') }}" />
+    <meta property="og:image:secure_url" content="{{ url('img/blogs/how-to-earn-extra-money-by-selling-billing-and-invoicing-solutions-as-a-service-by-ather-digital-hub.jpeg') }}" />
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Earn Extra Income by Selling Billing and Invoicing Solutions" />

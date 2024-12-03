@@ -7,7 +7,7 @@
     <title>The Benefits of a Hotel and Booking Management System</title>
     <meta name="description" content="Discover the key benefits of a hotel and booking management system. Streamline your operations, enhance guest experiences, and improve revenue with powerful software solutions designed for the hospitality industry.">
 
-    <link rel="canonical" href="{{ url('blog/the-benefits-of-a-hotel-and-booking-management-system') }}" />
+    <link rel="canonical" href="{{ url('the-benefits-of-a-hotel-and-booking-management-system') }}" />
     <link rel="icon" href="{{ URL::asset('favicon-96x96.png') }}" sizes="96x96" type="image/png">
 
 
@@ -35,7 +35,7 @@
     <meta property="og:site_name" content="Ather Digital Hub" />
     <meta property="og:updated_time" content="2024-11-20 12:08:59" />
     <meta property="og:image" content="{{ asset('img/blogs/hotel-and-booking-managemeny-system-by-ather-digital-hub.jpg') }}" />
-    <meta property="og:image:secure_url" content="{{ url('/') }}" />
+    <meta property="og:image:secure_url" content="{{ url('img/blogs/hotel-and-booking-managemeny-system-by-ather-digital-hub.jpg') }}" />
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="The Benefits of a Hotel and Booking Management System" />

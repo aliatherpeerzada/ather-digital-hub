@@ -56,6 +56,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
         Route::get('how-laravel-and-google-translate-api-can-simplify-multilingual-translation-for-your-website',function(){
             return view('blogs.leveraging_google_translate_api_with_laravel_for_seamless_multilingual_translation');
         });
+        Route::get('best-custom-software-development-solutions-in-america-a-spotlight-on-ather-digital-hub',function(){
+            return view('blogs.best_custom_software_development_solutions_in_america_a_spotlight_on_ather_digital_hub');
+        });
 
 
 

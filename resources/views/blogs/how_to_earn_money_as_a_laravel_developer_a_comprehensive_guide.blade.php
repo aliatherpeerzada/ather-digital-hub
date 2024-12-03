@@ -11,7 +11,7 @@
     <title>How to Earn Money as a Laravel Developer – Complete Guide</title>
 
 
-    <link rel="canonical" href="{{ url('blog/how-to-earn-money-as-a-laravel-developer-a-comprehensive-guide') }}" />
+    <link rel="canonical" href="{{ url('how-to-earn-money-as-a-laravel-developer-a-comprehensive-guide') }}" />
     <link rel="icon" href="{{ URL::asset('favicon-96x96.png') }}" sizes="96x96" type="image/png">
 
 
@@ -37,7 +37,7 @@
     <meta property="og:site_name" content="Ather Digital Hub" />
     <meta property="og:updated_time" content="2024-11-20 12:08:59" />
     <meta property="og:image" content="{{ asset('img/blogs/how-to-earn-money-by-learning-laravel-development.jpg') }}" />
-    <meta property="og:image:secure_url" content="{{ url('/') }}" />
+    <meta property="og:image:secure_url" content="{{ url('img/blogs/how-to-earn-money-by-learning-laravel-development.jpg') }}" />
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="How to Earn Money as a Laravel Developer – Complete Guide" />
