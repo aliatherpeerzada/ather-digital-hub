@@ -15,7 +15,7 @@
         <meta name="keywords" content="Laravel, Google Translate API, multilingual translation, Laravel translation, Google Translate, website localization, multilingual websites, translation integration, global audience, PHP translation API">
 
 
-    <link rel="canonical" href="{{ url('leveraging-google-translate-api-with-laravel-for-seamless-multilingual-translation') }}" />
+    <link rel="canonical" href="{{ url('leveraging-google-translate-api-with-laravel-for-seamless-multilingual-translatiohow-laravel-and-google-translate-api-can-simplify-multilingual-translation-for-your-website') }}" />
     <link rel="icon" href="{{ URL::asset('favicon-96x96.png') }}" sizes="96x96" type="image/png">
 
 
@@ -38,7 +38,7 @@
     <meta property="og:title" content="How Laravel and Google Translate API Can Simplify Multilingual Translation for Your Website" />
     <meta property="og:description"
         content="Learn how combining Laravel and the Google Translate API can help you easily implement multilingual translation, providing a seamless experience for users worldwide. Enhance your website's global reach with this powerful integration." />
-    <meta property="og:url" content="{{ url('leveraging-google-translate-api-with-laravel-for-seamless-multilingual-translation') }}" />
+    <meta property="og:url" content="{{ url('how-laravel-and-google-translate-api-can-simplify-multilingual-translation-for-your-website') }}" />
     <meta property="og:site_name" content="Ather Digital Hub" />
     <meta property="og:updated_time" content="2024-11-20 12:08:59" />
     <meta property="og:image" content="{{ asset('img/blogs/laravel-google-api-making-multilingual-simplified.jpg') }}" />
