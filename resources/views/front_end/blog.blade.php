@@ -36,7 +36,7 @@
     <meta property="og:site_name" content="Ather Digital Hub" />
     <meta property="og:updated_time" content="2024-11-20 12:08:59" />
     <meta property="og:image" content="{{ URL::asset('img/social_media.jpg') }}" />
-    <meta property="og:image:secure_url" content="{{ url('/') }}" />
+    <meta property="og:image:secure_url" content="{{ url('img/social_media.jpg') }}" />
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="World No 1 Custom Development Solution Company" />
