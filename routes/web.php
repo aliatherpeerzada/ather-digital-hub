@@ -12,33 +12,33 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // front end routes
-        Route::get('404', function(){
-            return view('front_end.404');
-        });
-        Route::get('about', function(){
-            return view('front_end.about');
-        });
-        Route::get('/', function(){
-            return view('front_end.index');
-        });
-        Route::get('project', function(){
-            return view('front_end.project');
-        });
-        Route::get('service', function(){
-            return view('front_end.service');
-        });
-        Route::get('team', function(){
-            return view('front_end.team');
-        });
-        Route::get('testimonial', function(){
-            return view('front_end.testimonial');
-        });
+        // Route::get('404', function(){
+        //     return view('front_end.404');
+        // });
+        // Route::get('about', function(){
+        //     return view('front_end.about');
+        // });
+        // Route::get('/', function(){
+        //     return view('front_end.index');
+        // });
+        // Route::get('project', function(){
+        //     return view('front_end.project');
+        // });
+        // Route::get('service', function(){
+        //     return view('front_end.service');
+        // });
+        // Route::get('team', function(){
+        //     return view('front_end.team');
+        // });
+        // Route::get('testimonial', function(){
+        //     return view('front_end.testimonial');
+        // });
         Route::get('blog', function(){
             return view('front_end.blog');
         });
-        Route::get('blog-detail', function(){
-            return view('front_end.blog-detail');
-        });
+        // Route::get('blog-detail', function(){
+        //     return view('front_end.blog-detail');
+        // });
 
         Route::get('the-benefits-of-a-hotel-and-booking-management-system',function(){
             return view('blogs.benefits_of_hotel_and_booking_management');
