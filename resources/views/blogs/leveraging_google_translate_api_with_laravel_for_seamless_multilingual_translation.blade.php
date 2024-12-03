@@ -15,7 +15,7 @@
         <meta name="keywords" content="Laravel, Google Translate API, multilingual translation, Laravel translation, Google Translate, website localization, multilingual websites, translation integration, global audience, PHP translation API">
 
 
-    <link rel="canonical" href="{{ url('leveraging-google-translate-api-with-laravel-for-seamless-multilingual-translatiohow-laravel-and-google-translate-api-can-simplify-multilingual-translation-for-your-website') }}" />
+    <link rel="canonical" href="{{ url('how-laravel-and-google-translate-api-can-simplify-multilingual-translation-for-your-website') }}" />
     <link rel="icon" href="{{ URL::asset('favicon-96x96.png') }}" sizes="96x96" type="image/png">
 
 
