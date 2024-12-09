@@ -97,6 +97,7 @@
         <div class="container pb-5">
             <div class="row  pb-5 ">
 
+                
 
                 <div class="col-md-4">
 
@@ -268,6 +269,64 @@
                                         <h2 class="title"> How to Earn Money as a Laravel Developer: A Comprehensive Guide
                                         </h2>
                                         <p class="text">  Laravel, a powerful PHP framework, has revolutionized web development. Its elegant syntax, robust features, and large community make it a top choice for developers worldwide.</p>
+                                     
+
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row pb-5">
+                <div class="col-md-4">
+
+                    <div class="example-1 card">
+                        <div class="wrapper">
+                            <a href="{{URL('streamline-your-business-with-xero-and-ather-digital-hubs-laravel-integration')}}"> <img
+                                    src="{{ asset('img/blogs/streamline-your-business-with-xero-and-ather-digital-hubs-laravel-integration.jpg') }}"
+                                    class="img-fluid" alt=""> </a>
+
+                            <div class="data">
+                                <a href="{{URL('streamline-your-business-with-xero-and-ather-digital-hubs-laravel-integration')}}">
+                                    <div class="content">
+                                        <span class="author">05 December, 2024</span>
+                                        <h2 class="title"> 
+                                            Streamline Your Business with Xero and Ather Digital Hub's Laravel Integration
+                                         </h2>
+                                        <p class="text"> 
+                                            Running a business can be overwhelming, especially when it comes to managing finances. That’s where Xero, a powerful accounting software, comes in. Xero simplifies bookkeeping, invoicing, and financial tracking, making it a perfect solution for businesses of all sizes.     </p>
+                                     
+
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+
+                    <div class="example-1 card">
+                        <div class="wrapper">
+                            <a href="{{URL('what-is-an-inventory-management-system-and-why-does-your-business-need-it')}}"> <img
+                                    src="{{ asset('img/blogs/professional_enterprise_inventory_system_by_ather_digital_hub.jpg') }}"
+                                    class="img-fluid" alt=""> </a>
+
+                            <div class="data">
+                                <a href="{{URL('what-is-an-inventory-management-system-and-why-does-your-business-need-it')}}">
+                                    <div class="content">
+                                        <span class="author">08 December, 2024</span>
+                                        <h2 class="title"> 
+                                            What Is an Inventory Management System and Why Does Your Business Need It?
+                                        </h2>
+                                        <p class="text"> 
+                                            An inventory management system is a tool that helps businesses keep track of their products. Think of it as a smart assistant that tells you how many items you have in stock, what’s selling fast, and what needs to be restocked. Whether you run a small shop or a big company, having an organized way to manage your inventory saves time, money, and effort.
+                                        </p>
                                      
 
                                     </div>

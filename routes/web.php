@@ -59,6 +59,12 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
         Route::get('best-custom-software-development-solutions-in-america-a-spotlight-on-ather-digital-hub',function(){
             return view('blogs.best_custom_software_development_solutions_in_america_a_spotlight_on_ather_digital_hub');
         });
+        Route::get('what-is-an-inventory-management-system-and-why-does-your-business-need-it',function(){
+            return view('blogs.what_is_an_inventory_management_system_and_why_does_your_business_need_it');
+        });
+        Route::get('streamline-your-business-with-xero-and-ather-digital-hubs-laravel-integration',function(){
+            return view('blogs.streamline_your_business_with_xero_and_ather_digital_hubs_laravel_integration');
+        });
 
 
 
