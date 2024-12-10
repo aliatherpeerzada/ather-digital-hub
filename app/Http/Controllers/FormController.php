@@ -15,21 +15,21 @@ class FormController extends Controller
     public function contact_store(Request $request)
     {
    
-        // $captchaToken = $request->captcha_token;
+        $captchaToken = $request->captcha_token;
 
-        // // Verify the captcha response
-        // $verifyResponse = Http::timeout(30)->post('https://challenges.cloudflare.com/turnstile/v0/siteverify', [
-        //     'secret' => '0x4AAAAAAAy4-UTWh8QbJhnFu0uGvl6wfqY',
-        //     'response' => $captchaToken,
-        // ]);
+        // Verify the captcha response
+        $verifyResponse = Http::timeout(30)->post('https://challenges.cloudflare.com/turnstile/v0/siteverify', [
+            'secret' => '0x4AAAAAAA13b49DvKNEtmncXkVgOYqHfF8',
+            'response' => $captchaToken,
+        ]);
 
-        // // Check if the verification was successful
-        // if (!$verifyResponse->successful() || $verifyResponse->json()['success'] == false) {
-        //     return back()->withErrors(['captcha' => 'Captcha verification failed. Please try again.']);
-        // }
+        // Check if the verification was successful
+        if (!$verifyResponse->successful() || $verifyResponse->json()['success'] == false) {
+            return back()->withErrors(['captcha' => 'Captcha verification failed. Please try again.']);
+        }
 
         $restrictedWords = [];
-        // $restrictedWords = ['SEO', 'marketing', 'social media marketing', 'betting', 'promotional', 'advertising', 'content marketing', 'email marketing', 'lead generation', 'content', 'branding', 'copywriting', 'email', 'website', 'landing page',];
+        $restrictedWords = ['SEO', 'marketing', 'social media marketing', 'betting', 'promotional', 'advertising', 'content marketing', 'email marketing', 'lead generation', 'content', 'branding', 'copywriting', 'email', 'website', 'landing page',];
         $messageContent = strtolower($request->message);
 
         // Check if the message content contains any restricted words

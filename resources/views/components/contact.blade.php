@@ -109,12 +109,12 @@
                                     required</label>
                             </div>
 
-                            {{-- <div>
-                                <div class="cf-turnstile" data-sitekey="0x4AAAAAAAjrJLyb3MIY_kn6"
+                            <div>
+                                <div class="cf-turnstile" data-sitekey="0x4AAAAAAA13b52jQX0i8W4z"
                                     id="cloud_flare_id_1" data-callback="javascriptCallback"></div>
                                 <div id="error_message" class="text-danger fw-bold"></div>
                             </div>
-                            <input type="hidden" id="captcha_token" name="captcha_token" value=""> --}}
+                            <input type="hidden" id="captcha_token" name="captcha_token" value="">
 
                             <!-- Submit Button -->
                             <a href="javascript:void(0)"
