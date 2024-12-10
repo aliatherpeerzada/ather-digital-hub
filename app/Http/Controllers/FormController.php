@@ -15,7 +15,7 @@ class FormController extends Controller
     public function contact_store(Request $request)
     {
    
-        $captchaToken = $request->captcha_token;
+        $captchaToken =  Input::get('cf-turnstile-response'); 
 
         // Verify the captcha response
         $verifyResponse = Http::timeout(30)->post('https://challenges.cloudflare.com/turnstile/v0/siteverify', [
