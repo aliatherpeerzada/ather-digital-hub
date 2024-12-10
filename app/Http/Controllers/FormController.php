@@ -9,14 +9,13 @@ use App\Models\Newsletter;
 use App\Models\PackageRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\Input;
-
+ 
 class FormController extends Controller
 {
     public function contact_store(Request $request)
     {
    
-        $captchaToken =  Input::get('cf-turnstile-response'); 
+        $captchaToken =  request('cf-turnstile-response');
 
         // Verify the captcha response
         $verifyResponse = Http::timeout(30)->post('https://challenges.cloudflare.com/turnstile/v0/siteverify', [
