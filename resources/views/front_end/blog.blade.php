@@ -128,21 +128,20 @@
 
                     <div class="example-1 card">
                         <div class="wrapper">
-                            <a href="{{URL('revolutionize-your-business-how-a-modern-website-can-multiply-your-sales-100x')}}"> <img
-                                    src="{{ asset('img/blogs/revolutionize_your_business_how_a_modern_website_can_multiply_your_sales_100x.webp') }}"
+                            <a href="{{URL('boost-your-business-with-ather-digital-hubs-website-hosting-and-maintenance-services')}}"> <img
+                                    src="{{ asset('img/blogs/boost_your_business_with_ather_digital_hubs_website_hosting_and_maintenance_services.webp') }}"
                                     class="img-fluid" alt=""> </a>
 
                             <div class="data">
-                                <a href="{{URL('revolutionize-your-business-how-a-modern-website-can-multiply-your-sales-100x')}}">
+                                <a href="{{URL('boost-your-business-with-ather-digital-hubs-website-hosting-and-maintenance-services')}}">
                                     <div class="content">
-                                        <span class="author">16 December, 2024</span>
+                                        <span class="author">24 November, 2024</span>
                                         <h2 class="title"> 
-                                            Revolutionize Your Business: How a Modern Website Can Multiply Your Sales 100x
+                                            Boost Your Business with Ather Digital Hub’s Website Hosting and Maintenance Services
                                             
                                         </h2>
                                         <p class="text"> 
-                                            In today’s digital-first world, having an online presence isn’t just an option — it’s a critical lifeline for businesses seeking to thrive and expand. Gone are the days when traditional marketing methods alone could sustain a successful enterprise. Now, a strategic digital approach can transform your business from local to global, potentially multiplying your sales by an incredible 100x.                                        </p>
-                                     
+                                            In today’s fast-paced digital world, your website is often the first point of contact between your business and potential customers. Whether you’re a small startup or a well-established enterprise, ensuring that your website is always up, secure, and performing optimally is crucial for your business success. At Ather Digital Hub, we provide comprehensive website hosting and maintenance services designed to enhance your business’s digital presence, improve security, and ensure long-term growth.                                     
 
                                     </div>
                                 </a>

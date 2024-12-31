@@ -86,6 +86,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
         Route::get('transforming-education-the-role-of-e-learning-and-school-management-systems-in-todays-world',function(){
             return view('blogs.transforming_education_the_role_of_e_learning_and_school_management_systems_in_todays_world');
         });
+   
+        Route::get('boost-your-business-with-ather-digital-hubs-website-hosting-and-maintenance-services',function(){
+            return view('blogs.boost_your_business_with_ather_digital_hubs_website_hosting_and_maintenance_services');
+        });
 
 
 
