@@ -74,6 +74,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
         Route::get('generating-passive-income-through-saas-5-lucrative-opportunities',function(){
             return view('blogs.generating_passive_income_through_saas_5_lucrative_opportunities');
         });
+      
+        Route::get('revolutionize-your-business-how-a-modern-website-can-multiply-your-sales-100x',function(){
+            return view('blogs.revolutionize_your_business_how_a_modern_website_can_multiply_your_sales_100x');
+        });
 
 
 

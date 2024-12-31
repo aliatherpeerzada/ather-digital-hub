@@ -133,20 +133,20 @@
 
                     <div class="example-1 card">
                         <div class="wrapper">
-                            <a href="{{URL('how-laravel-and-google-translate-api-can-simplify-multilingual-translation-for-your-website')}}"> <img
-                                    src="{{ asset('img/blogs/laravel-google-api-making-multilingual-simplified.jpg') }}"
+                            <a href="{{URL('revolutionize-your-business-how-a-modern-website-can-multiply-your-sales-100x')}}"> <img
+                                    src="{{ asset('img/blogs/revolutionize_your_business_how_a_modern_website_can_multiply_your_sales_100x.webp') }}"
                                     class="img-fluid" alt=""> </a>
 
                             <div class="data">
-                                <a href="{{URL('how-laravel-and-google-translate-api-can-simplify-multilingual-translation-for-your-website')}}">
+                                <a href="{{URL('revolutionize-your-business-how-a-modern-website-can-multiply-your-sales-100x')}}">
                                     <div class="content">
-                                        <span class="author">02 December, 2024</span>
+                                        <span class="author">16 December, 2024</span>
                                         <h2 class="title"> 
-                                            How Laravel and Google Translate API Can Simplify Multilingual Translation for Your Website
+                                            Revolutionize Your Business: How a Modern Website Can Multiply Your Sales 100x
+                                            
                                         </h2>
                                         <p class="text"> 
-                                            In today’s globalized world, businesses, websites, and applications need to cater to diverse audiences who speak different languages. Offering your content in multiple languages can enhance the user experience and broaden your reach. However, manually translating content can be time-consuming and resource-intensive. Fortunately, combining the power of Laravel, a popular PHP framework, with the Google Translate API provides an efficient and automated solution for multilingual translation.
-                                        </p>
+                                            In today’s digital-first world, having an online presence isn’t just an option — it’s a critical lifeline for businesses seeking to thrive and expand. Gone are the days when traditional marketing methods alone could sustain a successful enterprise. Now, a strategic digital approach can transform your business from local to global, potentially multiplying your sales by an incredible 100x.                                        </p>
                                      
 
                                     </div>
