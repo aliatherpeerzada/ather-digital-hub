@@ -103,20 +103,20 @@
 
                     <div class="example-1 card">
                         <div class="wrapper">
-                            <a href="{{URL('best-custom-software-development-solutions-in-america-a-spotlight-on-ather-digital-hub')}}"> <img
-                                    src="{{ asset('img/blogs/best-custom-software-development-in-america-ather-digital-hub.jpg') }}"
+                            <a href="{{URL('chatgpt-vs-gemini-vs-copilot-integrating-ai-to-boost-productivity-in-your-application')}}"> <img
+                                    src="{{ asset('img/blogs/chatgpt_vs_gemini_vs_copilot_integrating_ai_to_boost_productivity_in_your_application.webp') }}"
                                     class="img-fluid" alt=""> </a>
 
                             <div class="data">
-                                <a href="{{URL('best-custom-software-development-solutions-in-america-a-spotlight-on-ather-digital-hub')}}">
+                                <a href="{{URL('chatgpt-vs-gemini-vs-copilot-integrating-ai-to-boost-productivity-in-your-application')}}">
                                     <div class="content">
-                                        <span class="author">03 December, 2024</span>
+                                        <span class="author">12 December, 2024</span>
                                         <h2 class="title"> 
-                                            Best Custom Software Development Solutions in America: A Spotlight on Ather Digital Hub
-                                        </h2>
+                                            ChatGPT vs. Gemini vs. Copilot: Integrating AI to Boost Productivity in Your Application      
+                                                                          </h2>
                                         <p class="text"> 
-                                            In the fast-paced, technology-driven world of today, businesses are increasingly seeking custom software solutions to gain a competitive edge, streamline operations, and provide superior customer experiences. As the demand for bespoke software development continues to rise, many companies in America have emerged as leaders in this field, offering a wide range of services that cater to the unique needs of businesses across various industries. Among these industry giants, Ather Digital Hub stands out as a top-tier provider of custom software development solutions, setting the standard for innovation, efficiency, and client satisfaction.
-                                        </p>
+                                            Artificial Intelligence (AI) has revolutionized how businesses and individuals operate, driving efficiency, automation, and innovation. Among the many AI tools available, ChatGPT, Gemini, and Copilot are leading the way in enhancing productivity across various domains. These AI systems are not only reshaping how we interact with machines but are also providing valuable solutions for businesses looking to integrate AI into their applications.
+                                                                                </p>
                                      
 
                                     </div>

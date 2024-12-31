@@ -78,6 +78,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
         Route::get('revolutionize-your-business-how-a-modern-website-can-multiply-your-sales-100x',function(){
             return view('blogs.revolutionize_your_business_how_a_modern_website_can_multiply_your_sales_100x');
         });
+    
+        Route::get('chatgpt-vs-gemini-vs-copilot-integrating-ai-to-boost-productivity-in-your-application',function(){
+            return view('blogs.chatgpt_vs_gemini_vs_copilot_integrating_ai_to_boost_productivity_in_your_application');
+        });
 
 
 
