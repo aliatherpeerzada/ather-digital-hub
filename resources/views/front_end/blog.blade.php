@@ -313,6 +313,34 @@
 
                     <div class="example-1 card">
                         <div class="wrapper">
+                            <a href="{{URL('laravel-vs-wordpress-the-better-option-in-2025')}}"> <img
+                                    src="{{ asset('img/blogs/laravel-vs-wordpress-in-2025.webp') }}"
+                                    class="img-fluid" alt=""> </a>
+
+                            <div class="data">
+                                <a href="{{URL('laravel-vs-wordpress-the-better-option-in-2025')}}">
+                                    <div class="content">
+                                        <span class="author">23 December, 2024</span>
+                                        <h2 class="title"> 
+                                            Laravel vs WordPress: The Better Option in 2025?
+                                        </h2>
+                                        <p class="text"> 
+                                            Are you trying to build a website but can’t decide between Laravel and WordPress? Don’t worry — we’ll break it down in simple terms that anyone can understand. Let’s explore which platform might be the best choice for your next project.                                        </p>
+                                     
+
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="col-md-4">
+
+                    <div class="example-1 card">
+                        <div class="wrapper">
                             <a href="{{URL('what-is-an-inventory-management-system-and-why-does-your-business-need-it')}}"> <img
                                     src="{{ asset('img/blogs/professional_enterprise_inventory_system_by_ather_digital_hub.jpg') }}"
                                     class="img-fluid" alt=""> </a>
@@ -337,6 +365,8 @@
                     </div>
 
                 </div>
+
+
             </div>
 
         </div>

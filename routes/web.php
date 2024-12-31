@@ -65,6 +65,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
         Route::get('streamline-your-business-with-xero-and-ather-digital-hubs-laravel-integration',function(){
             return view('blogs.streamline_your_business_with_xero_and_ather_digital_hubs_laravel_integration');
         });
+      
+        Route::get('laravel-vs-wordpress-the-better-option-in-2025',function(){
+            return view('blogs.laravel_vs_wordpress_the_better_option_in_2025');
+        });
 
 
 
