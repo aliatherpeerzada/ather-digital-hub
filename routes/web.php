@@ -90,6 +90,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
         Route::get('boost-your-business-with-ather-digital-hubs-website-hosting-and-maintenance-services',function(){
             return view('blogs.boost_your_business_with_ather_digital_hubs_website_hosting_and_maintenance_services');
         });
+      
+        Route::get('importance-of-billing-and-invoicing-software-in-business',function(){
+            return view('blogs.importance_of_billing_and_invoicing_software_in_business');
+        });
 
 
 
