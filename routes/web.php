@@ -70,6 +70,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
             return view('blogs.laravel_vs_wordpress_the_better_option_in_2025');
         });
 
+      
+        Route::get('generating-passive-income-through-saas-5-lucrative-opportunities',function(){
+            return view('blogs.generating_passive_income_through_saas_5_lucrative_opportunities');
+        });
+
 
 
         Route::post('/contact/store',[FormController::class,'contact_store'])->name('contact.store');

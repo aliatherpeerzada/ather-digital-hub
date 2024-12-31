@@ -127,6 +127,105 @@
                     </div>
 
                 </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="example-1 card">
+                        <div class="wrapper">
+                            <a href="{{URL('how-laravel-and-google-translate-api-can-simplify-multilingual-translation-for-your-website')}}"> <img
+                                    src="{{ asset('img/blogs/laravel-google-api-making-multilingual-simplified.jpg') }}"
+                                    class="img-fluid" alt=""> </a>
+
+                            <div class="data">
+                                <a href="{{URL('how-laravel-and-google-translate-api-can-simplify-multilingual-translation-for-your-website')}}">
+                                    <div class="content">
+                                        <span class="author">02 December, 2024</span>
+                                        <h2 class="title"> 
+                                            How Laravel and Google Translate API Can Simplify Multilingual Translation for Your Website
+                                        </h2>
+                                        <p class="text"> 
+                                            In today’s globalized world, businesses, websites, and applications need to cater to diverse audiences who speak different languages. Offering your content in multiple languages can enhance the user experience and broaden your reach. However, manually translating content can be time-consuming and resource-intensive. Fortunately, combining the power of Laravel, a popular PHP framework, with the Google Translate API provides an efficient and automated solution for multilingual translation.
+                                        </p>
+                                     
+
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="example-1 card">
+                        <div class="wrapper">
+                            <a href="{{URL('generating-passive-income-through-saas-5-lucrative-opportunities')}}"> <img
+                                    src="{{ asset('img/blogs/generating_passive_income_through_saas_5_lucrative_opportunities.webp') }}"
+                                    class="img-fluid" alt=""> </a>
+
+                            <div class="data">
+                                <a href="{{URL('generating-passive-income-through-saas-5-lucrative-opportunities')}}">
+                                    <div class="content">
+                                        <span class="author">20 November, 2024</span>
+                                        <h2 class="title"> 
+                                            Generating Passive Income Through SaaS: 5 Lucrative Opportunities
+                                        </h2>
+                                        <p class="text">In today’s digital economy, Software as a Service (SaaS) has emerged as one of the most profitable ways to generate passive income. With the right concept and execution, SaaS businesses can provide consistent recurring revenue while requiring minimal ongoing maintenance. Let’s explore five promising SaaS opportunities and how Ather Digital Hub can help bring your vision to life.</p>
+                                     
+
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            
+              
+              
+
+      
+            </div>
+
+            {{-- 31- dec --}}
+            <div class="row  pb-5 ">
+
+                
+
+                <div class="col-md-4">
+
+                    <div class="example-1 card">
+                        <div class="wrapper">
+                            <a href="{{URL('best-custom-software-development-solutions-in-america-a-spotlight-on-ather-digital-hub')}}"> <img
+                                    src="{{ asset('img/blogs/best-custom-software-development-in-america-ather-digital-hub.jpg') }}"
+                                    class="img-fluid" alt=""> </a>
+
+                            <div class="data">
+                                <a href="{{URL('best-custom-software-development-solutions-in-america-a-spotlight-on-ather-digital-hub')}}">
+                                    <div class="content">
+                                        <span class="author">03 December, 2024</span>
+                                        <h2 class="title"> 
+                                            Best Custom Software Development Solutions in America: A Spotlight on Ather Digital Hub
+                                        </h2>
+                                        <p class="text"> 
+                                            In the fast-paced, technology-driven world of today, businesses are increasingly seeking custom software solutions to gain a competitive edge, streamline operations, and provide superior customer experiences. As the demand for bespoke software development continues to rise, many companies in America have emerged as leaders in this field, offering a wide range of services that cater to the unique needs of businesses across various industries. Among these industry giants, Ather Digital Hub stands out as a top-tier provider of custom software development solutions, setting the standard for innovation, efficiency, and client satisfaction.
+                                        </p>
+                                     
+
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                
                 <div class="col-md-4">
 
                     <div class="example-1 card">
