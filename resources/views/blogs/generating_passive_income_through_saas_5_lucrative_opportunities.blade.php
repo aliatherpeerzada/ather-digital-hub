@@ -10,7 +10,7 @@
      <title>Generating Passive Income Through SaaS: 5 Lucrative Opportunities</title>
 
 
-    <link rel="canonical" href="{{ url('what-is-an-inventory-management-system-and-why-does-your-business-need-it') }}" />
+    <link rel="canonical" href="{{ url('generating-passive-income-through-saas-5-lucrative-opportunities') }}" />
     <link rel="icon" href="{{ URL::asset('favicon-96x96.png') }}" sizes="96x96" type="image/png">
 
 
