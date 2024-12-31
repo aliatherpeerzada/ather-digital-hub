@@ -95,18 +95,18 @@
         </div>
 
         <div class="container pb-5">
+           
+           
             <div class="row  pb-5 ">
 
                 
 
                 <div class="col-md-4">
-
                     <div class="example-1 card">
                         <div class="wrapper">
                             <a href="{{URL('chatgpt-vs-gemini-vs-copilot-integrating-ai-to-boost-productivity-in-your-application')}}"> <img
                                     src="{{ asset('img/blogs/chatgpt_vs_gemini_vs_copilot_integrating_ai_to_boost_productivity_in_your_application.webp') }}"
                                     class="img-fluid" alt=""> </a>
-
                             <div class="data">
                                 <a href="{{URL('chatgpt-vs-gemini-vs-copilot-integrating-ai-to-boost-productivity-in-your-application')}}">
                                     <div class="content">
@@ -117,6 +117,31 @@
                                         <p class="text"> 
                                             Artificial Intelligence (AI) has revolutionized how businesses and individuals operate, driving efficiency, automation, and innovation. Among the many AI tools available, ChatGPT, Gemini, and Copilot are leading the way in enhancing productivity across various domains. These AI systems are not only reshaping how we interact with machines but are also providing valuable solutions for businesses looking to integrate AI into their applications.
                                                                                 </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="example-1 card">
+                        <div class="wrapper">
+                            <a href="{{URL('revolutionize-your-business-how-a-modern-website-can-multiply-your-sales-100x')}}"> <img
+                                    src="{{ asset('img/blogs/revolutionize_your_business_how_a_modern_website_can_multiply_your_sales_100x.webp') }}"
+                                    class="img-fluid" alt=""> </a>
+
+                            <div class="data">
+                                <a href="{{URL('revolutionize-your-business-how-a-modern-website-can-multiply-your-sales-100x')}}">
+                                    <div class="content">
+                                        <span class="author">16 December, 2024</span>
+                                        <h2 class="title"> 
+                                            Revolutionize Your Business: How a Modern Website Can Multiply Your Sales 100x
+                                            
+                                        </h2>
+                                        <p class="text"> 
+                                            In today’s digital-first world, having an online presence isn’t just an option — it’s a critical lifeline for businesses seeking to thrive and expand. Gone are the days when traditional marketing methods alone could sustain a successful enterprise. Now, a strategic digital approach can transform your business from local to global, potentially multiplying your sales by an incredible 100x.                                        </p>
                                      
 
                                     </div>
@@ -128,6 +153,65 @@
 
                 </div>
 
+                <div class="col-md-4">
+
+                    <div class="example-1 card">
+                        <div class="wrapper">
+                            <a href="{{URL('transforming-education-the-role-of-e-learning-and-school-management-systems-in-todays-world')}}"> <img
+                                    src="{{ asset('img/blogs/transforming_education_the_role_of_e_learning_and_school_management_systems_in_todays_world.webp') }}"
+                                    class="img-fluid" alt=""> </a>
+
+                            <div class="data">
+                                <a href="{{URL('transforming-education-the-role-of-e-learning-and-school-management-systems-in-todays-world')}}">
+                                    <div class="content">
+                                        <span class="author">25 November, 2024</span>
+                                        <h2 class="title"> 
+                                            Transforming Education: The Role of E-Learning and School Management Systems in Today’s World
+                                        </h2>
+                                        <p class="text">In today’s fast-paced digital age, the world of education is undergoing a monumental transformation. Traditional teaching methods and manual school management practices are no longer sufficient to meet the ever-growing demands of modern education systems. With increasing class sizes, diverse learning needs, and a global shift toward digital solutions, e-learning platforms and school management systems have become indispensable tools for educators, administrators, students, and parents alike.</p>
+                                     
+
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            
+              
+              
+
+      
+            </div>
+            {{-- 31 deca --}}
+            <div class="row  pb-5 ">
+
+                
+
+                <div class="col-md-4">
+                    <div class="example-1 card">
+                        <div class="wrapper">
+                            <a href="{{URL('chatgpt-vs-gemini-vs-copilot-integrating-ai-to-boost-productivity-in-your-application')}}"> <img
+                                    src="{{ asset('img/blogs/chatgpt_vs_gemini_vs_copilot_integrating_ai_to_boost_productivity_in_your_application.webp') }}"
+                                    class="img-fluid" alt=""> </a>
+                            <div class="data">
+                                <a href="{{URL('chatgpt-vs-gemini-vs-copilot-integrating-ai-to-boost-productivity-in-your-application')}}">
+                                    <div class="content">
+                                        <span class="author">12 December, 2024</span>
+                                        <h2 class="title"> 
+                                            ChatGPT vs. Gemini vs. Copilot: Integrating AI to Boost Productivity in Your Application      
+                                                                          </h2>
+                                        <p class="text"> 
+                                            Artificial Intelligence (AI) has revolutionized how businesses and individuals operate, driving efficiency, automation, and innovation. Among the many AI tools available, ChatGPT, Gemini, and Copilot are leading the way in enhancing productivity across various domains. These AI systems are not only reshaping how we interact with machines but are also providing valuable solutions for businesses looking to integrate AI into their applications.
+                                                                                </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="col-md-4">
 

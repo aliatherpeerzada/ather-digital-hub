@@ -82,6 +82,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
         Route::get('chatgpt-vs-gemini-vs-copilot-integrating-ai-to-boost-productivity-in-your-application',function(){
             return view('blogs.chatgpt_vs_gemini_vs_copilot_integrating_ai_to_boost_productivity_in_your_application');
         });
+  
+        Route::get('transforming-education-the-role-of-e-learning-and-school-management-systems-in-todays-world',function(){
+            return view('blogs.transforming_education_the_role_of_e_learning_and_school_management_systems_in_todays_world');
+        });
 
 
 
