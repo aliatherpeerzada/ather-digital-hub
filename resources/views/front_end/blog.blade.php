@@ -549,6 +549,38 @@
 
 
             </div>
+            <div class="row pb-5">
+                <div class="col-md-4">
+
+                    <div class="example-1 card">
+                        <div class="wrapper">
+                            <a href="{{URL('laravel-development-in-2025')}}"> <img
+                                    src="{{ asset('img/blogs/laravel-development-in-2025.jpg') }}"
+                                    class="img-fluid" alt=""> </a>
+
+                            <div class="data">
+                                <a href="{{URL('laravel-development-in-2025')}}">
+                                    <div class="content">
+                                        <span class="author">01 January, 2024</span>
+                                        <h2 class="title"> 
+                                            Laravel Development in 2025: Your Complete Guide to Getting Started
+                                                                                 </h2>
+                                        <p class="text"> 
+                                            Laravel is like a Swiss Army knife for web developers — it’s a powerful PHP framework that makes building web applications faster, more secure, and more enjoyable. Created by Taylor Otwell in 2011, Laravel has grown to become one of the most popular web development frameworks worldwide.
+                                        </p>
+
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+               
+
+
+            </div>
 
         </div>
         <x-contact />

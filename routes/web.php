@@ -94,6 +94,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
         Route::get('importance-of-billing-and-invoicing-software-in-business',function(){
             return view('blogs.importance_of_billing_and_invoicing_software_in_business');
         });
+     
+        Route::get('laravel-development-in-2025',function(){
+            return view('blogs.laravel_development_in_2025');
+        });
 
 
 
