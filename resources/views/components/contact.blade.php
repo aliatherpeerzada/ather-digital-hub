@@ -177,6 +177,7 @@ style="box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" ></script>
 
 <script>
+    $(document).ready(function(){
     function javascriptCallback(token) {
 console.log("Turnstile token:", token); // Debugging
 $(this).closest("form").find(".captcha_token").val(token); // Set token in the correct form
@@ -190,4 +191,6 @@ callback: javascriptCallback.bind(this), // Bind the callback to the current ele
 });
 });
 };
+
+});
 </script>
