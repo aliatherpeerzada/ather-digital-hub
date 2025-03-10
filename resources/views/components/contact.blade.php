@@ -178,7 +178,7 @@ style="box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 
 <script>
     function javascriptCallback(token) {
 console.log("Turnstile token:", token); // Debugging
-$(this).closest("form").find(".captcha_token").val(token); // Set token in the correct form
+$(".captcha_token").val(token); // Set token in the correct form
 }
  
 window.onloadTurnstileCallback = function () {
