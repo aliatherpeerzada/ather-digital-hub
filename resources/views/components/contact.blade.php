@@ -173,8 +173,7 @@ style="box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 
         </div>
     </div>
 </div>
-
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" ></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" defer></script>
 
 <script>
     $(document).ready(function(){
