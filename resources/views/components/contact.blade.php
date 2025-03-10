@@ -173,23 +173,3 @@ style="box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 
         </div>
     </div>
 </div>
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" defer></script>
-
-<script>
-    $(document).ready(function(){
-    function javascriptCallback(token) {
-console.log("Turnstile token:", token); // Debugging
-$(this).closest("form").find(".captcha_token").val(token); // Set token in the correct form
-}
- 
-window.onloadTurnstileCallback = function () {
-$(".cf-turnstile").each(function () {
-turnstile.render(this, {
-sitekey: "0x4AAAAAAA13b52jQX0i8W4z",
-callback: javascriptCallback.bind(this), // Bind the callback to the current element
-});
-});
-};
-
-});
-</script>

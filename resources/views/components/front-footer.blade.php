@@ -41,3 +41,24 @@
         ]
     });
 </script>
+
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" defer></script>
+
+<script>
+    $(document).ready(function(){
+    function javascriptCallback(token) {
+console.log("Turnstile token:", token); // Debugging
+$(this).closest("form").find(".captcha_token").val(token); // Set token in the correct form
+}
+ 
+window.onloadTurnstileCallback = function () {
+$(".cf-turnstile").each(function () {
+turnstile.render(this, {
+sitekey: "0x4AAAAAAA13b52jQX0i8W4z",
+callback: javascriptCallback.bind(this), // Bind the callback to the current element
+});
+});
+};
+
+});
+</script>
