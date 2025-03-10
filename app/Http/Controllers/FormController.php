@@ -28,25 +28,7 @@ class FormController extends Controller
             return back()->withErrors(['captcha' => 'Captcha verification failed. Please try again.']);
         }
 
-        $restrictedWords = [];
-        $restrictedWords = ['SEO', 'marketing', 'social media marketing', 'betting', 'promotional', 'advertising', 'content marketing', 'email marketing', 'lead generation', 'content', 'branding', 'copywriting', 'email', 'website', 'landing page',];
-        $messageContent = strtolower($request->message);
-
-        // Check if the message content contains any restricted words
-        foreach ($restrictedWords as $word) {
-            if (strpos($messageContent, strtolower($word)) !== false) {
-                return back()->with('message', 'Contact Submitted successfully');
-            }
-        }
-
-        // Check if the email contains a restricted domain
-        if (str_contains(strtolower($request->email), 'xyz.com')) {
-            return back()->with('message', 'Contact Submitted successfully');
-        }
-
-        if ($this->check_email($request->email)) {
-            return redirect()->back()->with('message', 'Contact Submitted successfully');
-        }
+     
 
         $data = $request->validate([
             'name' => 'required',
@@ -78,6 +60,19 @@ class FormController extends Controller
         $data = $request->validate([
             'subscription_email' => 'required',
         ]);
+
+        $captchaToken =  request('cf-turnstile-response');
+
+        // Verify the captcha response
+        $verifyResponse = Http::timeout(30)->post('https://challenges.cloudflare.com/turnstile/v0/siteverify', [
+            'secret' => '0x4AAAAAAA13b49DvKNEtmncXkVgOYqHfF8',
+            'response' => $captchaToken,
+        ]);
+
+        // Check if the verification was successful
+        if (!$verifyResponse->successful() || $verifyResponse->json()['success'] == false) {
+            return back()->withErrors(['captcha' => 'Captcha verification failed. Please try again.']);
+        }
 
         if (Newsletter::where('subscription_email', $request->subscription_email)->exists()) {
             return back()->with('message', 'Newsletter subscription successfull');

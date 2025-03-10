@@ -146,35 +146,8 @@
             </div>
         </div>
         <x-contact />
-        <div class="row p-5 justify-content-center"
-            style="box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;">
-            <div class="col-lg-7 text-center">
-                <p class="section-title text-secondary justify-content-center   wow animate__animated animate__fadeInDown"
-                    data-wow-duration="2s"><span></span>Newsletter<span></span>
-                </p>
-                <h1 class="text-center   mb-4 wow animate__animated animate__fadeInDown" data-wow-duration="6s">Always
-                    Stay In Touch</h1>
-
-                <div class="position-relative w-100 mt-3">
-                    <form method="POST" action="{{ route('newsletter.store') }}" id="news_form">
-                        @csrf
-                        <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="email"
-                            placeholder="Enter Your Email" style="height: 48px;" name="subscription_email"
-                            id="subscription_email">
-                        <label for="invalid_subscription_email" id="invalid_subscription_email"
-                            class="text-danger fw-bold" style="display: none;">Invalid
-                            email</label>
-                        <label for="" id="error_subscription_email" class="text-danger fw-bold "
-                            style="display: none">
-
-                        </label>
-                        <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
-                                class="fa fa-paper-plane text-primary fs-4"
-                                onclick="newsletter_validate()"></i></button>
-                    </form>
-                </div>
-            </div>
-        </div>
+      
+        
 
         <x-front-footer-nav />
 
