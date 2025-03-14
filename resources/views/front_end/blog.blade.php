@@ -95,7 +95,43 @@
         </div>
 
         <div class="container pb-5">
-           
+            @php
+            $blogs= App\Models\Blog::latest()->get();
+        @endphp
+        <div class="row pb-5">
+                        @foreach ($blogs as $blog)
+                            
+
+                        <div class="col-md-4">
+                            <div class="example-1 card">
+                                <div class="wrapper">
+                                    <a href='{{URL("$blog->slug")}}'> 
+                                        <img src='{{ Storage::url("$blog->main_image") }}'
+                                            class="img-fluid" alt="{{$blog->main_image_alt}}"> </a>
+                                    <div class="data">
+                                        <a  href='{{URL("$blog->slug")}}'>
+                                            <div class="content">
+                                                <span class="author">{{date('d-m-Y',strtotime($blog->created_at))}}</span>
+                                                <h2 class="title"> 
+                                            {{$blog->title}}
+                                                                                </h2>
+                                                <p class="text"> 
+                                        {{ Str::words($blog->content, 50, '...') }}
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        @endforeach
+        </div>
+                   
+
+
            
             <div class="row  pb-5 ">
 

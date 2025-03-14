@@ -27,6 +27,16 @@
                         <span class="menu-title text-white">Dashboard</span>
                     </a>
                 </div>
+               
+                <div class="menu-item">
+                    <a class="menu-link gap-3 {{ Route::is('blogs') ? 'active' : '' }}"
+                        href="{{ route('blogs') }}">
+                        <span class="menu-bullet">
+                            <i class="bi bi-person-lines-fill fs-3 text-white"></i>
+                        </span>
+                        <span class="menu-title text-white">Blogs</span>
+                    </a>
+                </div>
 
                  
 
