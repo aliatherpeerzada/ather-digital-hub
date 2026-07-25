@@ -114,6 +114,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
                 Route::get('/admin/dashboard',[AdminController::class,'dashboard'])->name('dashboard');
                 Route::delete('/admin/newsletter/delete/{id}',[FormController::class,'newsletter_delete'])->name('newsletter.delete');
                 Route::delete('/admin/contact/delete/{id}',[FormController::class,'contact_delete'])->name('contact.delete');
+                Route::post('/admin/contact/bulk-delete', [FormController::class, 'contact_bulk_delete'])->name('contact.bulk_delete');
 
 
                  // blog routes

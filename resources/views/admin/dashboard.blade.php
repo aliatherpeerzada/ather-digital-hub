@@ -44,40 +44,47 @@
 
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="kt_tab_pane_1" role="tabpanel">
-                    <div class="d-flex align-items-center mb-5 bg-light p-4 rounded">
-                        <i class="bi bi-calendar-date fs-2 me-3 text-primary"></i>
-                        <div class="d-flex align-items-center" style="max-width: 400px;">
-                            <label for="contactDateFilter" class="form-label fw-bold me-3 mb-0 text-nowrap">Filter by Created Date:</label>
-                            <input type="date" id="contactDateFilter" class="form-control form-control-solid">
+                    <div class="d-flex align-items-center mb-5 bg-light p-4 rounded justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-calendar-date fs-2 me-3 text-primary"></i>
+                            <div class="d-flex align-items-center" style="max-width: 400px;">
+                                <label for="contactDateFilter" class="form-label fw-bold me-3 mb-0 text-nowrap">Filter by Created Date:</label>
+                                <input type="date" id="contactDateFilter" class="form-control form-control-solid">
+                            </div>
                         </div>
+                        <button type="button" class="btn btn-danger" id="bulkDeleteBtn" style="display:none;" onclick="bulk_delete_contacts()">
+                            <i class="bi bi-trash fs-4 me-2"></i>Delete Selected
+                        </button>
                     </div>
                     <div class="table-responsive">
                         <table id="contact_table" class="table table-row-bordered table-row-gray-300 align-middle gs-0 gy-4 dataTable">
                             <thead>
                                 <tr class="fw-bold text-muted bg-light">
-                                    <th class="ps-4 rounded-start min-w-100px">Date</th>
+                                    <th class="ps-4 rounded-start w-10px pe-2">
+                                        <div class="form-check form-check-sm form-check-custom form-check-solid me-3">
+                                            <input class="form-check-input" type="checkbox" id="selectAllContacts" />
+                                        </div>
+                                    </th>
+                                    <th class="min-w-50px">Actions</th>
+                                    <th class="min-w-100px">Date</th>
                                     <th class="min-w-125px">Name</th>
                                     <th class="min-w-125px">Phone</th>
                                     <th class="min-w-125px">Alt Phone</th>
                                     <th class="min-w-150px">Email</th>
                                     <th class="min-w-125px">Company</th>
                                     <th class="min-w-100px">Budget</th>
-                                    <th class="min-w-200px">Message</th>
-                                    <th class="rounded-end min-w-100px text-end pe-4">Actions</th>
+                                    <th class="rounded-end min-w-200px">Message</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($contacts as $contact)
                                     <tr>
-                                        <td class="ps-4"><span class="badge badge-light-primary fw-bold">{{ $contact->created_at->format('Y-m-d') }}</span></td>
-                                        <td class="fw-semibold text-gray-800">{{ $contact->name }}</td>
-                                        <td>{{ $contact->phone }}</td>
-                                        <td>{{ $contact->additional_number ?: '-' }}</td>
-                                        <td><a href="mailto:{{ $contact->email }}" class="text-gray-600 text-hover-primary">{{ $contact->email }}</a></td>
-                                        <td>{{ $contact->company ?: '-' }}</td>
-                                        <td>{{ $contact->budget ?: '-' }}</td>
-                                        <td class="text-gray-600">{{ Str::limit($contact->message, 50) }}</td>
-                                        <td class="text-end pe-4">
+                                        <td class="ps-4">
+                                            <div class="form-check form-check-sm form-check-custom form-check-solid">
+                                                <input class="form-check-input contact-checkbox" type="checkbox" value="{{ $contact->id }}" />
+                                            </div>
+                                        </td>
+                                        <td>
                                             <form action="{{ route('contact.delete', $contact->id) }}" method="POST" class="d-inline" id="contact_form_{{ $contact->id }}">
                                                 @csrf
                                                 @method('DELETE')
@@ -86,6 +93,14 @@
                                                 </button>
                                             </form>
                                         </td>
+                                        <td><span class="badge badge-light-primary fw-bold">{{ $contact->created_at->format('Y-m-d') }}</span></td>
+                                        <td class="fw-semibold text-gray-800">{{ $contact->name }}</td>
+                                        <td>{{ $contact->phone }}</td>
+                                        <td>{{ $contact->additional_number ?: '-' }}</td>
+                                        <td><a href="mailto:{{ $contact->email }}" class="text-gray-600 text-hover-primary">{{ $contact->email }}</a></td>
+                                        <td>{{ $contact->company ?: '-' }}</td>
+                                        <td>{{ $contact->budget ?: '-' }}</td>
+                                        <td class="text-gray-600 pe-4">{{ Str::limit($contact->message, 50) }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>
@@ -139,30 +154,56 @@
 <script>
     $(document).ready(function() {
         
-        // Custom filtering function which will search data in column 0 (Date)
+        // Custom filtering function which will search data in column 2 (Date)
         $.fn.dataTable.ext.search.push(
             function( settings, data, dataIndex ) {
                 if (settings.nTable.id !== 'contact_table') {
                     return true;
                 }
                 var filterDate = $('#contactDateFilter').val();
-                var tableDate = data[0]; // Date is in column 0
+                var tableDate = data[2]; // Date is in column 2
                 
                 if (!filterDate) {
                     return true;
                 }
                 
-                return tableDate === filterDate;
+                return tableDate.includes(filterDate);
             }
         );
 
         var contactTable = $('#contact_table').DataTable({
-            'order': [[0, 'desc']] // Sort by date descending by default
+            'order': [[2, 'desc']], // Sort by date descending by default
+            'columnDefs': [
+                { 'orderable': false, 'targets': [0, 1] } // Disable sorting on checkbox and action columns
+            ]
         });
         
         $('#contactDateFilter').on('change', function() {
             contactTable.draw();
         });
+
+        // Handle Select All Checkbox
+        $('#selectAllContacts').on('change', function() {
+            var isChecked = $(this).prop('checked');
+            $('.contact-checkbox').prop('checked', isChecked);
+            toggleBulkDeleteBtn();
+        });
+
+        // Handle individual checkbox changes
+        $(document).on('change', '.contact-checkbox', function() {
+            if (!$(this).prop('checked')) {
+                $('#selectAllContacts').prop('checked', false);
+            }
+            toggleBulkDeleteBtn();
+        });
+
+        function toggleBulkDeleteBtn() {
+            if ($('.contact-checkbox:checked').length > 0) {
+                $('#bulkDeleteBtn').fadeIn();
+            } else {
+                $('#bulkDeleteBtn').fadeOut();
+            }
+        }
 
         $('#new_letter_table').DataTable({
             'order': []
@@ -221,6 +262,49 @@
         }).then((result) => {
             if (result.isConfirmed) {
                 document.getElementById('package_form_' + packageId).submit();
+            }
+        });
+    }
+
+    function bulk_delete_contacts() {
+        var selectedIds = [];
+        $('.contact-checkbox:checked').each(function() {
+            selectedIds.push($(this).val());
+        });
+
+        if (selectedIds.length === 0) return;
+
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You are about to delete " + selectedIds.length + " contacts. This action cannot be undone!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Yes, delete them all!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Create a form dynamically and submit
+                var form = document.createElement('form');
+                form.method = 'POST';
+                form.action = '{{ route("contact.bulk_delete") }}';
+
+                var csrfToken = document.createElement('input');
+                csrfToken.type = 'hidden';
+                csrfToken.name = '_token';
+                csrfToken.value = '{{ csrf_token() }}';
+                form.appendChild(csrfToken);
+
+                selectedIds.forEach(function(id) {
+                    var input = document.createElement('input');
+                    input.type = 'hidden';
+                    input.name = 'ids[]';
+                    input.value = id;
+                    form.appendChild(input);
+                });
+
+                document.body.appendChild(form);
+                form.submit();
             }
         });
     }

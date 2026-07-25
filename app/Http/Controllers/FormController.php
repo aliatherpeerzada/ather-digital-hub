@@ -40,6 +40,16 @@ class FormController extends Controller
         return back()->with('message', 'Contact deleted successfully');
     }
 
+    public function contact_bulk_delete(Request $request)
+    {
+        $request->validate([
+            'ids' => 'required|array',
+            'ids.*' => 'exists:contacts,id'
+        ]);
+        Contact::whereIn('id', $request->ids)->delete();
+        return back()->with('message', 'Selected contacts deleted successfully');
+    }
+
 
     public function news_letter_store(Request $request)
     {
