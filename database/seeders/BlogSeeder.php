@@ -25,7 +25,7 @@ class BlogSeeder extends Seeder
             $metaTitle = isset($metaTitleMatch[1]) ? trim($metaTitleMatch[1]) : 'Blog Title';
 
             // Extract Meta Description
-            preg_match('/<meta name="description" content="(.*?)">/is', $content, $metaDescMatch);
+            preg_match('/<meta name="description" content="([^"]*)"/is', $content, $metaDescMatch);
             $metaDescription = isset($metaDescMatch[1]) ? trim($metaDescMatch[1]) : '';
 
             // Extract Canonical (for slug)
