@@ -85,10 +85,22 @@
                                             </div>
                                         </td>
                                         <td>
+                                            <button type="button" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1 mb-1" 
+                                                onclick="view_contact(this)"
+                                                data-name="{{ $contact->name }}"
+                                                data-email="{{ $contact->email }}"
+                                                data-phone="{{ $contact->phone }}"
+                                                data-altphone="{{ $contact->additional_number ?: '-' }}"
+                                                data-company="{{ $contact->company ?: '-' }}"
+                                                data-budget="{{ $contact->budget ?: '-' }}"
+                                                data-date="{{ $contact->created_at->format('Y-m-d H:i') }}"
+                                                data-message="{{ $contact->message }}">
+                                                <i class="bi bi-eye fs-3"></i>
+                                            </button>
                                             <form action="{{ route('contact.delete', $contact->id) }}" method="POST" class="d-inline" id="contact_form_{{ $contact->id }}">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="button" class="btn btn-icon btn-bg-light btn-active-color-danger btn-sm" onclick="contact_delete({{ $contact->id }})">
+                                                <button type="button" class="btn btn-icon btn-bg-light btn-active-color-danger btn-sm mb-1" onclick="contact_delete({{ $contact->id }})">
                                                     <i class="bi bi-trash fs-3"></i>
                                                 </button>
                                             </form>
@@ -306,6 +318,41 @@
                 document.body.appendChild(form);
                 form.submit();
             }
+        });
+    }
+
+    function view_contact(btn) {
+        var name = $(btn).data('name');
+        var email = $(btn).data('email');
+        var phone = $(btn).data('phone');
+        var altphone = $(btn).data('altphone');
+        var company = $(btn).data('company');
+        var budget = $(btn).data('budget');
+        var date = $(btn).data('date');
+        var message = $(btn).data('message');
+
+        var htmlContent = `
+            <div class="text-start">
+                <p><strong>Date:</strong> ${date}</p>
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
+                <p><strong>Phone:</strong> ${phone}</p>
+                <p><strong>Alt Phone:</strong> ${altphone}</p>
+                <p><strong>Company:</strong> ${company}</p>
+                <p><strong>Budget:</strong> ${budget}</p>
+                <hr>
+                <p><strong>Message:</strong></p>
+                <div class="bg-light p-3 rounded" style="white-space: pre-wrap; word-break: break-word;">${message}</div>
+            </div>
+        `;
+
+        Swal.fire({
+            title: 'Contact Details',
+            html: htmlContent,
+            icon: 'info',
+            width: '600px',
+            confirmButtonText: 'Close',
+            confirmButtonColor: '#3085d6'
         });
     }
 </script>
