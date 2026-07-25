@@ -25,11 +25,11 @@ class FormController extends Controller
             'budget' => 'nullable',
         ]);
          
-        Contact::create($request->only(['name', 'email', 'phone', 'message']));
+        Contact::create($request->only(['name', 'email', 'phone', 'message', 'additional_number', 'company', 'budget']));
  
         SendMailJob::dispatchAfterResponse($data, 'contact');
          
-        return back()->with('message', 'Contact Submitted successfully');
+        return redirect(url()->previous() . '#contact')->with('message', 'Contact Submitted successfully');
     }
 
 

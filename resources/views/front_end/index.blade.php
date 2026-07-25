@@ -1204,7 +1204,7 @@
                     </div>
                     <div class="split-grid" style="gap: 1.5rem; margin-bottom: 1.5rem; grid-template-columns: 1fr 1fr;">
                         <input type="text" name="phone" class="form-control" placeholder="Phone Number" required>
-                        <input type="text" name="additional_number" class="form-control" placeholder="Additional Number">
+                        <input type="number" name="additional_number" class="form-control" placeholder="Additional Number">
                     </div>
                     <div class="split-grid" style="gap: 1.5rem; margin-bottom: 1.5rem; grid-template-columns: 1fr 1fr;">
                         <input type="text" name="company" class="form-control" placeholder="Company Name">
