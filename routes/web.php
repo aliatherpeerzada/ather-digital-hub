@@ -45,7 +45,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
         Route::get('sitemap.xml', [SitemapController::class, 'index'])->name('sitemap.index');
         Route::get('admin-sitemap/download', [SitemapController::class, 'download'])->name('sitemap.download');
 
-        Route::get('{slug}', [BlogController::class, 'get_blog_details'])->name('blog.details');
 
         // Route::get('the-benefits-of-a-hotel-and-booking-management-system',function(){
         //     return view('blogs.benefits_of_hotel_and_booking_management');
@@ -143,3 +142,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
             
                 return response()->json(['status' => 'success', 'message' => 'All caches cleared successfully']);
             });
+        Route::get('{slug}', [BlogController::class, 'get_blog_details'])->name('blog.details');

@@ -12,15 +12,23 @@
 
     <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="kt_tab_pane_1" role="tabpanel">
+            <div class="mb-4" style="max-width: 300px;">
+                <label for="contactDateFilter" class="form-label fw-bold">Filter by Created Date:</label>
+                <input type="date" id="contactDateFilter" class="form-control">
+            </div>
             <div class="table-responsive">
                 <table id="contact_table"
                     class="table table-row-bordered table-row-gray-600 table-striped table-hover gy-5 rounded dataTable">
                     <thead>
                         <tr>
+                            <th scope="col"> Date</th>
                             <th scope="col"> Name</th>
-                            <th scope="col">Phone Number</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Alt Phone</th>
                             <th scope="col">Email</th>
-                            <th scope="col" class="w-50">Message</th>
+                            <th scope="col">Company</th>
+                            <th scope="col">Budget</th>
+                            <th scope="col" class="w-25">Message</th>
                             <th scope="col">ACTIONS</th>
                         </tr>
                     </thead>
@@ -30,9 +38,13 @@
 
                             @foreach ($contacts as $contact)
                                 <tr>
+                                    <td>{{ $contact->created_at->format('Y-m-d') }}</td>
                                     <td>{{ $contact->name }}</td>
                                     <td>{{ $contact->phone }}</td>
+                                    <td>{{ $contact->additional_number }}</td>
                                     <td>{{ $contact->email }}</td>
+                                    <td>{{ $contact->company }}</td>
+                                    <td>{{ $contact->budget }}</td>
                                     <td>{{ $contact->message }}</td>
                                     <td>
                                         <form action="{{ route('contact.delete', $contact->id) }}" method="POST"
@@ -101,9 +113,32 @@
 </x-admin.layouts>
 <script>
     $(document).ready(function() {
-        $('#contact_table').DataTable({
-            'order': []
+        
+        // Custom filtering function which will search data in column 0 (Date)
+        $.fn.dataTable.ext.search.push(
+            function( settings, data, dataIndex ) {
+                if (settings.nTable.id !== 'contact_table') {
+                    return true;
+                }
+                var filterDate = $('#contactDateFilter').val();
+                var tableDate = data[0]; // Date is in column 0
+                
+                if (!filterDate) {
+                    return true;
+                }
+                
+                return tableDate === filterDate;
+            }
+        );
+
+        var contactTable = $('#contact_table').DataTable({
+            'order': [[0, 'desc']] // Sort by date descending by default
         });
+        
+        $('#contactDateFilter').on('change', function() {
+            contactTable.draw();
+        });
+
         $('#new_letter_table').DataTable({
             'order': []
         });

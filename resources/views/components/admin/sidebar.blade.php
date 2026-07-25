@@ -38,6 +38,16 @@
                     </a>
                 </div>
 
+                <div class="menu-item">
+                    <a class="menu-link gap-3"
+                        href="{{ route('sitemap.download') }}">
+                        <span class="menu-bullet">
+                            <i class="bi bi-download fs-3 text-white"></i>
+                        </span>
+                        <span class="menu-title text-white">Download Sitemap</span>
+                    </a>
+                </div>
+
                  
 
 
