@@ -437,7 +437,7 @@
                             <div class="example-1 card">
                                 <div class="wrapper">
                                     <a href='{{URL("$blog->slug")}}'> 
-                                        <img src="{{ asset($blog->main_image) }}"
+                                        <img src="{{ $blog->image_url }}"
                                             class="img-fluid" alt="{{$blog->main_image_alt}}"> </a>
                                     <div class="data">
                                         <a  href='{{URL("$blog->slug")}}'>

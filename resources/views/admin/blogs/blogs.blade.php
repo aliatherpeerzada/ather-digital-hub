@@ -49,8 +49,7 @@
                                                             <td>{!! \Illuminate\Support\Str::words($blog->title, 2) !!}</td>
                                                             <td>{!! \Illuminate\Support\Str::words($blog->page_excerpt,10)!!}</td>
                                                             <td>
-                                                                <img src="{{ asset('storage/' . $blog->main_image) }}"
-                                                                    width="50px" height="50px" alt="">
+                                                                <img src="{{ $blog->image_url }}" width="50px" height="50px" style="object-fit: cover; border-radius: 4px;" alt="">
                                                             </td>
 
                                                             <td>
