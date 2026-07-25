@@ -374,7 +374,7 @@
             </div>
             <div class="hero-visual reveal-scale delay-300">
                 <div class="blog-image-container">
-                    <img src='{{ asset("$blog->main_image") }}' alt="{{$blog->main_image_alt}}">
+                    <img src="{{ asset($blog->main_image) }}" alt="{{$blog->main_image_alt}}">
                 </div>
             </div>
         </div>
