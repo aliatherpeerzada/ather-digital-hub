@@ -37,7 +37,7 @@
 
 <!--begin::Body-->
 
-<body id="kt_app_body" class="app-default">
+<body id="kt_app_body" class="app-default" data-kt-app-sidebar-minimize="on" data-kt-app-sidebar-hoverable="true" data-kt-aside-minimize="on" data-kt-aside-hoverable="true">
     <!--begin::Page-->
     <div class="d-flex flex-column flex-root app-root" id="kt_app_root">
         <div class="app-page flex-column flex-column-fluid" id="kt_app_page">
