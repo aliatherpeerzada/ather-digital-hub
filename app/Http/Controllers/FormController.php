@@ -14,30 +14,18 @@ class FormController extends Controller
 {
     public function contact_store(Request $request)
     {
-   
-        $captchaToken =  request('cf-turnstile-response');
-
-        // Verify the captcha response
-        $verifyResponse = Http::timeout(30)->post('https://challenges.cloudflare.com/turnstile/v0/siteverify', [
-            'secret' => '0x4AAAAAAA13b49DvKNEtmncXkVgOYqHfF8',
-            'response' => $captchaToken,
-        ]);
-
-        // Check if the verification was successful
-        if (!$verifyResponse->successful() || $verifyResponse->json()['success'] == false) {
-            return back()->withErrors(['captcha' => 'Captcha verification failed. Please try again.']);
-        }
-
-     
 
         $data = $request->validate([
             'name' => 'required',
             'email' => 'required|email',
             'phone' => 'required',
             'message' => 'required',
+            'additional_number' => 'nullable',
+            'company' => 'nullable',
+            'budget' => 'nullable',
         ]);
          
-       Contact::create($data);
+        Contact::create($request->only(['name', 'email', 'phone', 'message']));
  
         SendMailJob::dispatchAfterResponse($data, 'contact');
          
@@ -60,19 +48,6 @@ class FormController extends Controller
         $data = $request->validate([
             'subscription_email' => 'required',
         ]);
-
-        $captchaToken =  request('cf-turnstile-response');
-
-        // Verify the captcha response
-        $verifyResponse = Http::timeout(30)->post('https://challenges.cloudflare.com/turnstile/v0/siteverify', [
-            'secret' => '0x4AAAAAAA13b49DvKNEtmncXkVgOYqHfF8',
-            'response' => $captchaToken,
-        ]);
-
-        // Check if the verification was successful
-        if (!$verifyResponse->successful() || $verifyResponse->json()['success'] == false) {
-            return back()->withErrors(['captcha' => 'Captcha verification failed. Please try again.']);
-        }
 
         if (Newsletter::where('subscription_email', $request->subscription_email)->exists()) {
             return back()->with('message', 'Newsletter subscription successfull');

@@ -131,7 +131,7 @@ class BlogController extends Controller
 
     public function get_blog_details($slug)
     {
-        $blog = Blog::where('slug', $slug)->first();
+        $blog = Blog::where('slug', $slug)->firstOrFail();
         $blogs = Blog::take(3)->get();
 
 

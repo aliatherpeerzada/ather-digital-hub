@@ -73,6 +73,15 @@
             <p><span class="label">Name:</span> {{ $data['name'] }}</p>
             <p><span class="label">Email:</span> {{ $data['email'] }}</p>
             <p><span class="label">Phone Number:</span> {{ $data['phone'] }}</p>
+            @if(!empty($data['additional_number']))
+            <p><span class="label">Additional Number:</span> {{ $data['additional_number'] }}</p>
+            @endif
+            @if(!empty($data['company']))
+            <p><span class="label">Company:</span> {{ $data['company'] }}</p>
+            @endif
+            @if(!empty($data['budget']))
+            <p><span class="label">Budget:</span> {{ $data['budget'] }}</p>
+            @endif
             <p><span class="label">Message:</span> {{ $data['message'] }}</p>
         </div>
 
