@@ -7,11 +7,12 @@
             <div class="col-md-12">
                 <div class="card shadow p-5 m-5 ">
                     <div class="">
-                        <a href="{{ route('blogs.create') }}" class="btn btn-outline-danger  p-2 float-end">
-
+                        <a href="{{ route('sitemap.download') }}" class="btn btn-outline-success p-2 float-end ms-2">
+                            Download Sitemap
+                        </a>
+                        <a href="{{ route('blogs.create') }}" class="btn btn-outline-danger p-2 float-end">
                             Add Blogs
                         </a>
-
                     </div>
 
                     <!--begin::Accordion-->

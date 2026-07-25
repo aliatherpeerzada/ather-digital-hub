@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\FormController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -40,7 +41,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
         });
         // Route::get('blog-detail', function(){
         //     return view('front_end.blog-detail');
-        // });
+        // Sitemap Routes
+        Route::get('sitemap.xml', [SitemapController::class, 'index'])->name('sitemap.index');
+        Route::get('admin-sitemap/download', [SitemapController::class, 'download'])->name('sitemap.download');
+
         Route::get('{slug}', [BlogController::class, 'get_blog_details'])->name('blog.details');
 
         // Route::get('the-benefits-of-a-hotel-and-booking-management-system',function(){

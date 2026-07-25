@@ -5,6 +5,19 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="{{ $blog->meta_title ?? $blog->title }}">
+    <meta property="og:description" content="{{ $blog->meta_description ?? $blog->page_excerpt }}">
+    <meta property="og:image" content="{{ asset($blog->main_image) }}">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:type" content="article">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ $blog->meta_title ?? $blog->title }}">
+    <meta name="twitter:description" content="{{ $blog->meta_description ?? $blog->page_excerpt }}">
+    <meta name="twitter:image" content="{{ asset($blog->main_image) }}">
+    
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -387,6 +400,25 @@
 
 
                 {!! $blog->content  !!}
+
+                <!-- Social Sharing -->
+                <div class="social-share mt-5 pt-4" style="border-top: 1px solid var(--glass-border);">
+                    <h4 style="color: var(--gold-premium); margin-bottom: 20px;">Share this article:</h4>
+                    <div style="display: flex; gap: 15px;">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(url()->current()) }}" target="_blank" class="share-btn facebook" style="padding: 10px 20px; border-radius: 8px; background: #1877F2; color: #fff; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 8px; transition: opacity 0.3s;">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </a>
+                        <a href="https://twitter.com/intent/tweet?url={{ urlencode(url()->current()) }}&text={{ urlencode($blog->title) }}" target="_blank" class="share-btn twitter" style="padding: 10px 20px; border-radius: 8px; background: #000000; color: #fff; border: 1px solid #333; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 8px; transition: opacity 0.3s;">
+                            <i class="fab fa-x-twitter"></i> X (Twitter)
+                        </a>
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ urlencode(url()->current()) }}&title={{ urlencode($blog->title) }}" target="_blank" class="share-btn linkedin" style="padding: 10px 20px; border-radius: 8px; background: #0A66C2; color: #fff; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 8px; transition: opacity 0.3s;">
+                            <i class="fab fa-linkedin-in"></i> LinkedIn
+                        </a>
+                        <a href="https://api.whatsapp.com/send?text={{ urlencode($blog->title . ' ' . url()->current()) }}" target="_blank" class="share-btn whatsapp" style="padding: 10px 20px; border-radius: 8px; background: #25D366; color: #fff; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 8px; transition: opacity 0.3s;">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
 
         </div>
     </section>
