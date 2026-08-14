@@ -344,6 +344,15 @@
             margin-bottom: 1.5rem;
         }
     </style>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-62XFM2N3Q0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-62XFM2N3Q0');
+</script>
 </head>
 
 <body>
