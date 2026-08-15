@@ -8,6 +8,25 @@ class Blog extends Model
 {
     protected $guarded=[];
 
+    protected $casts = [
+        'published_at' => 'datetime',
+    ];
+
+    public function author()
+    {
+        return $this->belongsTo(User::class, 'author_id');
+    }
+
+    public function scopePublished($query)
+    {
+        return $query->where('status', 'published');
+    }
+
+    public function scopeDraft($query)
+    {
+        return $query->where('status', 'draft');
+    }
+
     public function getImageUrlAttribute()
     {
         if (\Illuminate\Support\Str::startsWith($this->main_image, 'img/')) {

@@ -36,9 +36,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
         // Route::get('testimonial', function(){
         //     return view('front_end.testimonial');
         // });
-        Route::get('blog', function(){
-            return view('front_end.blog');
-        });
+        Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
         // Route::get('blog-detail', function(){
         //     return view('front_end.blog-detail');
         // Sitemap Routes
@@ -143,4 +141,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
             
                 return response()->json(['status' => 'success', 'message' => 'All caches cleared successfully']);
             });
-        Route::get('{slug}', [BlogController::class, 'get_blog_details'])->name('blog.details');
+        Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');

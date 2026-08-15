@@ -13,7 +13,7 @@ class SitemapController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::latest()->get();
+        $blogs = Blog::published()->latest()->get();
         $sitemapContent = view("sitemap", compact("blogs"))->render();
         
         return Response::make($sitemapContent, 200, [
@@ -26,7 +26,7 @@ class SitemapController extends Controller
      */
     public function download()
     {
-        $blogs = Blog::latest()->get();
+        $blogs = Blog::published()->latest()->get();
         $sitemapContent = view("sitemap", compact("blogs"))->render();
         
         return Response::make($sitemapContent, 200, [

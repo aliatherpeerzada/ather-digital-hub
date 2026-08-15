@@ -5,6 +5,10 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     
+    <title>{{ $blog->meta_title ?? $blog->title }}</title>
+    <meta name="description" content="{{ $blog->meta_description ?? $blog->page_excerpt }}">
+    <link rel="canonical" href="{{ $blog->canonical ?? url()->current() }}">
+    
     <!-- Open Graph Meta Tags for Social Sharing -->
     <meta property="og:title" content="{{ $blog->meta_title ?? $blog->title }}">
     <meta property="og:description" content="{{ $blog->meta_description ?? $blog->page_excerpt }}">
@@ -25,6 +29,35 @@
     
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ url()->current() }}"
+      },
+      "headline": "{{ $blog->title }}",
+      "description": "{{ $blog->meta_description ?? $blog->page_excerpt }}",
+      "image": "{{ $blog->image_url }}",  
+      "author": {
+        "@type": "Person",
+        "name": "{{ $blog->author ? $blog->author->name : 'Admin' }}"
+      },  
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ather Digital Hub",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ URL::asset('img/logo.png') }}"
+        }
+      },
+      "datePublished": "{{ $blog->published_at ? $blog->published_at->toIso8601String() : $blog->created_at->toIso8601String() }}",
+      "dateModified": "{{ $blog->updated_at->toIso8601String() }}"
+    }
+    </script>
     
     <style>
         :root {
@@ -382,8 +415,13 @@
     <section class="hero reveal-up delay-100">
         <div class="container hero-grid">
             <div class="hero-content">
-                <h1 class="hero-title">{{$blog->title}}</h1>
-                <a href="{{ url('blog') }}" class="btn btn-outline" style="padding: 10px 24px; font-size: 0.95rem; margin-top: 1rem;"><i class="fas fa-arrow-left" style="margin-right: 8px;"></i> Back to Blogs</a>
+                <h1 class="hero-title" style="margin-bottom: 0.5rem;">{{$blog->title}}</h1>
+                <p style="color: var(--text-grey); margin-bottom: 1.5rem; font-size: 1rem;">
+                    <i class="far fa-user" style="color: var(--gold-premium); margin-right: 5px;"></i> {{ $blog->author ? $blog->author->name : 'Admin' }}
+                    <span style="margin: 0 10px;">|</span>
+                    <i class="far fa-calendar-alt" style="color: var(--gold-premium); margin-right: 5px;"></i> {{ $blog->published_at ? $blog->published_at->format('M d, Y') : $blog->created_at->format('M d, Y') }}
+                </p>
+                <a href="{{ url('blog') }}" class="btn btn-outline" style="padding: 10px 24px; font-size: 0.95rem;"><i class="fas fa-arrow-left" style="margin-right: 8px;"></i> Back to Blogs</a>
             </div>
             <div class="hero-visual reveal-scale delay-300">
                 <div class="blog-image-container">
@@ -417,6 +455,9 @@
                         <a href="https://api.whatsapp.com/send?text={{ urlencode($blog->title . ' ' . url()->current()) }}" target="_blank" class="share-btn whatsapp" style="padding: 10px 20px; border-radius: 8px; background: #25D366; color: #fff; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 8px; transition: opacity 0.3s;">
                             <i class="fab fa-whatsapp"></i> WhatsApp
                         </a>
+                        <button onclick="copyToClipboard('{{ url()->current() }}')" class="share-btn copy-link" style="border:none; cursor:pointer; padding: 10px 20px; border-radius: 8px; background: #333; color: #fff; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 8px; transition: opacity 0.3s;">
+                            <i class="fas fa-link"></i> Copy Link
+                        </button>
                     </div>
                 </div>
 
@@ -491,6 +532,15 @@
             const animatedElements = document.querySelectorAll('.reveal-up, .reveal-scale');
             animatedElements.forEach(el => observer.observe(el));
         });
+
+        // Copy link functionality
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Link copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
     </script>
 </body>
 </html>

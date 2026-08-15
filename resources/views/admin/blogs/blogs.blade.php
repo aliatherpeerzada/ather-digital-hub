@@ -36,8 +36,9 @@
                                             <thead>
                                                 <tr>
                                                     <th scope="col">TITLE</th>
-                                                    <th scope="col">CONTENT</th>
-                                                    <th scope="col">MAIN IMAGE</th>
+                                                    <th scope="col">STATUS</th>
+                                                    <th scope="col">AUTHOR</th>
+                                                    <th scope="col">PUBLISHED AT</th>
                                                     <th scope="col">ACTIONS</th>
                                                 </tr>
                                             </thead>
@@ -46,11 +47,16 @@
                                                 @if (count($blogs) > 0)
                                                     @foreach ($blogs as $blog)
                                                         <tr>
-                                                            <td>{!! \Illuminate\Support\Str::words($blog->title, 2) !!}</td>
-                                                            <td>{!! \Illuminate\Support\Str::words($blog->page_excerpt,10)!!}</td>
+                                                            <td>{!! \Illuminate\Support\Str::words($blog->title, 5) !!}</td>
                                                             <td>
-                                                                <img src="{{ $blog->image_url }}" width="50px" height="50px" style="object-fit: cover; border-radius: 4px;" alt="">
+                                                                @if($blog->status == 'published')
+                                                                    <span class="badge bg-success">Published</span>
+                                                                @else
+                                                                    <span class="badge bg-warning text-dark">Draft</span>
+                                                                @endif
                                                             </td>
+                                                            <td>{{ $blog->author ? $blog->author->name : 'Admin' }}</td>
+                                                            <td>{{ $blog->published_at ? $blog->published_at->format('Y-m-d') : '-' }}</td>
 
                                                             <td>
                                                                 <a href="{{ route('blogs.edit', $blog->id) }}"

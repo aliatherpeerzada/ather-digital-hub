@@ -11,12 +11,12 @@ class BlogController extends Controller
 {
     public function admin_blogs()
     {
-        $blogs = Blog::latest()->get();
+        $blogs = Blog::with('author')->latest()->get();
         return view('admin.blogs.blogs', compact('blogs'));
     }
 
     public function admin_blogs_create()
-    {;
+    {
         return view('admin.blogs.blogs_create');
     }
 
@@ -34,6 +34,8 @@ class BlogController extends Controller
             'content' => 'required',
             'main_image' => 'required',
             'main_image_alt' => 'required',
+            'status' => 'required|in:draft,published',
+            'published_at' => 'nullable|date',
         ]);
 
         $slug = Str::slug($request->title, '-');
@@ -54,6 +56,9 @@ class BlogController extends Controller
             'main_image' => $main_image,
             'main_image_alt' => $request->main_image_alt,
             'content' => $request->content,
+            'status' => $request->status,
+            'published_at' => $request->published_at,
+            'author_id' => \Illuminate\Support\Facades\Auth::id(),
         ]);
 
         return redirect()->route('blogs')->with('message', 'Blog Added Successfully');
@@ -76,6 +81,8 @@ class BlogController extends Controller
             'page_excerpt' => 'required',
             'content' => 'required',
             'main_image_alt' => 'required',
+            'status' => 'required|in:draft,published',
+            'published_at' => 'nullable|date',
         ]);
 
         $blog = Blog::findOrFail($id);
@@ -104,6 +111,8 @@ class BlogController extends Controller
             'main_image' => $main_image,
             'main_image_alt' => $request->main_image_alt,
             'content' => $request->content,
+            'status' => $request->status,
+            'published_at' => $request->published_at,
         ]);
 
         return redirect()->route('blogs')->with('message', 'Blog Updated Successfully');
@@ -122,18 +131,27 @@ class BlogController extends Controller
         return redirect()->route('blogs')->with('message', 'Blog Deleted Successfully');
     }
 
-    public function get_blog()
+    public function index()
     {
-        $blogs = Blog::latest()->get();
+        $blogs = Blog::published()
+            ->orderBy('published_at', 'desc')
+            ->paginate(12);
 
-        return view('blog', compact('blogs'));
+        return view('front_end.blog', compact('blogs'));
     }
 
-    public function get_blog_details($slug)
+    public function show($slug)
     {
-        $blog = Blog::where('slug', $slug)->firstOrFail();
-        $blogs = Blog::take(3)->get();
-
+        $blog = Blog::with('author')
+            ->where('slug', $slug)
+            ->published()
+            ->firstOrFail();
+            
+        $blogs = Blog::published()
+            ->where('id', '!=', $blog->id)
+            ->inRandomOrder()
+            ->take(3)
+            ->get();
 
         return view('blog_template', compact('blog','blogs'));
     }

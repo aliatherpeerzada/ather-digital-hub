@@ -770,8 +770,8 @@
                 <a href="#services" class="nav-link">Services</a>
                 <a href="#portfolio" class="nav-link">Portfolio</a>
                 <a href="#technologies" class="nav-link">Technologies</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="{{ url('blog') }}" class="nav-link">Blog</a>
+                <a href="{{ url('/') }}#about" class="nav-link">About</a>
+                <a href="{{ route('blog.index') }}" class="nav-link">Blog</a>
             </div>
             <a href="#contact" class="btn btn-gold d-none-mobile" style="padding: 12px 28px;">Get Consultation</a>
         </div>

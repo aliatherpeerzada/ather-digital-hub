@@ -17,7 +17,7 @@
     <!-- Dynamic Blogs -->
     @foreach($blogs as $blog)
     <url>
-        <loc>{{ url($blog->slug) }}</loc>
+        <loc>{{ route('blog.show', $blog->slug) }}</loc>
         <lastmod>{{ $blog->updated_at->tz("UTC")->toAtomString() }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>

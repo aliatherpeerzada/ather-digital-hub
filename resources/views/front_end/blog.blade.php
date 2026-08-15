@@ -435,9 +435,6 @@
     <section class="section">
         <div class="container pb-5">
 
-            @php
-            $blogs= App\Models\Blog::latest()->get();
-        @endphp
         <div class="row pb-5">
                         @foreach ($blogs as $blog)
                             
@@ -445,13 +442,13 @@
                         <div class="col-md-4">
                             <div class="example-1 card">
                                 <div class="wrapper">
-                                    <a href='{{URL("$blog->slug")}}'> 
+                                    <a href="{{ route('blog.show', $blog->slug) }}"> 
                                         <img src="{{ $blog->image_url }}"
                                             class="img-fluid" alt="{{$blog->main_image_alt}}"> </a>
                                     <div class="data">
-                                        <a  href='{{URL("$blog->slug")}}'>
+                                        <a href="{{ route('blog.show', $blog->slug) }}">
                                             <div class="content">
-                                                <span class="author">{{date('d-m-Y',strtotime($blog->created_at))}}</span>
+                                                <span class="author">{{ $blog->published_at ? $blog->published_at->format('d-m-Y') : $blog->created_at->format('d-m-Y') }}</span>
                                                 <h2 class="title"> 
                                             {{$blog->title}}
                                                                                 </h2>
@@ -468,6 +465,9 @@
 
 
                         @endforeach
+        </div>
+        <div class="d-flex justify-content-center mt-5">
+            {{ $blogs->links() }}
         </div>
     </section>
 

@@ -89,6 +89,20 @@
                                             style="display: none;">Main image alt is required</div>
                                     </div>
                                 </div>
+                                
+                                <div class="row">
+                                    <div class="col-lg-6 mb-3">
+                                        <label class="form-label">Status</label>
+                                        <select name="status" id="status" class="form-control">
+                                            <option value="draft">Draft</option>
+                                            <option value="published">Published</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <label class="form-label">Published At</label>
+                                        <input type="datetime-local" name="published_at" id="published_at" class="form-control">
+                                    </div>
+                                </div>
 
                             </div>
                         </div>
