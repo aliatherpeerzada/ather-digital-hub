@@ -12,7 +12,7 @@
     <!-- Open Graph Meta Tags for Social Sharing -->
     <meta property="og:title" content="{{ $blog->meta_title ?? $blog->title }}">
     <meta property="og:description" content="{{ $blog->meta_description ?? $blog->page_excerpt }}">
-    <meta property="og:image" content="{{ $blog->image_url }}">
+    <meta property="og:image" content="{{ asset($blog->image_url) }}">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:type" content="article">
     
@@ -20,7 +20,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ $blog->meta_title ?? $blog->title }}">
     <meta name="twitter:description" content="{{ $blog->meta_description ?? $blog->page_excerpt }}">
-    <meta name="twitter:image" content="{{ $blog->image_url }}">
+    <meta name="twitter:image" content="{{ asset($blog->image_url) }}">
     
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +41,7 @@
       },
       "headline": "{{ $blog->title }}",
       "description": "{{ $blog->meta_description ?? $blog->page_excerpt }}",
-      "image": "{{ $blog->image_url }}",  
+      "image": "{{ asset($blog->image_url) }}",  
       "author": {
         "@type": "Person",
         "name": "{{ $blog->author ? $blog->author->name : 'Admin' }}"
