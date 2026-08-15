@@ -7,7 +7,7 @@
     
     <title>{{ $blog->meta_title ?? $blog->title }}</title>
     <meta name="description" content="{{ $blog->meta_description ?? $blog->page_excerpt }}">
-    <link rel="canonical" href="{{ $blog->canonical ?? url()->current() }}">
+    <link rel="canonical" href="{{ route('blog.show', $blog->slug) }}">
     
     <!-- Open Graph Meta Tags for Social Sharing -->
     <meta property="og:title" content="{{ $blog->meta_title ?? $blog->title }}">

@@ -4,7 +4,25 @@
     @yield('seoMeta')
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    
+
+    <!-- Primary SEO Meta Tags -->
+    <title>Ather Digital Hub | Premium Software Development Company</title>
+    <meta name="description" content="Ather Digital Hub builds enterprise software, web apps, mobile apps, ERP systems, and AI solutions for businesses worldwide. Start your project today.">
+    <link rel="canonical" href="{{ url('/') }}">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url('/') }}">
+    <meta property="og:title" content="Ather Digital Hub | Premium Software Development Company">
+    <meta property="og:description" content="We build enterprise software, web applications, mobile apps, ERP systems, AI solutions, and digital experiences for companies worldwide.">
+    <meta property="og:image" content="{{ URL::asset('img/logo.png') }}">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ather Digital Hub | Premium Software Development">
+    <meta name="twitter:description" content="Premium software, ERP, AI, and web solutions for businesses worldwide.">
+    <meta name="twitter:image" content="{{ URL::asset('img/logo.png') }}">
+
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
