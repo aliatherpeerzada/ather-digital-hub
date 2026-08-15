@@ -433,7 +433,7 @@
 
     <!-- Blog Content -->
     <section class="section pt-0">
-        <div class="blog-content reveal-up delay-200">
+        <div class="blog-content ">
 
 
 
