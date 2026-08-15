@@ -392,6 +392,63 @@
             line-height: 1.6;
             margin-bottom: 0;
         }
+        /* Custom Pagination */
+        nav .flex.justify-between {
+            display: none; /* Hide mobile simple pagination links if any */
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            padding-left: 0;
+            gap: 8px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        .page-item .page-link {
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            color: var(--text-grey);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 40px;
+            min-height: 40px;
+        }
+        .page-item.active .page-link {
+            background: var(--gold-premium) !important;
+            border-color: var(--gold-premium) !important;
+            color: var(--bg-main) !important;
+            box-shadow: var(--gold-glow);
+        }
+        .page-item .page-link:hover:not(.active) {
+            border-color: var(--gold-premium);
+            color: var(--gold-premium);
+            background: rgba(212, 175, 55, 0.1);
+        }
+        .page-item.disabled .page-link {
+            opacity: 0.5;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+        .page-link svg {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+        .d-flex.justify-content-between.flex-fill {
+             display: none !important;
+        }
+        .text-muted {
+            color: var(--text-grey) !important;
+            margin-top: 15px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
     </style>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-62XFM2N3Q0"></script>
