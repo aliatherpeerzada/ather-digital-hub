@@ -348,11 +348,72 @@
         ::-webkit-scrollbar-thumb { background: rgba(212, 175, 55, 0.3); border-radius: 10px; }
         ::-webkit-scrollbar-thumb:hover { background: rgba(212, 175, 55, 0.6); }
         
+        /* Split Grid Layout */
+        .split-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: start;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4), var(--gold-glow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Social Links */
+        .social-links-contact {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .social-link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 22px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .social-link-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .social-link-btn.linkedin  { background: rgba(10,102,194,0.15); color: #4a9fd4; border-color: rgba(10,102,194,0.3); }
+        .social-link-btn.linkedin:hover  { background: #0A66C2; color: #fff; }
+        .social-link-btn.facebook  { background: rgba(24,119,242,0.15); color: #5b9ef7; border-color: rgba(24,119,242,0.3); }
+        .social-link-btn.facebook:hover  { background: #1877F2; color: #fff; }
+        .social-link-btn.instagram { background: rgba(228,64,95,0.15); color: #e4405f; border-color: rgba(228,64,95,0.3); }
+        .social-link-btn.instagram:hover { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #fff; border-color: transparent; }
+        .social-link-btn.whatsapp  { background: rgba(37,211,102,0.15); color: #25D366; border-color: rgba(37,211,102,0.3); }
+        .social-link-btn.whatsapp:hover  { background: #25D366; color: #fff; }
+
+        .delay-200 { transition-delay: 0.2s; }
+
         @media (max-width: 768px) {
             .hero-grid { grid-template-columns: 1fr; text-align: center; }
             .hero-title { font-size: 2.5rem; }
             .nav-links { display: none; }
             .footer-grid { grid-template-columns: 1fr; gap: 2.5rem;}
+            .split-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+            .contact-form { padding: 2rem 1.5rem; }
+            .section-title { font-size: 2.5rem; }
         }
         
         /* Blog Content Styling */
@@ -461,6 +522,94 @@
                     </div>
                 </div>
 
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact" style="background: radial-gradient(ellipse at 60% 50%, rgba(212,175,55,0.04) 0%, transparent 70%);">
+        <div class="container split-grid">
+            <!-- Left: Contact Info -->
+            <div class="reveal-up">
+                <h2 class="section-title">Get in <span class="text-gold">Touch</span></h2>
+                <p class="mb-5" style="font-size: 1.15rem; color: #ccc;">Ready to transform your business with world-class digital solutions? Contact our technical experts today.</p>
+
+                <div style="display:flex; flex-direction:column; gap: 2.5rem;">
+                    <div style="display:flex; align-items:center; gap: 1.5rem;">
+                        <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(212,175,55,0.1); display:flex; align-items:center; justify-content:center; border: 1px solid rgba(212,175,55,0.3); flex-shrink:0;">
+                            <i class="fas fa-envelope text-gold" style="font-size: 1.5rem;"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.2rem; margin-bottom: 5px;">Corporate Email</h4>
+                            <p style="margin:0; color: #aaa;">info@atherdigitalhub.com</p>
+                        </div>
+                    </div>
+                    <div style="display:flex; align-items:center; gap: 1.5rem;">
+                        <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(212,175,55,0.1); display:flex; align-items:center; justify-content:center; border: 1px solid rgba(212,175,55,0.3); flex-shrink:0;">
+                            <i class="fas fa-phone-alt text-gold" style="font-size: 1.5rem;"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.2rem; margin-bottom: 5px;">Phone / WhatsApp</h4>
+                            <p style="margin:0; color: #aaa;">03363498664</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Links -->
+                <div style="margin-top: 3.5rem;">
+                    <h4 style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--text-grey); text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem;">Follow Us</h4>
+                    <div class="social-links-contact">
+                        <a href="https://www.linkedin.com/company/ather-digital-hub" target="_blank" class="social-link-btn linkedin">
+                            <i class="fab fa-linkedin-in"></i> LinkedIn
+                        </a>
+                        <a href="https://www.facebook.com/atherdigitalhub" target="_blank" class="social-link-btn facebook">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </a>
+                        <a href="https://www.instagram.com/atherdigitalhub" target="_blank" class="social-link-btn instagram">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=923363498664" target="_blank" class="social-link-btn whatsapp">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Contact Form -->
+            <div class="contact-form reveal-up delay-200">
+                @if(session('message'))
+                    <div style="background: rgba(46, 204, 113, 0.2); border: 1px solid #2ecc71; color: #2ecc71; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                        {{ session('message') }}
+                    </div>
+                @endif
+                @if($errors->any())
+                    <div style="background: rgba(231, 76, 60, 0.2); border: 1px solid #e74c3c; color: #e74c3c; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                        @foreach($errors->all() as $error)
+                            <p style="margin: 0;">{{ $error }}</p>
+                        @endforeach
+                    </div>
+                @endif
+
+                <form action="{{ url('contact/store') }}" method="POST">
+                    @csrf
+                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                        <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+                        <input type="email" name="email" class="form-control" placeholder="Corporate Email" required>
+                    </div>
+                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                        <input type="text" name="phone" class="form-control" placeholder="Phone Number" required>
+                        <input type="number" name="additional_number" class="form-control" placeholder="Additional Number">
+                    </div>
+                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                        <input type="text" name="company" class="form-control" placeholder="Company Name">
+                        <input type="text" name="budget" class="form-control" placeholder="Project Budget (e.g. $10k - $25k)">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" class="form-control" rows="5" placeholder="Project Details" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-gold" style="width: 100%; padding: 18px; font-size: 1.1rem; letter-spacing: 1px;">Send Request <i class="fas fa-paper-plane" style="margin-left: 10px;"></i></button>
+                </form>
+            </div>
         </div>
     </section>
 
