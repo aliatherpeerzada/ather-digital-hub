@@ -416,14 +416,33 @@
             .section-title { font-size: 2.5rem; }
         }
         
+        /* Blog + Sidebar Layout */
+        .blog-sidebar-layout {
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 4rem;
+            align-items: start;
+            padding: 60px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .blog-sidebar {
+            position: sticky;
+            top: 100px;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(212,175,55,0.3) transparent;
+        }
+        .blog-sidebar::-webkit-scrollbar { width: 4px; }
+        .blog-sidebar::-webkit-scrollbar-thumb { background: rgba(212,175,55,0.3); border-radius: 4px; }
+
         /* Blog Content Styling */
         .blog-content {
-            max-width: 900px;
-            margin: 0 auto;
             font-size: 1.1rem;
             line-height: 1.8;
             color: var(--text-grey);
-            padding: 60px 5%;
         }
         .blog-content strong {
             color: var(--gold-light);
@@ -449,6 +468,18 @@
         }
         .blog-content p {
             margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 1024px) {
+            .blog-sidebar-layout {
+                grid-template-columns: 1fr;
+                padding: 40px 5%;
+            }
+            .blog-sidebar {
+                position: static;
+                max-height: none;
+                overflow-y: visible;
+            }
         }
     </style>
 </head>
@@ -492,124 +523,121 @@
         </div>
     </section>
 
-    <!-- Blog Content -->
-    <section class="section pt-0">
-        <div class="blog-content ">
+    <!-- Blog Content + Sticky Contact Sidebar -->
+    <section class="section pt-0" id="contact">
+        <div class="blog-sidebar-layout">
 
-
-
-                {!! $blog->content  !!}
+            <!-- LEFT: Scrolling Blog Content -->
+            <div class="blog-content reveal-up">
+                {!! $blog->content !!}
 
                 <!-- Social Sharing -->
                 <div class="social-share mt-5 pt-4" style="border-top: 1px solid var(--glass-border);">
                     <h4 style="color: var(--gold-premium); margin-bottom: 20px;">Share this article:</h4>
-                    <div style="display: flex; gap: 15px;">
-                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(url()->current()) }}" target="_blank" class="share-btn facebook" style="padding: 10px 20px; border-radius: 8px; background: #1877F2; color: #fff; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 8px; transition: opacity 0.3s;">
+                    <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(url()->current()) }}" target="_blank" style="padding: 10px 18px; border-radius: 8px; background: #1877F2; color: #fff; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 8px;">
                             <i class="fab fa-facebook-f"></i> Facebook
                         </a>
-                        <a href="https://twitter.com/intent/tweet?url={{ urlencode(url()->current()) }}&text={{ urlencode($blog->title) }}" target="_blank" class="share-btn twitter" style="padding: 10px 20px; border-radius: 8px; background: #000000; color: #fff; border: 1px solid #333; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 8px; transition: opacity 0.3s;">
+                        <a href="https://twitter.com/intent/tweet?url={{ urlencode(url()->current()) }}&text={{ urlencode($blog->title) }}" target="_blank" style="padding: 10px 18px; border-radius: 8px; background: #000; color: #fff; border: 1px solid #333; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 8px;">
                             <i class="fab fa-x-twitter"></i> X (Twitter)
                         </a>
-                        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ urlencode(url()->current()) }}&title={{ urlencode($blog->title) }}" target="_blank" class="share-btn linkedin" style="padding: 10px 20px; border-radius: 8px; background: #0A66C2; color: #fff; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 8px; transition: opacity 0.3s;">
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ urlencode(url()->current()) }}&title={{ urlencode($blog->title) }}" target="_blank" style="padding: 10px 18px; border-radius: 8px; background: #0A66C2; color: #fff; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 8px;">
                             <i class="fab fa-linkedin-in"></i> LinkedIn
                         </a>
-                        <a href="https://api.whatsapp.com/send?text={{ urlencode($blog->title . ' ' . url()->current()) }}" target="_blank" class="share-btn whatsapp" style="padding: 10px 20px; border-radius: 8px; background: #25D366; color: #fff; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 8px; transition: opacity 0.3s;">
+                        <a href="https://api.whatsapp.com/send?text={{ urlencode($blog->title . ' ' . url()->current()) }}" target="_blank" style="padding: 10px 18px; border-radius: 8px; background: #25D366; color: #fff; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 8px;">
                             <i class="fab fa-whatsapp"></i> WhatsApp
                         </a>
-                        <button onclick="copyToClipboard('{{ url()->current() }}')" class="share-btn copy-link" style="border:none; cursor:pointer; padding: 10px 20px; border-radius: 8px; background: #333; color: #fff; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 8px; transition: opacity 0.3s;">
+                        <button onclick="copyToClipboard('{{ url()->current() }}')" style="border:none; cursor:pointer; padding: 10px 18px; border-radius: 8px; background: #333; color: #fff; font-weight: 500; display: flex; align-items: center; gap: 8px;">
                             <i class="fas fa-link"></i> Copy Link
                         </button>
                     </div>
                 </div>
+            </div>
 
-        </div>
-    </section>
+            <!-- RIGHT: Sticky Contact Sidebar -->
+            <div class="blog-sidebar reveal-up delay-200">
+                <div class="contact-form">
+                    <h3 style="color: var(--gold-premium) !important; font-size: 1.6rem; margin-top: 0; margin-bottom: 0.5rem;">Get in <span style="color: #fff;">Touch</span></h3>
+                    <p style="font-size: 0.95rem; color: #aaa; margin-bottom: 1.8rem; line-height: 1.6;">Ready to transform your business? Contact our experts today.</p>
 
-    <!-- Contact Section -->
-    <section class="section" id="contact" style="background: radial-gradient(ellipse at 60% 50%, rgba(212,175,55,0.04) 0%, transparent 70%);">
-        <div class="container split-grid">
-            <!-- Left: Contact Info -->
-            <div class="reveal-up">
-                <h2 class="section-title">Get in <span class="text-gold">Touch</span></h2>
-                <p class="mb-5" style="font-size: 1.15rem; color: #ccc;">Ready to transform your business with world-class digital solutions? Contact our technical experts today.</p>
-
-                <div style="display:flex; flex-direction:column; gap: 2.5rem;">
-                    <div style="display:flex; align-items:center; gap: 1.5rem;">
-                        <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(212,175,55,0.1); display:flex; align-items:center; justify-content:center; border: 1px solid rgba(212,175,55,0.3); flex-shrink:0;">
-                            <i class="fas fa-envelope text-gold" style="font-size: 1.5rem;"></i>
+                    <!-- Contact Info -->
+                    <div style="display:flex; flex-direction:column; gap: 1.2rem; margin-bottom: 2rem;">
+                        <div style="display:flex; align-items:center; gap: 1rem;">
+                            <div style="width: 44px; height: 44px; flex-shrink:0; border-radius: 50%; background: rgba(212,175,55,0.1); display:flex; align-items:center; justify-content:center; border: 1px solid rgba(212,175,55,0.3);">
+                                <i class="fas fa-envelope text-gold" style="font-size: 1rem;"></i>
+                            </div>
+                            <div>
+                                <p style="margin:0; font-size: 0.75rem; color: #666; text-transform: uppercase; letter-spacing: 1px;">Email</p>
+                                <p style="margin:0; color: #ccc; font-size: 0.9rem;">info@atherdigitalhub.com</p>
+                            </div>
                         </div>
-                        <div>
-                            <h4 style="font-size: 1.2rem; margin-bottom: 5px;">Corporate Email</h4>
-                            <p style="margin:0; color: #aaa;">info@atherdigitalhub.com</p>
-                        </div>
-                    </div>
-                    <div style="display:flex; align-items:center; gap: 1.5rem;">
-                        <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(212,175,55,0.1); display:flex; align-items:center; justify-content:center; border: 1px solid rgba(212,175,55,0.3); flex-shrink:0;">
-                            <i class="fas fa-phone-alt text-gold" style="font-size: 1.5rem;"></i>
-                        </div>
-                        <div>
-                            <h4 style="font-size: 1.2rem; margin-bottom: 5px;">Phone / WhatsApp</h4>
-                            <p style="margin:0; color: #aaa;">03363498664</p>
+                        <div style="display:flex; align-items:center; gap: 1rem;">
+                            <div style="width: 44px; height: 44px; flex-shrink:0; border-radius: 50%; background: rgba(212,175,55,0.1); display:flex; align-items:center; justify-content:center; border: 1px solid rgba(212,175,55,0.3);">
+                                <i class="fas fa-phone-alt text-gold" style="font-size: 1rem;"></i>
+                            </div>
+                            <div>
+                                <p style="margin:0; font-size: 0.75rem; color: #666; text-transform: uppercase; letter-spacing: 1px;">Phone / WhatsApp</p>
+                                <p style="margin:0; color: #ccc; font-size: 0.9rem;">03363498664</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Social Links -->
-                <div style="margin-top: 3.5rem;">
-                    <h4 style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--text-grey); text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem;">Follow Us</h4>
-                    <div class="social-links-contact">
-                        <a href="https://www.linkedin.com/company/ather-digital-hub" target="_blank" class="social-link-btn linkedin">
-                            <i class="fab fa-linkedin-in"></i> LinkedIn
-                        </a>
-                        <a href="https://www.facebook.com/atherdigitalhub" target="_blank" class="social-link-btn facebook">
-                            <i class="fab fa-facebook-f"></i> Facebook
-                        </a>
-                        <a href="https://www.instagram.com/atherdigitalhub" target="_blank" class="social-link-btn instagram">
-                            <i class="fab fa-instagram"></i> Instagram
-                        </a>
-                        <a href="https://api.whatsapp.com/send?phone=923363498664" target="_blank" class="social-link-btn whatsapp">
-                            <i class="fab fa-whatsapp"></i> WhatsApp
-                        </a>
+                    <!-- Flash Messages -->
+                    @if(session('message'))
+                        <div style="background: rgba(46,204,113,0.2); border: 1px solid #2ecc71; color: #2ecc71; padding: 12px; border-radius: 8px; margin-bottom: 16px; font-size: 0.9rem;">
+                            {{ session('message') }}
+                        </div>
+                    @endif
+                    @if($errors->any())
+                        <div style="background: rgba(231,76,60,0.2); border: 1px solid #e74c3c; color: #e74c3c; padding: 12px; border-radius: 8px; margin-bottom: 16px; font-size: 0.9rem;">
+                            @foreach($errors->all() as $error)
+                                <p style="margin: 0;">{{ $error }}</p>
+                            @endforeach
+                        </div>
+                    @endif
+
+                    <!-- Form -->
+                    <form action="{{ url('contact/store') }}" method="POST">
+                        @csrf
+                        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                            <input type="text" name="name" class="form-control" placeholder="Full Name" required style="padding: 0.9rem 1.1rem; font-size: 0.95rem;">
+                            <input type="email" name="email" class="form-control" placeholder="Email" required style="padding: 0.9rem 1.1rem; font-size: 0.95rem;">
+                        </div>
+                        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                            <input type="text" name="phone" class="form-control" placeholder="Phone" required style="padding: 0.9rem 1.1rem; font-size: 0.95rem;">
+                            <input type="number" name="additional_number" class="form-control" placeholder="Alt. Number" style="padding: 0.9rem 1.1rem; font-size: 0.95rem;">
+                        </div>
+                        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                            <input type="text" name="company" class="form-control" placeholder="Company" style="padding: 0.9rem 1.1rem; font-size: 0.95rem;">
+                            <input type="text" name="budget" class="form-control" placeholder="Budget" style="padding: 0.9rem 1.1rem; font-size: 0.95rem;">
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <textarea name="message" class="form-control" rows="4" placeholder="Project Details" required style="padding: 0.9rem 1.1rem; font-size: 0.95rem;"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-gold" style="width: 100%; padding: 15px; font-size: 1rem; letter-spacing: 1px;">Send Request <i class="fas fa-paper-plane" style="margin-left: 8px;"></i></button>
+                    </form>
+
+                    <!-- Social Links -->
+                    <div style="margin-top: 1.8rem; padding-top: 1.5rem; border-top: 1px solid var(--glass-border);">
+                        <p style="font-size: 0.75rem; color: #666; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">Follow Us</p>
+                        <div class="social-links-contact" style="gap: 0.6rem;">
+                            <a href="https://www.linkedin.com/company/ather-digital-hub" target="_blank" class="social-link-btn linkedin" style="padding: 9px 16px; font-size: 0.85rem;">
+                                <i class="fab fa-linkedin-in"></i> LinkedIn
+                            </a>
+                            <a href="https://www.facebook.com/atherdigitalhub" target="_blank" class="social-link-btn facebook" style="padding: 9px 16px; font-size: 0.85rem;">
+                                <i class="fab fa-facebook-f"></i> Facebook
+                            </a>
+                            <a href="https://www.instagram.com/atherdigitalhub" target="_blank" class="social-link-btn instagram" style="padding: 9px 16px; font-size: 0.85rem;">
+                                <i class="fab fa-instagram"></i> Instagram
+                            </a>
+                            <a href="https://api.whatsapp.com/send?phone=923363498664" target="_blank" class="social-link-btn whatsapp" style="padding: 9px 16px; font-size: 0.85rem;">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Right: Contact Form -->
-            <div class="contact-form reveal-up delay-200">
-                @if(session('message'))
-                    <div style="background: rgba(46, 204, 113, 0.2); border: 1px solid #2ecc71; color: #2ecc71; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
-                        {{ session('message') }}
-                    </div>
-                @endif
-                @if($errors->any())
-                    <div style="background: rgba(231, 76, 60, 0.2); border: 1px solid #e74c3c; color: #e74c3c; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
-                        @foreach($errors->all() as $error)
-                            <p style="margin: 0;">{{ $error }}</p>
-                        @endforeach
-                    </div>
-                @endif
-
-                <form action="{{ url('contact/store') }}" method="POST">
-                    @csrf
-                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
-                        <input type="text" name="name" class="form-control" placeholder="Full Name" required>
-                        <input type="email" name="email" class="form-control" placeholder="Corporate Email" required>
-                    </div>
-                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
-                        <input type="text" name="phone" class="form-control" placeholder="Phone Number" required>
-                        <input type="number" name="additional_number" class="form-control" placeholder="Additional Number">
-                    </div>
-                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
-                        <input type="text" name="company" class="form-control" placeholder="Company Name">
-                        <input type="text" name="budget" class="form-control" placeholder="Project Budget (e.g. $10k - $25k)">
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" class="form-control" rows="5" placeholder="Project Details" required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-gold" style="width: 100%; padding: 18px; font-size: 1.1rem; letter-spacing: 1px;">Send Request <i class="fas fa-paper-plane" style="margin-left: 10px;"></i></button>
-                </form>
-            </div>
         </div>
     </section>
 
