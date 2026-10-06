@@ -31,6 +31,9 @@
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     
+    <!-- Cloudflare Turnstile Captcha -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    
     <style>
         :root {
             --bg-main: #050505;
@@ -1240,6 +1243,9 @@
                     <div class="form-group">
                         <textarea name="message" class="form-control" rows="5" placeholder="Project Details" required></textarea>
                     </div>
+                    
+                    <!-- Cloudflare Turnstile Captcha -->
+                    <div class="cf-turnstile" data-sitekey="{{ config('services.turnstile.key') }}" data-theme="dark" style="margin-bottom: 1.5rem;"></div>
                     
                     <button type="submit" class="btn btn-gold w-100" style="width: 100%; padding: 18px; font-size: 1.1rem; letter-spacing: 1px;">Send Request <i class="fas fa-paper-plane" style="margin-left: 10px;"></i></button>
                 </form>

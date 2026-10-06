@@ -30,6 +30,9 @@
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     
+    <!-- Cloudflare Turnstile Captcha -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
@@ -614,6 +617,10 @@
                         <div style="margin-bottom: 1rem;">
                             <textarea name="message" class="form-control" rows="4" placeholder="Project Details" required style="padding: 0.9rem 1.1rem; font-size: 0.95rem;"></textarea>
                         </div>
+                        
+                        <!-- Cloudflare Turnstile Captcha -->
+                        <div class="cf-turnstile" data-sitekey="{{ config('services.turnstile.key') }}" data-theme="dark" style="margin-bottom: 1rem;"></div>
+
                         <button type="submit" class="btn btn-gold" style="width: 100%; padding: 15px; font-size: 1rem; letter-spacing: 1px;">Send Request <i class="fas fa-paper-plane" style="margin-left: 8px;"></i></button>
                     </form>
 

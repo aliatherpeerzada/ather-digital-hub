@@ -14,8 +14,13 @@ class FormController extends Controller
 {
     public function contact_store(Request $request)
     {
+        if (!$request->filled('cf-turnstile-response') && $request->filled('captcha_token')) {
+            $request->merge(['cf-turnstile-response' => $request->input('captcha_token')]);
+        }
 
-        $data = $request->validate([
+        $hasSecret = !empty(config('services.turnstile.secret'));
+
+        $request->validate([
             'name' => 'required',
             'email' => 'required|email',
             'phone' => 'required',
@@ -23,11 +28,18 @@ class FormController extends Controller
             'additional_number' => 'nullable',
             'company' => 'nullable',
             'budget' => 'nullable',
+            'cf-turnstile-response' => array_values(array_filter([
+                $hasSecret ? 'required' : 'nullable',
+                new \App\Rules\TurnstileRule(),
+            ])),
+        ], [
+            'cf-turnstile-response.required' => 'Please complete the Cloudflare security verification.',
         ]);
          
-        Contact::create($request->only(['name', 'email', 'phone', 'message', 'additional_number', 'company', 'budget']));
+        $contactData = $request->only(['name', 'email', 'phone', 'message', 'additional_number', 'company', 'budget']);
+        Contact::create($contactData);
  
-        SendMailJob::dispatchAfterResponse($data, 'contact');
+        SendMailJob::dispatchAfterResponse($contactData, 'contact');
          
         return redirect(url()->previous() . '#contact')->with('message', 'Contact Submitted successfully');
     }

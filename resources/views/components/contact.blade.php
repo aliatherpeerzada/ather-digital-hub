@@ -110,14 +110,11 @@
                             </div>
 
                             <div>
-                                                                <input type="hidden" class="captcha_token" name="captcha_token"
-                                value="">
-                                <div class="mt-3 d-flex justify-content-end flex-column align-items-end ">
-                                <div class="cf-turnstile"></div>
-                                <div id="error_message" class="text-danger fw-bold"></div>
+                                <div class="mt-3 mb-3 d-flex justify-content-center">
+                                    <div class="cf-turnstile" data-sitekey="{{ config('services.turnstile.key') }}" data-theme="dark"></div>
+                                </div>
+                                <div id="error_message_captcha" class="text-danger fw-bold text-center" style="display: none;"></div>
                             </div>
-                            </div>
-                            <input type="hidden" id="captcha_token" name="captcha_token" value="">
 
                             <!-- Submit Button -->
                             <a href="javascript:void(0)"
