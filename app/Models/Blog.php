@@ -10,7 +10,19 @@ class Blog extends Model
 
     protected $casts = [
         'published_at' => 'datetime',
+        'approved_at' => 'datetime',
+        'created_by_ai' => 'boolean',
     ];
+
+    public function approver()
+    {
+        return $this->belongsTo(User::class, 'approved_by');
+    }
+
+    public function scopeAiPendingApproval($query)
+    {
+        return $query->where('created_by_ai', true)->where('status', 'draft');
+    }
 
     public function author()
     {

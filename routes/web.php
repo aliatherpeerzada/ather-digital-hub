@@ -122,6 +122,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
     Route::get('/admin-blogs-edit/{id}', [BlogController::class, 'admin_blogs_edit'])->name('blogs.edit');
     Route::put('/admin-blogs-edit/{id}/update', [BlogController::class, 'admin_blogs_update'])->name('blogs.update');
     Route::delete('/admin-blogs-delete/{id}', [BlogController::class, 'admin_blogs_delete'])->name('blogs.delete');
+    Route::post('/admin-blogs-approve/{id}', [BlogController::class, 'admin_blogs_approve'])->name('blogs.approve');
     // end blog routes
 
 

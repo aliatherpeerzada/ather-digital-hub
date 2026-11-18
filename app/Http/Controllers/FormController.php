@@ -86,8 +86,8 @@ class FormController extends Controller
         }
 
 
-        Newsletter::create($data);
-        SendMailJob::dispatchAfterResponse($data, 'newsletter');
+        // Newsletter::create($data);
+        // SendMailJob::dispatchAfterResponse($data, 'newsletter');
 
         return back()->with('message', 'Newsletter subscription successful');
     }

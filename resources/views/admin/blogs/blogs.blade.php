@@ -54,11 +54,29 @@
                                                                 @else
                                                                     <span class="badge bg-warning text-dark">Draft</span>
                                                                 @endif
+                                                                @if($blog->created_by_ai && $blog->status == 'draft')
+                                                                    <span class="badge bg-info text-dark">Pending Approval</span>
+                                                                @endif
                                                             </td>
-                                                            <td>{{ $blog->author ? $blog->author->name : 'Admin' }}</td>
+                                                            <td>
+                                                                @if($blog->created_by_ai)
+                                                                    <span class="badge bg-primary">AI (Claude)</span>
+                                                                @else
+                                                                    {{ $blog->author ? $blog->author->name : 'Admin' }}
+                                                                @endif
+                                                            </td>
                                                             <td>{{ $blog->published_at ? $blog->published_at->format('Y-m-d') : '-' }}</td>
 
                                                             <td>
+                                                                @if($blog->status == 'draft')
+                                                                    <form action="{{ route('blogs.approve', $blog->id) }}" method="POST" class="d-inline"
+                                                                        onsubmit="return confirm('Approve and publish this blog?')">
+                                                                        @csrf
+                                                                        <button type="submit" class="btn btn-primary btn-sm" title="Approve & Publish">
+                                                                            <i class="bi bi-check2-circle fs-4"></i>
+                                                                        </button>
+                                                                    </form>
+                                                                @endif
                                                                 <a href="{{ route('blogs.edit', $blog->id) }}"
                                                                     class="btn btn-success btn-sm">
                                                                     <i class="bi bi-pencil-square fs-4"></i>

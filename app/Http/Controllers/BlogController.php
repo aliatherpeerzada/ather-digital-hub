@@ -101,7 +101,16 @@ class BlogController extends Controller
         }
 
 
-        $blog->update([
+        // Record admin approval when an AI draft gets published
+        $approval = [];
+        if ($blog->created_by_ai && $blog->status !== 'published' && $request->status === 'published') {
+            $approval = [
+                'approved_by' => \Illuminate\Support\Facades\Auth::id(),
+                'approved_at' => now(),
+            ];
+        }
+
+        $blog->update($approval + [
             'slug' => $slug,
             'meta_title' => $request->title,
             'meta_description' => $request->meta_description,
@@ -112,10 +121,28 @@ class BlogController extends Controller
             'main_image_alt' => $request->main_image_alt,
             'content' => $request->content,
             'status' => $request->status,
-            'published_at' => $request->published_at,
+            'published_at' => $request->published_at ?: ($request->status === 'published' ? ($blog->published_at ?? now()) : null),
         ]);
 
         return redirect()->route('blogs')->with('message', 'Blog Updated Successfully');
+    }
+
+    public function admin_blogs_approve($id)
+    {
+        $blog = Blog::findOrFail($id);
+
+        if ($blog->status === 'published') {
+            return redirect()->route('blogs')->with('message', 'Blog is already published');
+        }
+
+        $blog->update([
+            'status' => 'published',
+            'published_at' => $blog->published_at ?? now(),
+            'approved_by' => \Illuminate\Support\Facades\Auth::id(),
+            'approved_at' => now(),
+        ]);
+
+        return redirect()->route('blogs')->with('message', 'Blog Approved & Published Successfully');
     }
 
     public function admin_blogs_delete($id)
