@@ -42,7 +42,7 @@ return [
 
     'claude' => [
         // Shared secret Claude sends as "Authorization: Bearer <token>" (min 32 chars)
-        'api_token' => env('CLAUDE_API_TOKEN','sk-ant-api03-977U54_40b3D7XzR254_UeIeSZy8p4oVqX5yX-B7w0uB0_5mO47XgU3q8h_8zN-c_j_x_H_mU3p_J_f_f-O9WGA'),
+        'api_token' => env('CLAUDE_API_TOKEN'),
         // Optional comma-separated IP allow-list
         'allowed_ips' => env('CLAUDE_ALLOWED_IPS', ''),
     ],
