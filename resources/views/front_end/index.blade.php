@@ -1391,6 +1391,27 @@
             animatedElements.forEach(el => observer.observe(el));
 
             const productSlider = document.getElementById('product-slider');
+            const sliderSection = productSlider?.closest('#portfolio');
+            const sliderControls = document.querySelector('.product-slider-controls');
+            const reducedMotionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+            let sliderTimer = null;
+            const stopSlider = () => {
+                if (sliderTimer) window.clearInterval(sliderTimer);
+                sliderTimer = null;
+            };
+            const advanceSlider = (behavior = 'smooth') => {
+                if (!productSlider) return;
+                const atEnd = productSlider.scrollLeft + productSlider.clientWidth >= productSlider.scrollWidth - 24;
+                productSlider.scrollTo({
+                    left: atEnd ? 0 : productSlider.scrollLeft + productSlider.clientWidth,
+                    behavior: reducedMotionPreference.matches ? 'auto' : behavior,
+                });
+            };
+            const startSlider = () => {
+                if (!productSlider || sliderTimer || reducedMotionPreference.matches || document.hidden) return;
+                sliderTimer = window.setInterval(() => advanceSlider(), 4500);
+            };
+
             document.querySelectorAll('[data-slide]').forEach(button => {
                 button.addEventListener('click', () => {
                     if (!productSlider) return;
@@ -1398,6 +1419,26 @@
                     productSlider.scrollBy({ left: direction * productSlider.clientWidth, behavior: 'smooth' });
                 });
             });
+
+            if (productSlider && sliderSection && sliderControls) {
+                [productSlider, sliderControls].forEach(element => {
+                    element.addEventListener('mouseenter', stopSlider);
+                    element.addEventListener('mouseleave', startSlider);
+                    element.addEventListener('focusin', stopSlider);
+                    element.addEventListener('focusout', event => {
+                        if (!element.contains(event.relatedTarget)) startSlider();
+                    });
+                });
+                document.addEventListener('visibilitychange', () => document.hidden ? stopSlider() : startSlider());
+                if ('IntersectionObserver' in window) {
+                    const sliderVisibilityObserver = new IntersectionObserver(entries => {
+                        entries[0].isIntersecting ? startSlider() : stopSlider();
+                    }, { threshold: 0.2 });
+                    sliderVisibilityObserver.observe(sliderSection);
+                } else {
+                    startSlider();
+                }
+            }
 
             const counters = document.querySelectorAll('.stat-num[data-count]');
             const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
