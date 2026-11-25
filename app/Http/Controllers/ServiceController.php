@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
 
@@ -70,7 +71,10 @@ class ServiceController extends Controller
 
     public function home()
     {
-        return view('front_end.index', ['services' => self::catalog()]);
+        return view('front_end.index', [
+            'services' => self::catalog(),
+            'featuredBlogs' => Blog::published()->inRandomOrder()->take(3)->get(),
+        ]);
     }
 
     public function index()

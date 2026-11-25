@@ -257,11 +257,11 @@
 
         /* Hero */
         .hero {
-            min-height: 100vh;
+            min-height: min(860px, 100vh);
             display: flex;
             align-items: center;
             position: relative;
-            padding-top: 80px;
+            padding: 120px 0 64px;
             background: radial-gradient(circle at 70% 30%, #1a1a1a 0%, var(--bg-main) 70%);
             overflow: hidden;
         }
@@ -279,19 +279,19 @@
         .hero-grid {
             display: grid;
             grid-template-columns: 1.1fr 0.9fr;
-            gap: 4rem;
+            gap: 2.5rem;
             align-items: center;
             position: relative;
             z-index: 2;
         }
 
         .hero-title {
-            font-size: 5rem;
-            margin-bottom: 1.5rem;
+            font-size: clamp(3.1rem, 4.2vw, 4.25rem);
+            margin-bottom: 1.25rem;
             background: linear-gradient(180deg, #FFFFFF 0%, #A0A0A0 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            line-height: 1.1;
+            line-height: 1.08;
         }
 
         .hero-title span {
@@ -301,10 +301,10 @@
         }
 
         .hero-desc {
-            font-size: 1.25rem;
-            margin-bottom: 3rem;
-            max-width: 90%;
-            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 95%;
+            line-height: 1.7;
             color: #d1d1d1;
         }
 
@@ -343,6 +343,26 @@
             margin-bottom: 0.5rem;
             letter-spacing: -2px;
         }
+
+        .stat-stars { color: var(--gold-premium); font-size: .9rem; letter-spacing: 3px; margin: -.15rem 0 .45rem; }
+        .stat-item p { color: var(--text-grey); }
+
+        .sdlc-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.25rem; }
+        .sdlc-card { padding: 1.7rem; border: 1px solid var(--glass-border); border-radius: 18px; background: var(--glass-bg); }
+        .sdlc-card > span { color: var(--gold-premium); font-size: .9rem; font-weight: 800; letter-spacing: .12em; }
+        .sdlc-card h3 { color: var(--text-white); font-size: 1.15rem; margin: .8rem 0; }
+        .sdlc-card p { color: var(--text-grey); font-size: .94rem; line-height: 1.7; }
+        .sdlc-card h4 { color: var(--gold-light); font-size: .85rem; margin: 1rem 0 .35rem; text-transform: uppercase; letter-spacing: .08em; }
+
+        .home-blog-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+        .home-blog-card { display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--glass-border); border-radius: 20px; background: var(--glass-bg); color: var(--text-grey); }
+        .home-blog-card:hover { transform: translateY(-6px); border-color: rgba(212,175,55,.55); }
+        .home-blog-image { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; background: var(--bg-sec); }
+        .home-blog-content { padding: 1.5rem; }
+        .home-blog-date { color: var(--gold-premium); font-size: .82rem; margin-bottom: .5rem; }
+        .home-blog-title { color: var(--text-white); font-size: 1.2rem; margin-bottom: .65rem; }
+        .home-blog-excerpt { font-size: .95rem; line-height: 1.65; }
+        .home-blog-link { color: var(--gold-light); font-weight: 600; margin-top: 1rem; display: inline-block; }
 
         /* Services */
         .services-grid {
@@ -523,11 +543,16 @@
 
         /* Portfolio */
         .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 3rem;
+            display: flex;
+            gap: 1.5rem;
         }
+        .product-slider { overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -ms-overflow-style: none; }
+        .product-slider::-webkit-scrollbar { display: none; }
+        .product-slider-controls { display: flex; justify-content: flex-end; gap: .75rem; margin-top: 1.25rem; }
+        .product-slider-controls button { width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--glass-border); background: var(--bg-card); color: var(--gold-light); cursor: pointer; }
+        .product-slider-controls button:hover { border-color: var(--gold-premium); background: rgba(212,175,55,.12); }
         .portfolio-card {
+            flex: 0 0 calc(50% - .75rem);
             position: relative;
             border-radius: 24px;
             overflow: hidden;
@@ -535,6 +560,7 @@
             aspect-ratio: 16/10;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             cursor: pointer;
+            scroll-snap-align: start;
         }
         .portfolio-img {
             width: 100%;
@@ -564,7 +590,7 @@
             flex-direction: column;
             justify-content: flex-end;
             padding: 3rem;
-            opacity: 0;
+            opacity: 1;
             transition: all 0.5s ease;
         }
         .portfolio-card:hover .portfolio-img {
@@ -573,7 +599,7 @@
         .portfolio-card:hover .portfolio-overlay {
             opacity: 1;
         }
-        .portfolio-title { font-size: 2.2rem; margin-bottom: 1rem; color: #fff;}
+        .portfolio-title { font-size: 1.65rem; margin-bottom: .7rem; color: #fff;}
         .portfolio-tag { 
             color: var(--gold-premium); 
             font-size: 0.9rem; 
@@ -778,6 +804,7 @@
             .hero-visual { height: 400px; margin-top: 2rem; }
             .panel-1 { right: auto; left: 50%; transform: translateX(-50%); }
             .panel-2 { right: auto; left: 20%; }
+            .sdlc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
         }
         @media (max-width: 768px) {
             .hero-grid, .split-grid, .portfolio-grid { grid-template-columns: 1fr; gap: 3rem;}
@@ -792,6 +819,13 @@
             .timeline-dot { left: 18px !important; }
             .contact-form { padding: 2rem; }
             .booking-row { grid-template-columns: 1fr; }
+            .sdlc-grid { grid-template-columns: 1fr; }
+            .home-blog-grid { grid-template-columns: 1fr; }
+            .portfolio-card { flex-basis: calc(50% - .5rem); }
+            .portfolio-overlay { padding: 1rem; }
+            .portfolio-title { font-size: 1.1rem; }
+            .portfolio-tag { font-size: .7rem; letter-spacing: 1px; }
+            .portfolio-overlay .btn { display: none; }
         }
     </style>
     <!-- Google tag (gtag.js) -->
@@ -815,6 +849,7 @@
             <div class="nav-links">
                 <a href="#home" class="nav-link active">Home</a>
                 <a href="{{ route('services.index') }}" class="nav-link">Services</a>
+                <a href="#sdlc" class="nav-link">Our Process</a>
                 <a href="#portfolio" class="nav-link">Portfolio</a>
                 <a href="#technologies" class="nav-link">Technologies</a>
                 <a href="{{ url('/') }}#about" class="nav-link">About</a>
@@ -828,7 +863,7 @@
     <section class="hero" id="home">
         <div class="container hero-grid">
             <div class="hero-content reveal-up delay-100">
-                <h1 class="hero-title">Custom Software, SaaS &amp; <br><span>AI Products</span><br> Built for Your Business.</h1>
+                <h1 class="hero-title">Custom Software<br><span>SaaS &amp; AI Products</span><br>for Your Business</h1>
                 <p class="hero-desc">We plan and build SaaS platforms, custom web and mobile applications, and AI agents around real business needs. Work with a product development team serving clients in the USA, UK, UAE and Pakistan.</p>
                 <div class="hero-btns">
                     <a href="#contact" class="btn btn-gold">Start Your Project</a>
@@ -870,31 +905,50 @@
         </div>
     </section>
 
-    <!-- Stats -->
-    <div class="stats">
+    <!-- Client results -->
+    <div class="stats" id="client-results">
         <div class="container stats-grid">
             <div class="stat-item reveal-up">
-                <i class="fas fa-lightbulb"></i>
-                <div class="stat-num">01</div>
-                <p>Understand the problem</p>
+                <i class="fab fa-google"></i>
+                <div class="stat-num" data-count="137">137</div>
+                <div class="stat-stars" aria-label="Five star rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>5-Star Google Reviews</p>
             </div>
             <div class="stat-item reveal-up delay-100">
-                <i class="fas fa-sitemap"></i>
-                <div class="stat-num">02</div>
-                <p>Plan the right solution</p>
+                <i class="fas fa-users"></i>
+                <div class="stat-num" data-count="279">279</div>
+                <p>Satisfied Clients</p>
             </div>
             <div class="stat-item reveal-up delay-200">
-                <i class="fas fa-code"></i>
-                <div class="stat-num">03</div>
-                <p>Build in clear milestones</p>
+                <i class="fas fa-check-circle"></i>
+                <div class="stat-num" data-count="350">350</div>
+                <p>Projects Delivered</p>
             </div>
             <div class="stat-item reveal-up delay-300">
-                <i class="fas fa-rocket"></i>
-                <div class="stat-num">04</div>
-                <p>Launch and keep improving</p>
+                <i class="fas fa-globe"></i>
+                <div class="stat-num" data-count="7" data-suffix="+">7+</div>
+                <p>Countries Served</p>
             </div>
         </div>
     </div>
+
+    <!-- Software Development Life Cycle -->
+    <section class="section tech-bg" id="sdlc">
+        <div class="container">
+            <h2 class="section-title text-center reveal-up">A Clear <span class="text-gold">SDLC Process</span></h2>
+            <p class="section-subtitle text-center reveal-up delay-100">From the first discovery session to ongoing improvements, each stage has clear goals, review points and deliverables.</p>
+            <div class="sdlc-grid">
+                <article class="sdlc-card reveal-up"><span>01</span><h3>Discovery &amp; Requirements</h3><p>We align on the business problem, users, project goals, constraints and success measures. We document requirements, key workflows and open questions before defining scope.</p><h4>Output</h4><p>Prioritized requirements, user journeys and a shared project brief.</p></article>
+                <article class="sdlc-card reveal-up delay-100"><span>02</span><h3>Feasibility &amp; Planning</h3><p>We assess technical dependencies, integrations, risks and delivery options. Together we agree on a practical first release, milestones, responsibilities and communication rhythm.</p><h4>Output</h4><p>Delivery roadmap, scope, estimates and milestone plan.</p></article>
+                <article class="sdlc-card reveal-up delay-200"><span>03</span><h3>UX &amp; Solution Design</h3><p>We shape the user experience and technical architecture around the agreed requirements, including data flows, system boundaries, security considerations and interface behavior.</p><h4>Output</h4><p>Reviewed designs, architecture outline and implementation plan.</p></article>
+                <article class="sdlc-card reveal-up delay-300"><span>04</span><h3>Development &amp; Iteration</h3><p>We build in manageable increments, share progress regularly and review working software with you. Feedback is recorded and prioritized against the agreed goals.</p><h4>Output</h4><p>Working features delivered in reviewable milestones.</p></article>
+                <article class="sdlc-card reveal-up"><span>05</span><h3>Quality Assurance</h3><p>We verify core user flows, integrations, responsive layouts and error handling. Findings are tracked and resolved before release, with acceptance review against requirements.</p><h4>Output</h4><p>Tested release candidate and resolved launch blockers.</p></article>
+                <article class="sdlc-card reveal-up delay-100"><span>06</span><h3>Release &amp; Deployment</h3><p>We prepare the production release, configure the deployment process and coordinate the launch. The handover covers the agreed environments, access and operating notes.</p><h4>Output</h4><p>Deployed product and project handover.</p></article>
+                <article class="sdlc-card reveal-up delay-200"><span>07</span><h3>Monitoring &amp; Support</h3><p>After launch, we can help monitor the product, address issues and support your team under an agreed maintenance arrangement.</p><h4>Output</h4><p>Support plan and a clear path for issue resolution.</p></article>
+                <article class="sdlc-card reveal-up delay-300"><span>08</span><h3>Continuous Improvement</h3><p>We use user feedback, product priorities and operational insights to plan the next enhancements, keeping future development tied to business outcomes.</p><h4>Output</h4><p>A prioritized improvement backlog for future releases.</p></article>
+            </div>
+        </div>
+    </section>
 
     <!-- Services -->
     <section class="section" id="services">
@@ -969,6 +1023,7 @@
             <h2 class="section-title text-center reveal-up">Products We Can <span class="text-gold">Build</span></h2>
             <p class="section-subtitle text-center reveal-up delay-100">A few examples of solution types we develop. Ask us for relevant project examples and references during a consultation.</p>
             
+            <div class="product-slider" id="product-slider" aria-label="Products we can build">
             <div class="portfolio-grid">
                 <div class="portfolio-card reveal-up">
                     <div class="portfolio-img"></div>
@@ -1035,6 +1090,11 @@
                     </div>
                 </div>
             </div>
+            </div>
+            <div class="product-slider-controls" aria-label="Product slider controls">
+                <button type="button" data-slide="previous" aria-label="Show previous products"><i class="fas fa-arrow-left" aria-hidden="true"></i></button>
+                <button type="button" data-slide="next" aria-label="Show next products"><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+            </div>
         </div>
     </section>
 
@@ -1055,6 +1115,7 @@
                     <li class="feature-item"><i class="fas fa-check"></i> Clear Milestones</li>
                     <li class="feature-item"><i class="fas fa-check"></i> Ongoing Collaboration</li>
                 </ul>
+                <a href="#contact" class="btn btn-gold" style="margin-top: 1.75rem;">Book a Consultation</a>
             </div>
             <div class="hero-visual reveal-scale delay-200" style="height: 450px;">
                 <div class="glass-panel" style="width: 100%; height: 100%; display: flex; align-items:center; justify-content:center; flex-direction:column; background: radial-gradient(circle at center, rgba(212, 175, 55, 0.15), transparent);">
@@ -1066,59 +1127,6 @@
         </div>
     </section>
     
-    <!-- Development Process -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title text-center reveal-up">Development <span class="text-gold">Process</span></h2>
-            <p class="section-subtitle text-center reveal-up delay-100">A proven methodology for delivering excellence.</p>
-            
-            <div class="timeline">
-                <div class="timeline-item reveal-up">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>1. Discovery</h3>
-                        <p>We analyze your business goals, technical requirements, and target audience to formulate a robust strategy.</p>
-                    </div>
-                </div>
-                <div class="timeline-item reveal-up delay-100">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>2. Planning & Architecture</h3>
-                        <p>Our architects design a scalable, secure cloud infrastructure and database schema tailored to your needs.</p>
-                    </div>
-                </div>
-                <div class="timeline-item reveal-up delay-200">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>3. UI/UX Design</h3>
-                        <p>Crafting intuitive, world-class interfaces that prioritize user experience and drive high conversion rates.</p>
-                    </div>
-                </div>
-                <div class="timeline-item reveal-up delay-300">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>4. Development</h3>
-                        <p>Agile engineering sprints using modern frameworks, ensuring clean, maintainable, and high-performance code.</p>
-                    </div>
-                </div>
-                <div class="timeline-item reveal-up delay-400">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>5. Testing</h3>
-                        <p>Rigorous QA, including automated testing, security audits, and performance profiling before launch.</p>
-                    </div>
-                </div>
-                <div class="timeline-item reveal-up delay-500">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>6. Deployment & Maintenance</h3>
-                        <p>Seamless cloud deployment followed by 24/7 dedicated support and continuous system optimization.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Testimonials -->
     <section class="section tech-bg">
         <div class="container">
@@ -1195,6 +1203,32 @@
                 <a href="#contact" class="btn btn-gold">Book Consultation</a>
                 <a href="#contact" class="btn btn-outline">Get Quote</a>
             </div>
+        </div>
+    </section>
+
+    <!-- Latest Blog Articles -->
+    <section class="section tech-bg" id="latest-articles">
+        <div class="container">
+            <h2 class="section-title text-center reveal-up">Insights &amp; <span class="text-gold">Articles</span></h2>
+            <p class="section-subtitle text-center reveal-up delay-100">Explore practical ideas on software, product development and technology.</p>
+            @if($featuredBlogs->isNotEmpty())
+                <div class="home-blog-grid">
+                    @foreach($featuredBlogs as $blog)
+                        <a class="home-blog-card reveal-up" href="{{ route('blog.show', $blog->slug) }}">
+                            @if($blog->main_image)<img class="home-blog-image" src="{{ $blog->image_url }}" alt="{{ $blog->main_image_alt }}" loading="lazy">@endif
+                            <div class="home-blog-content">
+                                <p class="home-blog-date">{{ ($blog->published_at ?? $blog->created_at)->format('M j, Y') }}</p>
+                                <h3 class="home-blog-title">{{ $blog->title }}</h3>
+                                <p class="home-blog-excerpt">{{ \Illuminate\Support\Str::limit($blog->page_excerpt, 150) }}</p>
+                                <span class="home-blog-link">Read article <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            </div>
+                        </a>
+                    @endforeach
+                </div>
+            @else
+                <p class="section-subtitle text-center">New articles are on the way. <a href="{{ route('blog.index') }}" class="text-gold">Visit our blog</a>.</p>
+            @endif
+            <div class="text-center" style="margin-top:2.5rem"><a href="{{ route('blog.index') }}" class="btn btn-outline">View All Articles</a></div>
         </div>
     </section>
 
@@ -1360,6 +1394,46 @@
 
             const animatedElements = document.querySelectorAll('.reveal-up, .reveal-scale');
             animatedElements.forEach(el => observer.observe(el));
+
+            const productSlider = document.getElementById('product-slider');
+            document.querySelectorAll('[data-slide]').forEach(button => {
+                button.addEventListener('click', () => {
+                    if (!productSlider) return;
+                    const direction = button.dataset.slide === 'next' ? 1 : -1;
+                    productSlider.scrollBy({ left: direction * productSlider.clientWidth, behavior: 'smooth' });
+                });
+            });
+
+            const counters = document.querySelectorAll('.stat-num[data-count]');
+            const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const showFinalCounts = () => counters.forEach(counter => {
+                counter.textContent = `${Number(counter.dataset.count).toLocaleString()}${counter.dataset.suffix || ''}`;
+            });
+
+            if (reducedMotion || !('IntersectionObserver' in window)) {
+                showFinalCounts();
+            } else {
+                counters.forEach(counter => { counter.textContent = `0${counter.dataset.suffix || ''}`; });
+                const counterObserver = new IntersectionObserver((entries, counterObserver) => {
+                    entries.forEach(entry => {
+                        if (!entry.isIntersecting) return;
+                        const counter = entry.target;
+                        const target = Number(counter.dataset.count);
+                        const suffix = counter.dataset.suffix || '';
+                        const duration = 1400;
+                        const startTime = performance.now();
+                        const animate = now => {
+                            const progress = Math.min((now - startTime) / duration, 1);
+                            const eased = 1 - Math.pow(1 - progress, 3);
+                            counter.textContent = `${Math.round(target * eased).toLocaleString()}${suffix}`;
+                            if (progress < 1) requestAnimationFrame(animate);
+                        };
+                        requestAnimationFrame(animate);
+                        counterObserver.unobserve(counter);
+                    });
+                }, { threshold: 0.5 });
+                counters.forEach(counter => counterObserver.observe(counter));
+            }
         });
     </script>
 </body>
