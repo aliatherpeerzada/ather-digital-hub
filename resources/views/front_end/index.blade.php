@@ -553,20 +553,18 @@
         .product-slider-controls button:hover { border-color: var(--gold-premium); background: rgba(212,175,55,.12); }
         .portfolio-card {
             flex: 0 0 calc(50% - .75rem);
-            position: relative;
+            display: flex;
+            flex-direction: column;
             border-radius: 24px;
             overflow: hidden;
             border: 1px solid var(--glass-border);
-            aspect-ratio: 16/10;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            cursor: pointer;
             scroll-snap-align: start;
         }
         .portfolio-img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+            aspect-ratio: 16 / 9;
+            flex: 0 0 auto;
             background: linear-gradient(135deg, var(--bg-sec) 0%, #1a1a1a 100%);
             background-size: cover;
             background-position: center;
@@ -583,23 +581,12 @@
         .portfolio-card:nth-child(8) .portfolio-img { background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1200'); }
 
         .portfolio-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(5,5,5,0.95) 0%, rgba(5,5,5,0.4) 50%, rgba(5,5,5,0.1) 100%);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 3rem;
+            padding: 1.5rem;
             opacity: 1;
-            transition: all 0.5s ease;
+            background: var(--bg-card);
         }
-        .portfolio-card:hover .portfolio-img {
-            transform: scale(1.08);
-        }
-        .portfolio-card:hover .portfolio-overlay {
-            opacity: 1;
-        }
-        .portfolio-title { font-size: 1.65rem; margin-bottom: .7rem; color: #fff;}
+        .portfolio-title { font-size: 1.4rem; margin-bottom: .55rem; color: #fff;}
+        .portfolio-desc { color: var(--text-grey); font-size: .95rem; line-height: 1.65; margin-bottom: .9rem; }
         .portfolio-tag { 
             color: var(--gold-premium); 
             font-size: 0.9rem; 
@@ -825,7 +812,7 @@
             .portfolio-overlay { padding: 1rem; }
             .portfolio-title { font-size: 1.1rem; }
             .portfolio-tag { font-size: .7rem; letter-spacing: 1px; }
-            .portfolio-overlay .btn { display: none; }
+        .portfolio-overlay .btn { display: none; }
         }
     </style>
     <!-- Google tag (gtag.js) -->
@@ -1030,6 +1017,7 @@
                     <div class="portfolio-overlay">
                         <span class="portfolio-tag">SaaS</span>
                         <h3 class="portfolio-title">Subscription Platforms</h3>
+                        <p class="portfolio-desc">SaaS products with user accounts, subscription plans, dashboards and room to grow.</p>
                         <a href="#contact" class="btn btn-outline" style="width:fit-content; margin-top:15px;">Book a Consultation</a>
                     </div>
                 </div>
@@ -1038,6 +1026,7 @@
                     <div class="portfolio-overlay">
                         <span class="portfolio-tag">Business systems</span>
                         <h3 class="portfolio-title">Customer &amp; Operations Portals</h3>
+                        <p class="portfolio-desc">Secure portals that connect customers, teams and everyday business workflows.</p>
                         <a href="#contact" class="btn btn-outline" style="width:fit-content; margin-top:15px;">Book a Consultation</a>
                     </div>
                 </div>
@@ -1046,6 +1035,7 @@
                     <div class="portfolio-overlay">
                         <span class="portfolio-tag">Mobile</span>
                         <h3 class="portfolio-title">iOS &amp; Android Applications</h3>
+                        <p class="portfolio-desc">Mobile experiences that bring your service and business tools to users on the go.</p>
                         <a href="#contact" class="btn btn-outline" style="width:fit-content; margin-top:15px;">Book a Consultation</a>
                     </div>
                 </div>
@@ -1054,6 +1044,7 @@
                     <div class="portfolio-overlay">
                         <span class="portfolio-tag">Automation</span>
                         <h3 class="portfolio-title">AI Agents &amp; Assistants</h3>
+                        <p class="portfolio-desc">AI assistants for focused tasks, connected to the systems and information they need.</p>
                         <a href="#contact" class="btn btn-outline" style="width:fit-content; margin-top:15px;">Book a Consultation</a>
                     </div>
                 </div>
@@ -1062,6 +1053,7 @@
                     <div class="portfolio-overlay">
                         <span class="portfolio-tag">Integrations</span>
                         <h3 class="portfolio-title">Connected Business Workflows</h3>
+                        <p class="portfolio-desc">Integrations that help your applications share data and reduce repetitive work.</p>
                         <a href="#contact" class="btn btn-outline" style="width:fit-content; margin-top:15px;">Book a Consultation</a>
                     </div>
                 </div>
@@ -1070,6 +1062,7 @@
                     <div class="portfolio-overlay">
                         <span class="portfolio-tag">Web applications</span>
                         <h3 class="portfolio-title">Custom Web Products</h3>
+                        <p class="portfolio-desc">Responsive web applications shaped around your users, data and product goals.</p>
                         <a href="#contact" class="btn btn-outline" style="width:fit-content; margin-top:15px;">Book a Consultation</a>
                     </div>
                 </div>
@@ -1078,6 +1071,7 @@
                     <div class="portfolio-overlay">
                         <span class="portfolio-tag">Product development</span>
                         <h3 class="portfolio-title">MVPs for New Ideas</h3>
+                        <p class="portfolio-desc">A focused first release to test the core idea and learn from real users.</p>
                         <a href="#contact" class="btn btn-outline" style="width:fit-content; margin-top:15px;">Book a Consultation</a>
                     </div>
                 </div>
@@ -1086,6 +1080,7 @@
                     <div class="portfolio-overlay">
                         <span class="portfolio-tag">Modernization</span>
                         <h3 class="portfolio-title">Legacy Software Upgrades</h3>
+                        <p class="portfolio-desc">Modernize existing software in practical steps while protecting essential workflows.</p>
                         <a href="#contact" class="btn btn-outline" style="width:fit-content; margin-top:15px;">Book a Consultation</a>
                     </div>
                 </div>
