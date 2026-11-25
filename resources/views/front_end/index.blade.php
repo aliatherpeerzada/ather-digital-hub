@@ -6,21 +6,21 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <!-- Primary SEO Meta Tags -->
-    <title>Ather Digital Hub | Premium Software Development Company</title>
-    <meta name="description" content="Ather Digital Hub builds enterprise software, web apps, mobile apps, ERP systems, and AI solutions for businesses worldwide. Start your project today.">
+    <title>Custom Software, SaaS & AI Development | Ather Digital Hub</title>
+    <meta name="description" content="Ather Digital Hub builds custom software, SaaS products, web and mobile apps, and AI agents for growing businesses in the USA, UK, UAE and Pakistan.">
     <link rel="canonical" href="{{ url('/') }}">
 
     <!-- Open Graph / Social Sharing -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url('/') }}">
-    <meta property="og:title" content="Ather Digital Hub | Premium Software Development Company">
-    <meta property="og:description" content="We build enterprise software, web applications, mobile apps, ERP systems, AI solutions, and digital experiences for companies worldwide.">
+    <meta property="og:title" content="Custom Software, SaaS & AI Development | Ather Digital Hub">
+    <meta property="og:description" content="We build custom software, SaaS products, web and mobile apps, and AI agents for growing businesses.">
     <meta property="og:image" content="{{ URL::asset('img/logo.png') }}">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ather Digital Hub | Premium Software Development">
-    <meta name="twitter:description" content="Premium software, ERP, AI, and web solutions for businesses worldwide.">
+    <meta name="twitter:title" content="Custom Software, SaaS & AI Development | Ather Digital Hub">
+    <meta name="twitter:description" content="Custom software, SaaS, web and mobile applications, and practical AI agents for growing businesses.">
     <meta name="twitter:image" content="{{ URL::asset('img/logo.png') }}">
 
     <!-- Google Web Fonts -->
@@ -595,6 +595,31 @@
             box-shadow: 0 30px 60px rgba(0,0,0,0.4);
         }
         .form-group { margin-bottom: 2rem; position: relative; }
+
+        .booking-field {
+            display: block;
+            width: 100%;
+            margin-bottom: 1rem;
+            color: var(--text-white);
+            font-size: .95rem;
+            font-weight: 600;
+        }
+
+        .booking-row {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .booking-field .form-control { margin-top: .55rem; }
+        .budget-input { position: relative; margin-top: .55rem; }
+        .budget-input span { position: absolute; z-index: 1; left: 1.2rem; top: 50%; transform: translateY(-50%); color: var(--gold-light); }
+        .budget-input input { padding-left: 2.4rem; }
+        .word-count { margin-top: .6rem; text-align: right; font-size: .85rem; color: #999; }
+        .word-count.is-over-limit { color: #ff8e8e; }
+        .turnstile-notice { margin-bottom: 1.5rem; color: #ffcf70; }
+        .turnstile-notice a { color: var(--gold-light); text-decoration: underline; }
         
         .form-control {
             width: 100%;
@@ -766,6 +791,7 @@
             .timeline-item { width: 100%; padding-left: 80px !important; padding-right: 0 !important; left: 0 !important; text-align: left !important; }
             .timeline-dot { left: 18px !important; }
             .contact-form { padding: 2rem; }
+            .booking-row { grid-template-columns: 1fr; }
         }
     </style>
     <!-- Google tag (gtag.js) -->
@@ -788,7 +814,7 @@
             </a>
             <div class="nav-links">
                 <a href="#home" class="nav-link active">Home</a>
-                <a href="#services" class="nav-link">Services</a>
+                <a href="{{ route('services.index') }}" class="nav-link">Services</a>
                 <a href="#portfolio" class="nav-link">Portfolio</a>
                 <a href="#technologies" class="nav-link">Technologies</a>
                 <a href="{{ url('/') }}#about" class="nav-link">About</a>
@@ -802,8 +828,8 @@
     <section class="hero" id="home">
         <div class="container hero-grid">
             <div class="hero-content reveal-up delay-100">
-                <h1 class="hero-title">Building Premium <br><span>Digital Products</span><br> That Scale Businesses.</h1>
-                <p class="hero-desc">We build enterprise software, web applications, mobile apps, ERP systems, AI solutions, cloud infrastructure, and digital experiences for companies worldwide.</p>
+                <h1 class="hero-title">Custom Software, SaaS &amp; <br><span>AI Products</span><br> Built for Your Business.</h1>
+                <p class="hero-desc">We plan and build SaaS platforms, custom web and mobile applications, and AI agents around real business needs. Work with a product development team serving clients in the USA, UK, UAE and Pakistan.</p>
                 <div class="hero-btns">
                     <a href="#contact" class="btn btn-gold">Start Your Project</a>
                     <a href="#portfolio" class="btn btn-outline">View Portfolio</a>
@@ -812,33 +838,33 @@
             <div class="hero-visual reveal-scale delay-300">
                 <div class="glass-panel panel-1">
                     <i class="fas fa-shield-alt text-gold" style="font-size: 3.5rem; margin-bottom: 25px;"></i>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 20px;">Security & Compliance</h3>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 20px;">Thoughtful Engineering</h3>
                     
                     <div style="display:flex; justify-content:space-between; margin-bottom:12px; font-size:0.95rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 12px; width: 100%;">
                         <span style="color: #aaa;">Encryption</span>
-                        <span class="text-gold" style="font-weight:600;">AES-256</span>
+                        <span class="text-gold" style="font-weight:600;">Secure design</span>
                     </div>
                     <div style="display:flex; justify-content:space-between; margin-bottom:12px; font-size:0.95rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 12px; width: 100%;">
                         <span style="color: #aaa;">Data Protocol</span>
-                        <span class="text-gold" style="font-weight:600;">GDPR / HIPAA</span>
+                        <span class="text-gold" style="font-weight:600;">Privacy aware</span>
                     </div>
                     <div style="display:flex; justify-content:space-between; font-size:0.95rem; width: 100%;">
                         <span style="color: #aaa;">Threat Scans</span>
-                        <span class="text-gold" style="font-weight:600;">Daily Auto</span>
+                        <span class="text-gold" style="font-weight:600;">Reviewed delivery</span>
                     </div>
                 </div>
                 <div class="glass-panel panel-2">
                     <div style="padding: 25px; display: flex; align-items: center; gap: 20px; width: 100%;">
                         <i class="fas fa-server text-gold" style="font-size: 2.5rem;"></i>
                         <div>
-                            <h4 style="font-size: 1.2rem; margin-bottom: 5px;">Cloud Deployed</h4>
-                            <p style="font-size: 0.95rem; margin:0; color: #aaa;">99.99% Uptime SLA</p>
+                            <h4 style="font-size: 1.2rem; margin-bottom: 5px;">Ready to grow</h4>
+                            <p style="font-size: 0.95rem; margin:0; color: #aaa;">Architecture shaped to your needs</p>
                         </div>
                     </div>
                 </div>
                 <div class="glass-panel panel-3">
                     <i class="fas fa-chart-line text-gold" style="font-size: 3rem; margin-bottom: 20px;"></i>
-                    <h4 style="font-size: 1.2rem;">AI Analytics</h4>
+                    <h4 style="font-size: 1.2rem;">Practical AI</h4>
                 </div>
             </div>
         </div>
@@ -848,54 +874,43 @@
     <div class="stats">
         <div class="container stats-grid">
             <div class="stat-item reveal-up">
-                <i class="fas fa-award"></i>
-                <div class="stat-num">10+</div>
-                <p>Years Experience</p>
+                <i class="fas fa-lightbulb"></i>
+                <div class="stat-num">01</div>
+                <p>Understand the problem</p>
             </div>
             <div class="stat-item reveal-up delay-100">
-                <i class="fas fa-users"></i>
-                <div class="stat-num">700+</div>
-                <p>Global Clients</p>
+                <i class="fas fa-sitemap"></i>
+                <div class="stat-num">02</div>
+                <p>Plan the right solution</p>
             </div>
             <div class="stat-item reveal-up delay-200">
-                <i class="fas fa-check-circle"></i>
-                <div class="stat-num">1300+</div>
-                <p>Projects Delivered</p>
+                <i class="fas fa-code"></i>
+                <div class="stat-num">03</div>
+                <p>Build in clear milestones</p>
             </div>
             <div class="stat-item reveal-up delay-300">
-                <i class="fas fa-user-tie"></i>
-                <div class="stat-num">18+</div>
-                <p>Tech Experts</p>
+                <i class="fas fa-rocket"></i>
+                <div class="stat-num">04</div>
+                <p>Launch and keep improving</p>
             </div>
         </div>
     </div>
 
     <!-- Services -->
-    @php
-    $services = [
-        ['icon' => 'fa-laptop-code', 'title' => 'Custom Software Development', 'desc' => 'Tailor-made enterprise software solutions built to solve complex business challenges and drive digital growth.'],
-        ['icon' => 'fa-mobile-alt', 'title' => 'Mobile App Development', 'desc' => 'Native and cross-platform mobile applications that deliver exceptional user experiences.'],
-        ['icon' => 'fa-code', 'title' => 'Laravel Development', 'desc' => 'Robust backend architectures powered by Laravel, ensuring security, scalability, and speed.'],
-        ['icon' => 'fa-shield-alt', 'title' => 'Security & Compliance', 'desc' => 'Bank-grade security architectures ensuring strict data compliance and vulnerability protection.'],
-        ['icon' => 'fa-layer-group', 'title' => 'UI/UX Design', 'desc' => 'Research-driven interface design that guarantees user engagement and conversion.'],
-        ['icon' => 'fa-robot', 'title' => 'AI Automation', 'desc' => 'Intelligent workflow automation and AI integrations to drastically reduce operational overhead.']
-    ];
-    @endphp
-
     <section class="section" id="services">
         <div class="container">
             <h2 class="section-title text-center reveal-up">Premium <span class="text-gold">Services</span></h2>
             <p class="section-subtitle text-center reveal-up delay-100">Comprehensive technical solutions engineered to perfection.</p>
             
             <div class="services-grid">
-                @foreach($services as $index => $service)
-                <div class="service-card reveal-up" style="transition-delay: {{ ($index % 3) * 100 }}ms;">
+                @foreach($services as $slug => $service)
+                <div class="service-card reveal-up" style="transition-delay: {{ ($loop->index % 3) * 100 }}ms;">
                     <div class="service-icon">
                         <i class="fas {{ $service['icon'] }}"></i>
                     </div>
                     <h3 class="service-title">{{ $service['title'] }}</h3>
-                    <p class="service-desc">{{ $service['desc'] }}</p>
-                    <a href="#contact" class="service-link">
+                    <p class="service-desc">{{ $service['summary'] }}</p>
+                    <a href="{{ route('services.show', $slug) }}" class="service-link">
                         Read More <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -903,7 +918,7 @@
             </div>
             
             <div class="text-center reveal-up delay-300" style="margin-top: 4rem;">
-                <a href="#contact" class="btn btn-outline" style="padding: 14px 40px; font-size: 1.1rem; border-color: rgba(212, 175, 55, 0.5);">
+                <a href="{{ route('services.index') }}" class="btn btn-outline" style="padding: 14px 40px; font-size: 1.1rem; border-color: rgba(212, 175, 55, 0.5);">
                     Explore All Capabilities <i class="fas fa-arrow-right" style="margin-left: 10px; color: var(--gold-premium);"></i>
                 </a>
             </div>
@@ -951,71 +966,71 @@
     <!-- Portfolio -->
     <section class="section" id="portfolio">
         <div class="container">
-            <h2 class="section-title text-center reveal-up">Our <span class="text-gold">Portfolio</span></h2>
-            <p class="section-subtitle text-center reveal-up delay-100">A showcase of world-class digital experiences.</p>
+            <h2 class="section-title text-center reveal-up">Products We Can <span class="text-gold">Build</span></h2>
+            <p class="section-subtitle text-center reveal-up delay-100">A few examples of solution types we develop. Ask us for relevant project examples and references during a consultation.</p>
             
             <div class="portfolio-grid">
                 <div class="portfolio-card reveal-up">
                     <div class="portfolio-img"></div>
                     <div class="portfolio-overlay">
-                        <span class="portfolio-tag">Fintech</span>
-                        <h3 class="portfolio-title">Global Banking Portal</h3>
+                        <span class="portfolio-tag">SaaS</span>
+                        <h3 class="portfolio-title">Subscription Platforms</h3>
                         <a href="#contact" class="btn btn-outline" style="width:fit-content; margin-top:15px;">Book a Consultation</a>
                     </div>
                 </div>
                 <div class="portfolio-card reveal-up delay-100">
                     <div class="portfolio-img"></div>
                     <div class="portfolio-overlay">
-                        <span class="portfolio-tag">E-Commerce</span>
-                        <h3 class="portfolio-title">Luxury Retail Platform</h3>
+                        <span class="portfolio-tag">Business systems</span>
+                        <h3 class="portfolio-title">Customer &amp; Operations Portals</h3>
                         <a href="#contact" class="btn btn-outline" style="width:fit-content; margin-top:15px;">Book a Consultation</a>
                     </div>
                 </div>
                 <div class="portfolio-card reveal-up delay-200">
                     <div class="portfolio-img"></div>
                     <div class="portfolio-overlay">
-                        <span class="portfolio-tag">Healthcare</span>
-                        <h3 class="portfolio-title">Medical ERP System</h3>
+                        <span class="portfolio-tag">Mobile</span>
+                        <h3 class="portfolio-title">iOS &amp; Android Applications</h3>
                         <a href="#contact" class="btn btn-outline" style="width:fit-content; margin-top:15px;">Book a Consultation</a>
                     </div>
                 </div>
                 <div class="portfolio-card reveal-up delay-300">
                     <div class="portfolio-img"></div>
                     <div class="portfolio-overlay">
-                        <span class="portfolio-tag">Real Estate</span>
-                        <h3 class="portfolio-title">Property Management App</h3>
+                        <span class="portfolio-tag">Automation</span>
+                        <h3 class="portfolio-title">AI Agents &amp; Assistants</h3>
                         <a href="#contact" class="btn btn-outline" style="width:fit-content; margin-top:15px;">Book a Consultation</a>
                     </div>
                 </div>
                 <div class="portfolio-card reveal-up delay-100">
                     <div class="portfolio-img"></div>
                     <div class="portfolio-overlay">
-                        <span class="portfolio-tag">Logistics</span>
-                        <h3 class="portfolio-title">Supply Chain Tracker</h3>
+                        <span class="portfolio-tag">Integrations</span>
+                        <h3 class="portfolio-title">Connected Business Workflows</h3>
                         <a href="#contact" class="btn btn-outline" style="width:fit-content; margin-top:15px;">Book a Consultation</a>
                     </div>
                 </div>
                 <div class="portfolio-card reveal-up delay-200">
                     <div class="portfolio-img"></div>
                     <div class="portfolio-overlay">
-                        <span class="portfolio-tag">Education</span>
-                        <h3 class="portfolio-title">E-Learning Platform</h3>
+                        <span class="portfolio-tag">Web applications</span>
+                        <h3 class="portfolio-title">Custom Web Products</h3>
                         <a href="#contact" class="btn btn-outline" style="width:fit-content; margin-top:15px;">Book a Consultation</a>
                     </div>
                 </div>
                 <div class="portfolio-card reveal-up delay-300">
                     <div class="portfolio-img"></div>
                     <div class="portfolio-overlay">
-                        <span class="portfolio-tag">Travel</span>
-                        <h3 class="portfolio-title">Hotel Booking System</h3>
+                        <span class="portfolio-tag">Product development</span>
+                        <h3 class="portfolio-title">MVPs for New Ideas</h3>
                         <a href="#contact" class="btn btn-outline" style="width:fit-content; margin-top:15px;">Book a Consultation</a>
                     </div>
                 </div>
                 <div class="portfolio-card reveal-up delay-400">
                     <div class="portfolio-img"></div>
                     <div class="portfolio-overlay">
-                        <span class="portfolio-tag">SaaS</span>
-                        <h3 class="portfolio-title">Enterprise CRM</h3>
+                        <span class="portfolio-tag">Modernization</span>
+                        <h3 class="portfolio-title">Legacy Software Upgrades</h3>
                         <a href="#contact" class="btn btn-outline" style="width:fit-content; margin-top:15px;">Book a Consultation</a>
                     </div>
                 </div>
@@ -1028,7 +1043,7 @@
         <div class="container split-grid">
             <div class="reveal-up">
                 <h2 class="section-title">Why Choose <br><span class="text-gold">Ather Digital</span></h2>
-                <p class="mb-4" style="font-size: 1.15rem; color: #ccc;">We are more than developers. We are strategic technical partners dedicated to building flawless, scalable, and secure software that accelerates your business.</p>
+                <p class="mb-4" style="font-size: 1.15rem; color: #ccc;">We work with you from product discovery through delivery and ongoing improvement, keeping the scope, trade-offs and progress clear along the way.</p>
                 
                 <ul class="feature-list">
                     <li class="feature-item"><i class="fas fa-check"></i> Enterprise Architecture</li>
@@ -1037,15 +1052,15 @@
                     <li class="feature-item"><i class="fas fa-check"></i> Scalable Solutions</li>
                     <li class="feature-item"><i class="fas fa-check"></i> Agile Methodology</li>
                     <li class="feature-item"><i class="fas fa-check"></i> Dedicated Support</li>
-                    <li class="feature-item"><i class="fas fa-check"></i> Fast Delivery</li>
-                    <li class="feature-item"><i class="fas fa-check"></i> Global Clients</li>
+                    <li class="feature-item"><i class="fas fa-check"></i> Clear Milestones</li>
+                    <li class="feature-item"><i class="fas fa-check"></i> Ongoing Collaboration</li>
                 </ul>
             </div>
             <div class="hero-visual reveal-scale delay-200" style="height: 450px;">
                 <div class="glass-panel" style="width: 100%; height: 100%; display: flex; align-items:center; justify-content:center; flex-direction:column; background: radial-gradient(circle at center, rgba(212, 175, 55, 0.15), transparent);">
                     <i class="fas fa-shield-alt text-gold" style="font-size: 6rem; margin-bottom: 30px;"></i>
-                    <h3 style="font-size: 1.8rem; font-weight: 800;">ISO Certified Security</h3>
-                    <p style="color: #999; margin-top: 10px;">Bank-grade encryption & compliance</p>
+                    <h3 style="font-size: 1.8rem; font-weight: 800;">Security-minded Delivery</h3>
+                    <p style="color: #999; margin-top: 10px;">Careful decisions around data and access</p>
                 </div>
             </div>
         </div>
@@ -1108,7 +1123,7 @@
     <section class="section tech-bg">
         <div class="container">
             <h2 class="section-title text-center reveal-up">Client <span class="text-gold">Testimonials</span></h2>
-            <p class="section-subtitle text-center reveal-up delay-100">Trusted by industry leaders worldwide.</p>
+            <p class="section-subtitle text-center reveal-up delay-100">Feedback from clients about their project experience.</p>
             
             <div class="services-grid">
                 <div class="service-card reveal-up" style="border-top: 4px solid var(--gold-premium);">
@@ -1187,8 +1202,8 @@
     <section class="section" id="contact">
         <div class="container split-grid">
             <div class="reveal-up">
-                <h2 class="section-title">Get in <span class="text-gold">Touch</span></h2>
-                <p class="mb-5" style="font-size: 1.15rem; color: #ccc;">Ready to transform your business with world-class digital solutions? Contact our technical experts today.</p>
+                <h2 class="section-title">Book a Project <span class="text-gold">Consultation</span></h2>
+                <p class="mb-5" style="font-size: 1.15rem; color: #ccc;">Tell us what you want to build. Share your contact details, budget and project outline, and our team will follow up.</p>
                 
                 <div style="display:flex; flex-direction:column; gap: 2.5rem;">
                     <div style="display:flex; align-items:center; gap: 1.5rem;">
@@ -1226,28 +1241,38 @@
                     </div>
                 @endif
                 
-                <form action="{{ url('contact/store') }}" method="POST">
+                <form action="{{ route('contact.store') }}" method="POST" id="project-booking-form">
                     @csrf
-                    <div class="split-grid" style="gap: 1.5rem; margin-bottom: 1.5rem; grid-template-columns: 1fr 1fr;">
-                        <input type="text" name="name" class="form-control" placeholder="Full Name" required>
-                        <input type="email" name="email" class="form-control" placeholder="Corporate Email" required>
+                    <div class="booking-row">
+                        <label class="booking-field">Name
+                            <input type="text" name="name" class="form-control" placeholder="Your name" value="{{ old('name') }}" maxlength="120" autocomplete="name" required>
+                        </label>
+                        <label class="booking-field">Email
+                            <input type="email" name="email" class="form-control" placeholder="you@example.com" value="{{ old('email') }}" maxlength="255" autocomplete="email" required>
+                        </label>
                     </div>
-                    <div class="split-grid" style="gap: 1.5rem; margin-bottom: 1.5rem; grid-template-columns: 1fr 1fr;">
-                        <input type="text" name="phone" class="form-control" placeholder="Phone Number" required>
-                        <input type="number" name="additional_number" class="form-control" placeholder="Additional Number">
-                    </div>
-                    <div class="split-grid" style="gap: 1.5rem; margin-bottom: 1.5rem; grid-template-columns: 1fr 1fr;">
-                        <input type="text" name="company" class="form-control" placeholder="Company Name">
-                        <input type="text" name="budget" class="form-control" placeholder="Project Budget (e.g. $10k - $25k)">
+                    <div class="booking-row">
+                        <label class="booking-field">Phone
+                            <input type="tel" name="phone" class="form-control" placeholder="Country code and number" value="{{ old('phone') }}" maxlength="40" autocomplete="tel" required>
+                        </label>
+                        <label class="booking-field">Budget (USD)
+                            <div class="budget-input"><span aria-hidden="true">$</span><input type="number" name="budget" class="form-control" placeholder="5000" value="{{ old('budget') }}" min="0" step="any" inputmode="decimal" required></div>
+                        </label>
                     </div>
                     <div class="form-group">
-                        <textarea name="message" class="form-control" rows="5" placeholder="Project Details" required></textarea>
+                        <label class="booking-field" for="project-details">Project detail (up to 1,000 words)</label>
+                        <textarea id="project-details" name="message" class="form-control" rows="6" maxlength="50000" placeholder="What are you looking to build? Include the main goals, features and timeline." aria-describedby="project-details-count" required>{{ old('message') }}</textarea>
+                        <p id="project-details-count" class="word-count" aria-live="polite">0 / 1,000 words</p>
                     </div>
                     
                     <!-- Cloudflare Turnstile Captcha -->
-                    <div class="cf-turnstile" data-sitekey="{{ config('services.turnstile.key') }}" data-theme="dark" style="margin-bottom: 1.5rem;"></div>
+                    @if(config('services.turnstile.key') && config('services.turnstile.secret'))
+                        <div class="cf-turnstile" data-sitekey="{{ config('services.turnstile.key') }}" data-theme="dark" style="margin-bottom: 1.5rem;"></div>
+                    @else
+                        <p class="turnstile-notice">Online booking is temporarily unavailable. Please email <a href="mailto:info@atherdigitalhub.com">info@atherdigitalhub.com</a>.</p>
+                    @endif
                     
-                    <button type="submit" class="btn btn-gold w-100" style="width: 100%; padding: 18px; font-size: 1.1rem; letter-spacing: 1px;">Send Request <i class="fas fa-paper-plane" style="margin-left: 10px;"></i></button>
+                    <button type="submit" class="btn btn-gold w-100" style="width: 100%; padding: 18px; font-size: 1.1rem; letter-spacing: 1px;" @if(!config('services.turnstile.key') || !config('services.turnstile.secret')) disabled @endif>Submit <i class="fas fa-paper-plane" style="margin-left: 10px;"></i></button>
                 </form>
             </div>
         </div>
@@ -1259,7 +1284,7 @@
             <div class="footer-grid">
                 <div>
                     <img src="{{ URL::asset('img/logo.png') }}" alt="Ather Digital Hub" class="footer-logo">
-                    <p style="color: #888; font-size: 0.95rem; line-height: 1.8;">The #1 software development company empowering the IT world with innovative solutions, cutting-edge technology, and enterprise-grade services.</p>
+                    <p style="color: #888; font-size: 0.95rem; line-height: 1.8;">We build custom software, SaaS products, web and mobile applications, and AI agents for growing businesses.</p>
                 </div>
                 <div>
                     <h4 class="footer-title">Company</h4>
@@ -1292,6 +1317,19 @@
 
     <!-- Scripts -->
     <script>
+        const projectDetails = document.getElementById('project-details');
+        const wordCount = document.getElementById('project-details-count');
+        if (projectDetails && wordCount) {
+            const updateProjectWordCount = () => {
+                const words = (projectDetails.value.trim().match(/\S+/gu) || []).length;
+                wordCount.textContent = `${words.toLocaleString()} / 1,000 words`;
+                wordCount.classList.toggle('is-over-limit', words > 1000);
+                projectDetails.setCustomValidity(words > 1000 ? 'Please keep project details within 1,000 words.' : '');
+            };
+            projectDetails.addEventListener('input', updateProjectWordCount);
+            updateProjectWordCount();
+        }
+
         // Navbar scroll effect
         window.addEventListener('scroll', function() {
             const navbar = document.getElementById('navbar');

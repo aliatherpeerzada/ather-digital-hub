@@ -13,6 +13,21 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>{{ route('services.index') }}</loc>
+        <lastmod>{{ now()->tz("UTC")->toAtomString() }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    @foreach($servicePages as $slug)
+    <url>
+        <loc>{{ route('services.show', $slug) }}</loc>
+        <lastmod>{{ now()->tz("UTC")->toAtomString() }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    @endforeach
 
     <!-- Dynamic Blogs -->
     @foreach($blogs as $blog)

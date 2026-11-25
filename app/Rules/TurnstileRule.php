@@ -18,9 +18,8 @@ class TurnstileRule implements ValidationRule
     {
         $secret = config('services.turnstile.secret');
 
-        // If secret key is not configured yet in .env, gracefully bypass verification
-        // to avoid locking out form submissions during initial setup.
         if (empty($secret)) {
+            $fail('Cloudflare security verification is not configured. Please contact us directly.');
             return;
         }
 

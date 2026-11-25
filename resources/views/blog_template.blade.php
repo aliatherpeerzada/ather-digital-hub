@@ -607,21 +607,25 @@
                             <input type="email" name="email" class="form-control" placeholder="Email" required style="padding: 0.9rem 1.1rem; font-size: 0.95rem;">
                         </div>
                         <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
-                            <input type="text" name="phone" class="form-control" placeholder="Phone" required style="padding: 0.9rem 1.1rem; font-size: 0.95rem;">
+                            <input type="tel" name="phone" class="form-control" placeholder="Phone" required style="padding: 0.9rem 1.1rem; font-size: 0.95rem;">
                             <input type="number" name="additional_number" class="form-control" placeholder="Alt. Number" style="padding: 0.9rem 1.1rem; font-size: 0.95rem;">
                         </div>
                         <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
                             <input type="text" name="company" class="form-control" placeholder="Company" style="padding: 0.9rem 1.1rem; font-size: 0.95rem;">
-                            <input type="text" name="budget" class="form-control" placeholder="Budget" style="padding: 0.9rem 1.1rem; font-size: 0.95rem;">
+                            <input type="number" name="budget" class="form-control" placeholder="Budget (USD)" min="0" step="any" inputmode="decimal" required style="padding: 0.9rem 1.1rem; font-size: 0.95rem;">
                         </div>
                         <div style="margin-bottom: 1rem;">
-                            <textarea name="message" class="form-control" rows="4" placeholder="Project Details" required style="padding: 0.9rem 1.1rem; font-size: 0.95rem;"></textarea>
+                            <textarea name="message" class="form-control" rows="4" maxlength="50000" placeholder="Project Details (up to 1,000 words)" required style="padding: 0.9rem 1.1rem; font-size: 0.95rem;"></textarea>
                         </div>
                         
                         <!-- Cloudflare Turnstile Captcha -->
-                        <div class="cf-turnstile" data-sitekey="{{ config('services.turnstile.key') }}" data-theme="dark" style="margin-bottom: 1rem;"></div>
+                        @if(config('services.turnstile.key') && config('services.turnstile.secret'))
+                            <div class="cf-turnstile" data-sitekey="{{ config('services.turnstile.key') }}" data-theme="dark" style="margin-bottom: 1rem;"></div>
+                        @else
+                            <p style="color:#d4af37;">Online booking is temporarily unavailable. Email info@atherdigitalhub.com.</p>
+                        @endif
 
-                        <button type="submit" class="btn btn-gold" style="width: 100%; padding: 15px; font-size: 1rem; letter-spacing: 1px;">Send Request <i class="fas fa-paper-plane" style="margin-left: 8px;"></i></button>
+                        <button type="submit" class="btn btn-gold" style="width: 100%; padding: 15px; font-size: 1rem; letter-spacing: 1px;" @if(!config('services.turnstile.key') || !config('services.turnstile.secret')) disabled @endif>Submit <i class="fas fa-paper-plane" style="margin-left: 8px;"></i></button>
                     </form>
 
                     <!-- Social Links -->

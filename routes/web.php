@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
@@ -21,9 +22,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
         // Route::get('about', function(){
         //     return view('front_end.about');
         // });
-        Route::get('/', function(){
-            return view('front_end.index');
-        });
+        Route::get('/', [ServiceController::class, 'home'])->name('landing');
+        Route::get('/services', [ServiceController::class, 'index'])->name('services.index');
+        Route::get('/services/{slug}', [ServiceController::class, 'show'])->name('services.show');
         // Route::get('project', function(){
         //     return view('front_end.project');
         // });

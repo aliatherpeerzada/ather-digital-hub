@@ -92,17 +92,23 @@
                             <!-- Phone Number Field -->
                             <div class="form-group">
                                 <label for="number">Phone Number</label>
-                                <input type="number" class="form-control" id="phone" name="phone"
+                                <input type="tel" class="form-control" id="phone" name="phone"
                                     placeholder="Enter your phone number" required>
                                 <label for="" id="error_phone" class="text-danger fw-bold "
                                     style="display: none">Number is
                                     required</label>
                             </div>
 
+                            <div class="form-group">
+                                <label for="budget">Budget (USD)</label>
+                                <input type="number" class="form-control" id="budget" name="budget"
+                                    placeholder="Enter your budget in USD" min="0" step="any" required>
+                            </div>
+
                             <!-- Message Field -->
                             <div class="form-group">
                                 <label for="message">Message</label>
-                                <textarea class="form-control" id="message" name="message" rows="4"
+                                <textarea class="form-control" id="message" name="message" rows="4" maxlength="50000"
                                     placeholder="Tell us how we can help you" required></textarea>
                                 <label for="" id="error_message" class="text-danger fw-bold "
                                     style="display: none">Message is
@@ -111,16 +117,18 @@
 
                             <div>
                                 <div class="mt-3 mb-3 d-flex justify-content-center">
-                                    <div class="cf-turnstile" data-sitekey="{{ config('services.turnstile.key') }}" data-theme="dark"></div>
+                                    @if(config('services.turnstile.key') && config('services.turnstile.secret'))
+                                        <div class="cf-turnstile" data-sitekey="{{ config('services.turnstile.key') }}" data-theme="dark"></div>
+                                    @else
+                                        <p>Online booking is temporarily unavailable. Email info@atherdigitalhub.com.</p>
+                                    @endif
                                 </div>
                                 <div id="error_message_captcha" class="text-danger fw-bold text-center" style="display: none;"></div>
                             </div>
 
                             <!-- Submit Button -->
-                            <a href="javascript:void(0)"
-                                class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block"
-                                style="color: var(--dark); background: var(--secondary);"
-                                onclick="validate()">Submit</a>
+                            <button type="submit" class="btn rounded-pill py-2 px-4 ms-3"
+                                style="color: var(--dark); background: var(--secondary);" @if(!config('services.turnstile.key') || !config('services.turnstile.secret')) disabled @endif>Submit</button>
                         </form>
 
                     </div>

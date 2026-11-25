@@ -18,20 +18,25 @@ class FormController extends Controller
             $request->merge(['cf-turnstile-response' => $request->input('captcha_token')]);
         }
 
-        $hasSecret = !empty(config('services.turnstile.secret'));
-
         $request->validate([
-            'name' => 'required',
-            'email' => 'required|email',
-            'phone' => 'required',
-            'message' => 'required',
+            'name' => 'required|string|max:120',
+            'email' => 'required|email|max:255',
+            'phone' => 'required|string|max:40',
+            'budget' => 'required|numeric|min:0',
+            'message' => [
+                'required',
+                'string',
+                function ($attribute, $value, $fail) {
+                    preg_match_all('/[\p{L}\p{N}]+(?:[’\'-][\p{L}\p{N}]+)*/u', trim($value), $matches);
+
+                    if (count($matches[0]) > 1000) {
+                        $fail('Project details may not exceed 1,000 words.');
+                    }
+                },
+            ],
             'additional_number' => 'nullable',
             'company' => 'nullable',
-            'budget' => 'nullable',
-            'cf-turnstile-response' => array_values(array_filter([
-                $hasSecret ? 'required' : 'nullable',
-                new \App\Rules\TurnstileRule(),
-            ])),
+            'cf-turnstile-response' => ['required', new \App\Rules\TurnstileRule()],
         ], [
             'cf-turnstile-response.required' => 'Please complete the Cloudflare security verification.',
         ]);
